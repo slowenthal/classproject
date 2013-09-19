@@ -1,5 +1,10 @@
 package todo;
 
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.Session;
+import com.sun.net.httpserver.HttpContext;
+
+import javax.servlet.ServletContext;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +17,7 @@ import java.util.List;
  */
 public class ToDo {
 
-  public static List<String> listAll() {
+  public static List<String> listAllMock(ServletContext context) {
 
     List<String> todoItems = new ArrayList<String> ();
     todoItems.add("Eat Breakfast");
@@ -20,6 +25,19 @@ public class ToDo {
     todoItems.add("Pick up Drycleaning");
 
     return todoItems;
+  }
+
+
+  public static List<String> listAll(ServletContext context) {
+    Session session = CStar.getSession(context);
+
+    List<String> todoItems = new ArrayList<String> ();
+
+    for (Row row : session.execute("SELECT descr from todoitems")) {
+        todoItems.add(row.getString(0));
+    }
+
+   return todoItems;
   }
 
 }

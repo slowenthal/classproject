@@ -14,7 +14,7 @@
   <body>
   <B>Get Stuff Done</B>
   <ul>
-<% for (String item : ToDo.listAll()) { %>
+<% for (String item : ToDo.listAll(getServletConfig().getServletContext())) { %>
 
   <li> <%= item %></li>
 
