@@ -2,8 +2,6 @@ package todo.web;
 
 import todo.ToDo;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +16,7 @@ import java.util.List;
  * Time: 5:22 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TrackerServlet extends HttpServlet {
+public class TodoServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
   }

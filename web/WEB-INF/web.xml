@@ -15,4 +15,14 @@
         <servlet-name>TrackerServlet</servlet-name>
         <url-pattern>/track</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TodoServlet</servlet-name>
+        <servlet-class>todo.web.TodoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TodoServlet</servlet-name>
+        <url-pattern>/todo</url-pattern>
+    </servlet-mapping>
 </web-app>

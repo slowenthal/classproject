@@ -12,7 +12,7 @@ import javax.servlet.ServletContext;
  * Time: 10:01 PM
  * To change this template use File | Settings | File Templates.
  */
-public class CStar {
+public class CassandraData {
 
 
   public static final String C_STAR_SESSION = "CStarSession";
