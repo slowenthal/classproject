@@ -2,7 +2,7 @@
 <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
 
 <!-- ==================================================================
-Configure and deploy the test web application in $(jetty.home)/webapps/test
+Configure and deploy the test controller application in $(jetty.home)/webapps/test
 
 Note. If this file did not exist or used a context path other that /test
 then the default configuration of jetty.xml would discover the test

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="tryjetty:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/todo/ToDo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/todo/web/TodoServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/packagetracker.htm" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/todo/Packages.java" afterPath="$PROJECT_DIR$/src/todo/Tracking.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" afterPath="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/packagetracker.jsp" afterPath="$PROJECT_DIR$/web/packagetracker.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tracker/model/MockServletContext.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/tracker/model/TrackingTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/todo/CassandraData.java" afterPath="$PROJECT_DIR$/src/tracker/model/CassandraData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/todo/Tracking.java" afterPath="$PROJECT_DIR$/src/tracker/model/Tracking.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" afterPath="$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tryjetty.iml" afterPath="$PROJECT_DIR$/tryjetty.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deployment/contexts/tryjetty.xml" afterPath="$PROJECT_DIR$/deployment/contexts/tryjetty.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -18,8 +24,8 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691217433" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379688396426" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719862929" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719837400" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -28,6 +34,10 @@
     <file path="/Packages.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703062753" ignored="false" />
     <file path="/packagetracker.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703228916" ignored="false" />
     <file path="/Tracking.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379702083622" ignored="false" />
+    <file path="/CassandraDataTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719274294" ignored="false" />
+    <file path="/CassandraData.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717268258" ignored="false" />
+    <file path="/MockServletContext.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717774406" ignored="false" />
+    <file path="/TrackingTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719654016" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +88,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/todo/web/TrackerServlet.java" line="31" class="todo.web.TrackerServlet" package="todo.web">
+      <breakpoint url="file://$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java" line="31" class="tracker.controller.TrackerServlet" package="tracker.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -92,7 +102,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/todo/web/TrackerServlet.java" line="28" class="todo.web.TrackerServlet" package="todo.web">
+      <breakpoint url="file://$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java" line="28" class="tracker.controller.TrackerServlet" package="tracker.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -116,19 +126,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TrackerServlet.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/todo/web/TrackerServlet.java">
+      <file leaf-file-name="TrackerServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="776" selection-end="776" vertical-scroll-proportion="0.5675676">
+            <state line="21" column="37" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CassandraData.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/todo/CassandraData.java">
+        <entry file="file://$PROJECT_DIR$/src/tracker/model/CassandraData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="52" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="19" column="28" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CassandraDataTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="77" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MockServletContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/tracker/model/MockServletContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="137" column="31" selection-start="4217" selection-end="4217" vertical-scroll-proportion="-79.03846">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#493#509#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServletContext.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletContext.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="160" selection-end="160" vertical-scroll-proportion="53.92">
               <folding />
             </state>
           </provider>
@@ -143,7 +185,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="588" selection-end="588" vertical-scroll-proportion="-10.0">
+            <state line="20" column="64" selection-start="610" selection-end="610" vertical-scroll-proportion="-11.111111">
               <folding />
             </state>
           </provider>
@@ -164,19 +206,30 @@
       <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="52" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75">
+            <state line="22" column="7" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Tracking.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/todo/Tracking.java">
+        <entry file="file://$PROJECT_DIR$/src/tracker/model/Tracking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="29" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
+            <state line="29" column="72" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1075#1085#0" expanded="true" />
+                <element signature="e#1084#1094#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackingTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/tracker/model/TrackingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="50" selection-start="316" selection-end="316" vertical-scroll-proportion="0.5319149">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -200,8 +253,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/MyServlet.java" />
-        <option value="$PROJECT_DIR$/src/todo/CStar.java" />
         <option value="$PROJECT_DIR$/web/index2.jsp" />
         <option value="$PROJECT_DIR$/src/todo/ToDo.java" />
         <option value="$PROJECT_DIR$/web/packagetracker.htm" />
@@ -210,14 +261,20 @@
         <option value="$PROJECT_DIR$/src/todo/Packages.java" />
         <option value="$PROJECT_DIR$/src/todo/Tracking.java" />
         <option value="$PROJECT_DIR$/web/packagetracker.jsp" />
-        <option value="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" />
+        <option value="$PROJECT_DIR$/src/tracker/CassandraData.java" />
+        <option value="$PROJECT_DIR$/src/tracker/model/CassandraDataTest.java" />
+        <option value="$PROJECT_DIR$/src/tracker/model/CassandraData.java" />
+        <option value="$PROJECT_DIR$/test/tracker/model/MockServletContext.java" />
+        <option value="$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java" />
+        <option value="$PROJECT_DIR$/test/tracker/model/TrackingTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="117" />
+    <option name="x" value="115" />
+    <option name="y" value="76" />
     <option name="width" value="1680" />
     <option name="height" value="940" />
   </component>
@@ -391,11 +448,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
+              <option name="myItemId" value="tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,25 +492,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
+              <option name="myItemId" value="tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CQL" />
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,27 +506,31 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="vcs.TFS" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/stringtemplate-3.2.jar!/" />
-    <property name="project.structure.side.proportion" value="0.18648018" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/test/tracker/model" />
+    <property name="options.lastSelected" value="vcs.TFS" />
+    <property name="project.structure.side.proportion" value="0.18648018" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -472,6 +541,12 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="tracker.model" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="todo.web" />
     </key>
@@ -482,7 +557,91 @@
       <recent name="todo.web" />
     </key>
   </component>
-  <component name="RunManager" selected="Jetty Server.jetty8">
+  <component name="RunManager" selected="JUnit.TrackingTest.testFindTrackingByValidId">
+    <configuration default="false" name="CassandraDataTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tracker.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tryjetty" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tracker.model" />
+      <option name="MAIN_CLASS_NAME" value="tracker.model.CassandraDataTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TrackingTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tracker.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tryjetty" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tracker.model" />
+      <option name="MAIN_CLASS_NAME" value="tracker.model.TrackingTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TrackingTest.testFindTrackingByValidId" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="tracker.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="tryjetty" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="tracker.model" />
+      <option name="MAIN_CLASS_NAME" value="tracker.model.TrackingTest" />
+      <option name="METHOD_NAME" value="testFindTrackingByValidId" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -742,9 +901,19 @@
         </option>
       </method>
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Jetty Server.jetty8" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TrackingTest.testFindTrackingByValidId" />
     </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TrackingTest.testFindTrackingByValidId" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -788,7 +957,11 @@
       <created>1379655196559</created>
       <updated>1379655196559</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add better MVC">
+      <created>1379703846213</created>
+      <updated>1379703846213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -812,12 +985,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="117" width="1680" height="940" extended-state="6" />
+    <frame x="115" y="76" width="1680" height="940" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28902438" sideWeight="0.9987692" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42195123" sideWeight="0.9987692" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3817073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -833,12 +1007,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18849449" sideWeight="0.7109756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18849449" sideWeight="0.57804877" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -955,23 +1128,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/CassandraData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="52" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/Tracking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="29" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1075#1085#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/packagetracker.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="51" selection-start="688" selection-end="688" vertical-scroll-proportion="-2.18">
@@ -981,14 +1137,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="52" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75">
+        <state line="22" column="7" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="588" selection-end="588" vertical-scroll-proportion="-10.0">
+        <state line="20" column="64" selection-start="610" selection-end="610" vertical-scroll-proportion="-11.111111">
           <folding />
         </state>
       </provider>
@@ -1002,10 +1158,62 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo/web/TrackerServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="776" selection-end="776" vertical-scroll-proportion="0.5675676">
+        <state line="21" column="37" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javax.servlet.jar!/javax/servlet/ServletContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="160" selection-end="160" vertical-scroll-proportion="53.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tracker/model/CassandraData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tracker/model/Tracking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="72" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1084#1094#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tracker/model/MockServletContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="31" selection-start="4217" selection-end="4217" vertical-scroll-proportion="-79.03846">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#493#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="77" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/tracker/model/TrackingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="50" selection-start="316" selection-end="316" vertical-scroll-proportion="0.5319149">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

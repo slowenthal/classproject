@@ -1,6 +1,6 @@
-package todo.web;
+package tracker.controller;
 
-import todo.Tracking;
+import tracker.model.Tracking;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +24,7 @@ public class TrackerServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    String q= (String) request.getParameter("q");
+    String q = request.getParameter("q");
 
     List<Tracking> trackings = Tracking.findTrackingById(q,getServletContext());
 

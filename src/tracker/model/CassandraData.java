@@ -1,4 +1,4 @@
-package todo;
+package tracker.model;
 
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
@@ -21,14 +21,19 @@ public class CassandraData {
     Session session = (Session) context.getAttribute(C_STAR_SESSION);
 
     if (session == null) {
-      Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
-      session = cluster.connect("todo");
+      session = createSession();
       context.setAttribute(C_STAR_SESSION, session);
-
     }
 
     return session;
 
+  }
+
+  protected static Session createSession() {
+    Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
+    Session session = cluster.connect("tracker");
+
+    return session;
   }
 
 }

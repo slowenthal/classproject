@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>TrackerServlet</servlet-name>
-        <servlet-class>todo.web.TrackerServlet</servlet-class>
+        <servlet-class>tracker.controller.TrackerServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
