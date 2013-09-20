@@ -1,5 +1,6 @@
 package todo;
 
+import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.Session;
 import com.sun.net.httpserver.HttpContext;
@@ -33,8 +34,10 @@ public class ToDo {
 
     List<String> todoItems = new ArrayList<String> ();
 
+    ResultSet r = session.execute("SELECT descr from todoitems");
+
     for (Row row : session.execute("SELECT descr from todoitems")) {
-        todoItems.add(row.getString(0));
+        todoItems.add(row.getString("descr"));
     }
 
    return todoItems;

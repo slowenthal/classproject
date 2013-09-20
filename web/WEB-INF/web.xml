@@ -6,4 +6,13 @@
            version="2.5">
 
 
+    <servlet>
+        <servlet-name>TrackerServlet</servlet-name>
+        <servlet-class>todo.web.TrackerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TrackerServlet</servlet-name>
+        <url-pattern>/track</url-pattern>
+    </servlet-mapping>
 </web-app>
