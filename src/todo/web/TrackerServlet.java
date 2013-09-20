@@ -1,9 +1,7 @@
 package todo.web;
 
-import todo.ToDo;
+import todo.Tracking;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,15 +17,19 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class TrackerServlet extends HttpServlet {
-  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+ protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
   }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    List<String> todo = ToDo.listAll(getServletContext());
 
-    request.setAttribute("todo",todo);
-    getServletContext().getRequestDispatcher("/index.jsp").forward(request,response);
+    String q= (String) request.getParameter("q");
+
+    List<Tracking> trackings = Tracking.findTrackingById(q,getServletContext());
+
+    request.setAttribute("trackings", trackings);
+    getServletContext().getRequestDispatcher("/packagetracker.jsp").forward(request,response);
 
   }
 }

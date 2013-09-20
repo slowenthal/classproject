@@ -16,8 +16,7 @@
 <B>Get Stuff Done</B>
 <ul>
     <c:forEach var="item" items="${todo}">
-
-    <li>${item}</li>
+        <li>${item}</li>
     </c:forEach>
 </ul>
 </body>
