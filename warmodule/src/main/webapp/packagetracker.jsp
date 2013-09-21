@@ -17,7 +17,7 @@
   <input type="submit" name="button" id="button" value="Search" />
 </form>
 <p>&nbsp;</p>
-<B>Results</B>
+<b>Results</b>
 <table>
     <c:forEach var="waypoint" items="${trackings}">
         <tr>
@@ -26,7 +26,7 @@
             <td>${waypoint.notes}</td>
         </tr>
     </c:forEach>
-<table>
+</table>
 
 </body>
 </html>

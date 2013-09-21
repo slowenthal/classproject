@@ -31,7 +31,7 @@ public class CassandraData {
 
   protected static Session createSession() {
     Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
-    Session session = cluster.connect("tracker");
+    Session session = cluster.connect();
 
     return session;
   }
