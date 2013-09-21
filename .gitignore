@@ -6,3 +6,6 @@ lib
 *.jar
 *.war
 *.ear
+
+.idea/libraries
+

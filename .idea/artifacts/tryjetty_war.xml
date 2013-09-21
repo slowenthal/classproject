@@ -1,13 +1,8 @@
 <component name="ArtifactManager">
   <artifact type="war" name="tryjetty:war">
-    <output-path>$PROJECT_DIR$/out/artifacts/tryjetty_war</output-path>
-    <root id="archive" name="tryjetty_war.war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tryjetty-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="tryjetty:war exploded" />
-      <element id="directory" name="WEB-INF">
-        <element id="directory" name="lib">
-          <element id="library" level="project" name="jstl:jstl:1.2" />
-        </element>
-      </element>
     </root>
   </artifact>
 </component>
