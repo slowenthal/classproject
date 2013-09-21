@@ -6,27 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/com_datastax_cassandra_cassandra_driver_core_1_0_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jstl_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tracker/controller/TrackerServlet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tracker/model/CassandraData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tracker/model/Tracking.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/tracker/model/CassandraDataTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/tracker/model/MockServletContext.java" afterPath="$PROJECT_DIR$/src/test/java/tracker/model/MockServletContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/tracker/model/TrackingTest.java" afterPath="$PROJECT_DIR$/src/test/java/tracker/model/TrackingTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/packagetracker.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/packagetracker.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/packagetracker.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/packagetracker.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tryjetty.iml" afterPath="$PROJECT_DIR$/tryjetty.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war_exploded.xml" />
+    <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="" />
+    <list id="a7f56d7d-39e5-47fe-8aed-c6765adbcb18" name="Failed commit: Default" comment="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -36,7 +17,7 @@
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
     <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379739296784" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379739546918" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379742942863" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -50,6 +31,7 @@
     <file path="/MockServletContext.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717774406" ignored="false" />
     <file path="/TrackingTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719654016" ignored="false" />
     <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379737481781" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379742876416" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,38 +46,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tracker/controller/TrackerServlet.java" line="31" class="tracker.controller.TrackerServlet" package="tracker.controller">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/tracker/controller/TrackerServlet.java" line="28" class="tracker.controller.TrackerServlet" package="tracker.controller">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -176,8 +127,10 @@
       </file>
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="132" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
             <state />
@@ -185,17 +138,15 @@
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="132" selection-start="219" selection-end="219" vertical-scroll-proportion="-1.6666666">
-              <folding />
-            </state>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Tracking.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/tracker/model/Tracking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="38" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.6563786">
+            <state line="49" column="33" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.9364754">
               <folding />
             </state>
           </provider>
@@ -205,9 +156,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/tracker/model/TrackingTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="16" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -281,6 +230,7 @@
                 <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-codec:commons-codec:jar:1.3</node>
                 <node x="-62.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.ning:compress-lzf:jar:0.8.4</node>
                 <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
+                <node x="-53.5" y="-15.0">javax:javaee-api:jar:6.0</node>
                 <node x="-41.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m</node>
                 <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
                 <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
@@ -330,6 +280,10 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
+                <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax:javaee-api:jar:6.0">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
                 <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
@@ -358,11 +312,11 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+                <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
+                <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
@@ -478,15 +432,15 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
+                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
+                  <point x="0.0" y="0.0" />
+                  <point x="0.0" y="0.0" />
+                </edge>
                 <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
                 <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
@@ -510,11 +464,11 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
+                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+                <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
@@ -691,6 +645,56 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Tests">
           <PATH>
@@ -803,72 +807,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/stringtemplate-3.2.jar!/" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
@@ -880,8 +834,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -989,19 +943,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1030,19 +971,17 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
       <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 9.0.5.v20130815">
@@ -1062,6 +1001,21 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -1296,7 +1250,11 @@
       <created>1379719969737</created>
       <updated>1379719969737</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic">
+      <created>1379742222635</created>
+      <updated>1379742222635</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1323,9 +1281,8 @@
     <frame x="98" y="60" width="1680" height="940" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34512195" sideWeight="0.9987692" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34428224" sideWeight="0.9987692" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3817073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1334,19 +1291,20 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1882921" sideWeight="0.22804879" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12729499" sideWeight="0.654878" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12729499" sideWeight="0.6557178" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23011015" sideWeight="0.654878" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23011015" sideWeight="0.6557178" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1388,7 +1346,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor and add JUnit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1404,6 +1362,7 @@
     <MESSAGE value="Add Ability to read from Cassandra" />
     <MESSAGE value="Add better MVC" />
     <MESSAGE value="refactor and add JUnit tests" />
+    <MESSAGE value="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1467,14 +1426,329 @@
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/commons-lang:commons-lang:jar:2.5</node>
             <node x="-42.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0</node>
             <node x="-38.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1</node>
-            <node x="-120.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3</node>
             <node x="-47.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22</node>
+            <node x="-120.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3</node>
             <node x="-74.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
             <node x="-54.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5</node>
             <node x="-86.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.codehaus.jackson:jackson-mapper-asl:jar:1.4.2</node>
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/commons-lang:commons-lang:jar:2.5</node>
-            <node x="-73.0" y="-78.0">groupId:tryjetty:1.0-SNAPSHOT</node>
             <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2</node>
+            <node x="-73.0" y="-78.0">groupId:tryjetty:1.0-SNAPSHOT</node>
+            <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
+            <node x="-31.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/jline:jline:jar:1.0</node>
+            <node x="-60.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0</node>
+            <node x="-34.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2/log4j:log4j:jar:1.2.17</node>
+            <node x="-27.0" y="-15.0">javax.servlet:jstl:jar:1.2</node>
+            <node x="-33.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2</node>
+            <node x="-47.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/edu.stanford.ppl:snaptree:jar:0.1</node>
+            <node x="-79.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="-38.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.google.guava:guava:jar:13.0.1</node>
+            <node x="-74.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
+            <node x="-46.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.slf4j:slf4j-api:jar:1.5.11</node>
+            <node x="-34.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/io.netty:netty:jar:3.5.9.Final</node>
+            <node x="-46.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0/org.slf4j:slf4j-api:jar:1.7.2</node>
+            <node x="-94.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3</node>
+            <node x="-42.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0</node>
+            <node x="-34.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/io.netty:netty:jar:3.6.3.Final</node>
+            <node x="-86.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2</node>
+            <node x="-33.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2/org.antlr:stringtemplate:jar:3.2/antlr:antlr:jar:2.7.7</node>
+            <node x="-61.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2</node>
+            <node x="-45.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/org.apache.httpcomponents:httpcore:jar:4.0.1</node>
+            <node x="-46.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-api:jar:1.7.2</node>
+            <node x="-36.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.github.stephenc:jamm:jar:0.2.5</node>
+            <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
+            <node x="-46.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2/org.slf4j:slf4j-api:jar:1.7.2</node>
+            <node x="-57.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.json-simple:json-simple:jar:1.1</node>
+            <node x="-74.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
+            <node x="-53.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.yaml:snakeyaml:jar:1.6</node>
+            <node x="-27.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/net.jpountz.lz4:lz4:jar:1.1.0</node>
+            <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-codec:commons-codec:jar:1.3</node>
+            <node x="-62.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.ning:compress-lzf:jar:0.8.4</node>
+            <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
+            <node x="-53.5" y="-15.0">javax:javaee-api:jar:6.0</node>
+            <node x="-41.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m</node>
+            <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
+            <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
+            <node x="-61.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1</node>
+            <node x="-32.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1</node>
+            <node x="-49.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2/org.antlr:stringtemplate:jar:3.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2/org.antlr:stringtemplate:jar:3.2/antlr:antlr:jar:2.7.7">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-core-asl:jar:1.9.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.xerial.snappy:snappy-java:jar:1.0.5">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2/org.codehaus.jackson:jackson-core-asl:jar:1.9.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0/org.slf4j:slf4j-api:jar:1.7.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="junit:junit:jar:3.8.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/net.jpountz.lz4:lz4:jar:1.1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.slf4j:slf4j-api:jar:1.5.11">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax:javaee-api:jar:6.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-mapper-asl:jar:1.9.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/org.apache.httpcomponents:httpcore:jar:4.0.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/edu.stanford.ppl:snaptree:jar:0.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2/org.slf4j:slf4j-api:jar:1.7.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/jline:jline:jar:1.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra:cassandra-thrift:jar:1.2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.slf4j:slf4j-api:jar:1.7.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.yammer.metrics:metrics-core:jar:2.0.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/log4j:log4j:jar:1.2.16">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/commons-lang:commons-lang:jar:2.5">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.codehaus.jackson:jackson-core-asl:jar:1.9.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.yaml:snakeyaml:jar:1.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2/org.antlr:stringtemplate:jar:3.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-log4j12:jar:1.7.2/log4j:log4j:jar:1.2.17">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-codec:commons-codec:jar:1.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.google.guava:guava:jar:13.0.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/io.netty:netty:jar:3.5.9.Final">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:servlet-api:jar:2.5-20081211">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.slf4j:slf4j-api:jar:1.7.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/io.netty:netty:jar:3.6.3.Final">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-logging:commons-logging:jar:1.1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.json-simple:json-simple:jar:1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.github.stephenc:jamm:jar:0.2.5">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.ning:compress-lzf:jar:0.8.4">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/commons-lang:commons-lang:jar:2.5">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.codehaus.jackson:jackson-mapper-asl:jar:1.4.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-277.0" y="26.0" />
+          <SelectedNodes>
+            <node>groupId:tryjetty:1.0-SNAPSHOT</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/groupId:tryjetty:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>groupId:tryjetty:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="-67.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2/org.antlr:stringtemplate:jar:3.2</node>
+            <node x="-64.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.antlr:antlr:jar:3.2/org.antlr:antlr-runtime:jar:3.2</node>
+            <node x="-46.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.slf4j:slf4j-api:jar:1.7.2</node>
+            <node x="-66.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.github.stephenc.high-scale-lib:high-scale-lib:jar:1.1.2</node>
+            <node x="-63.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6</node>
+            <node x="-34.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/log4j:log4j:jar:1.2.16</node>
+            <node x="-42.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0</node>
+            <node x="-32.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22</node>
+            <node x="-54.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:servlet-api:jar:2.5-20081211</node>
+            <node x="-60.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.yammer.metrics:metrics-core:jar:2.0.3</node>
+            <node x="-60.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.xerial.snappy:snappy-java:jar:1.0.5</node>
+            <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/commons-lang:commons-lang:jar:2.5</node>
+            <node x="-42.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0</node>
+            <node x="-38.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1</node>
+            <node x="-47.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22</node>
+            <node x="-120.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3</node>
+            <node x="-74.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
+            <node x="-54.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5</node>
+            <node x="-86.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.codehaus.jackson:jackson-mapper-asl:jar:1.4.2</node>
+            <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/commons-lang:commons-lang:jar:2.5</node>
+            <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2</node>
+            <node x="-73.0" y="-78.0">groupId:tryjetty:1.0-SNAPSHOT</node>
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
             <node x="-31.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/jline:jline:jar:1.0</node>
             <node x="-60.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0</node>
@@ -1508,8 +1782,8 @@
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
             <node x="-41.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m</node>
             <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
-            <node x="-61.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1</node>
             <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
+            <node x="-61.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1</node>
             <node x="-32.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1</node>
             <node x="-49.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1</node>
           </nodes>
@@ -1575,19 +1849,19 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1603,11 +1877,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1703,6 +1977,10 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
@@ -1711,19 +1989,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.github.stephenc:jamm:jar:0.2.5">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1731,15 +1997,23 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/commons-lang:commons-lang:jar:2.5">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1775,16 +2049,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/packagetracker.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="51" selection-start="688" selection-end="688" vertical-scroll-proportion="-2.18">
-          <folding />
-        </state>
+        <state line="13" column="51" selection-start="688" selection-end="688" vertical-scroll-proportion="-2.18" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="7" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75">
-          <folding />
-        </state>
+        <state line="22" column="7" selection-start="534" selection-end="534" vertical-scroll-proportion="-13.75" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/model/CassandraDataTest.java">
@@ -1853,6 +2123,7 @@
             <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1/commons-codec:commons-codec:jar:1.3</node>
             <node x="-62.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.ning:compress-lzf:jar:0.8.4</node>
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
+            <node x="-53.5" y="-15.0">javax:javaee-api:jar:6.0</node>
             <node x="-41.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m</node>
             <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
             <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
@@ -1902,6 +2173,10 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax:javaee-api:jar:6.0">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
@@ -1930,11 +2205,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -2050,15 +2325,15 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -2082,11 +2357,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -2114,9 +2389,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/tracker/model/TrackingTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="16" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2128,18 +2401,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="132" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="132" selection-start="219" selection-end="219" vertical-scroll-proportion="-1.6666666">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
     </entry>
@@ -2159,7 +2432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/model/Tracking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="38" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.6563786">
+        <state line="49" column="33" selection-start="1219" selection-end="1219" vertical-scroll-proportion="0.9364754">
           <folding />
         </state>
       </provider>
