@@ -34,7 +34,7 @@ cqlsh -f packages.cql
 
 5) Build the project
 
-mnv install
+mvn install
 
 6) Run a standalone server
 
