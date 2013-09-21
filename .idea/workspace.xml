@@ -7,11 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/pom.xml" afterPath="$PROJECT_DIR$/startjetty/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -21,7 +16,7 @@
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
     <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784017228" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379780804755" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784697621" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -199,7 +194,7 @@
       <file leaf-file-name="OneWebApp.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="38" selection-start="844" selection-end="844" vertical-scroll-proportion="0.83623695">
+            <state line="30" column="17" selection-start="841" selection-end="841" vertical-scroll-proportion="0.78397214">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1175,7 +1170,11 @@
       <created>1379780810096</created>
       <updated>1379780810096</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Working standalone jetty with web app (at least on mac).">
+      <created>1379784706809</created>
+      <updated>1379784706809</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1268,7 +1267,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up multi-module pom file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working standalone jetty with web app (at least on mac)." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1291,6 +1290,7 @@
     <MESSAGE value="Try to get this thing to run everywhere" />
     <MESSAGE value="Add java version test" />
     <MESSAGE value="set up multi-module pom file" />
+    <MESSAGE value="Working standalone jetty with web app (at least on mac)." />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1730,7 +1730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="38" selection-start="844" selection-end="844" vertical-scroll-proportion="0.83623695">
+        <state line="30" column="17" selection-start="841" selection-end="841" vertical-scroll-proportion="0.78397214">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
