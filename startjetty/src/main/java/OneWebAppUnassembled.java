@@ -15,8 +15,8 @@ public class OneWebAppUnassembled {
 
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
-    context.setResourceBase("/Users/stevelowenthal/repos/tryjetty/src/main/webapp");
-    context.setContextPath("/tryjetty");
+    context.setResourceBase("/Users/stevelowenthal/repos/tryjetty/warmodule/src/main/webapp");
+    context.setContextPath("/warmodule");
     context.setParentLoaderPriority(true);
 
     server.setHandler(context);

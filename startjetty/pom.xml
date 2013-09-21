@@ -21,5 +21,11 @@
         <version>8.1.12.v20130726</version>
     </dependency>
 
+    <dependency>
+        <groupId>org.eclipse.jetty</groupId>
+        <artifactId>jetty-jsp</artifactId>
+        <version>8.1.12.v20130726</version>
+    </dependency>
+
 </dependencies>
 </project>

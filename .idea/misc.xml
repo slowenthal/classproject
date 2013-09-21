@@ -12,6 +12,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/startjetty/pom.xml" />
+        <option value="$PROJECT_DIR$/warmodule/pom.xml" />
       </list>
     </option>
   </component>

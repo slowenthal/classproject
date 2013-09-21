@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="startjetty" />
         <module name="tryjetty" />
+        <module name="warmodule" />
       </profile>
     </annotationProcessing>
   </component>

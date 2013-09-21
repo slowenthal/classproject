@@ -1,11 +1,11 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="tryjetty:war exploded">
-    <output-path>$PROJECT_DIR$/target/tryjetty-1.0-SNAPSHOT</output-path>
+  <artifact type="exploded-war" name="warmodule:war exploded">
+    <output-path>$PROJECT_DIR$/warmodule/target/webmodule-1.0-SNAPSHOT</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="tryjetty/web/Web" />
+      <element id="javaee-facet-resources" facet="warmodule/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="tryjetty" />
+          <element id="module-output" name="warmodule" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: com.datastax.cassandra:cassandra-driver-core:1.0.3" />
