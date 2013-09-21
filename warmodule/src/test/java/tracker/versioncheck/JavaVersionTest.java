@@ -15,7 +15,7 @@ import junit.framework.TestCase;
 
 public class JavaVersionTest extends TestCase {
 
-  public static final String MINIMUM_JAVA_VERSION = "1.7";
+  public static final String MINIMUM_JAVA_VERSION = "1.6";
 
   public void testJavaVersion() {
 
