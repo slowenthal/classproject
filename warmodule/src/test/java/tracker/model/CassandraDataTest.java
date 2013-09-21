@@ -37,6 +37,7 @@ public class CassandraDataTest extends TestCase {
     assertNotNull("session is null", session);
 
     // validate we get the same session when we call getSession a second time
+    // because getSession is supposed to store the result the first time it's called.
 
     Session session2 = CassandraData.getSession(context);
 

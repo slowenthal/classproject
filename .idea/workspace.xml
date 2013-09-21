@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/MockServletContext.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -18,8 +17,8 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777297016" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379750268877" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777462246" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777325854" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -28,12 +27,12 @@
     <file path="/Packages.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703062753" ignored="false" />
     <file path="/packagetracker.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703228916" ignored="false" />
     <file path="/Tracking.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379702083622" ignored="false" />
-    <file path="/CassandraDataTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719274294" ignored="false" />
+    <file path="/CassandraDataTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777368507" ignored="false" />
     <file path="/CassandraData.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717268258" ignored="false" />
     <file path="/MockServletContext.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717774406" ignored="false" />
     <file path="/TrackingTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719654016" ignored="false" />
     <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379748997865" ignored="false" />
-    <file path="/OneWebAppUnassembled.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379746220932" ignored="false" />
+    <file path="/OneWebAppUnassembled.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777634881" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,22 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" line="21" class="OneWebAppUnassembled" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
@@ -111,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CassandraDataTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CassandraDataTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="188" selection-end="188" vertical-scroll-proportion="0.2385159">
+            <state line="39" column="85" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,10 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneWebAppUnassembled.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OneWebAppUnassembled.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+            <state line="34" column="50" selection-start="931" selection-end="931" vertical-scroll-proportion="0.90106004">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,9 +205,9 @@
         <option value="$PROJECT_DIR$/src/test/java/tracker/model/MockServletContext.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/warmodule/pom.xml" />
-        <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
         <option value="$PROJECT_DIR$/startjetty/pom.xml" />
         <option value="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
+        <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
       </list>
     </option>
   </component>
@@ -994,7 +1008,11 @@
       <created>1379750278919</created>
       <updated>1379750278919</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Refactor tests a bit for clarity">
+      <created>1379777331932</created>
+      <updated>1379777331932</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1086,7 +1104,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rearrange the code so embedded Jetty works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor tests a bit for clarity" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1105,6 +1123,7 @@
     <MESSAGE value="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic" />
     <MESSAGE value="Add Embedded Jetty - still needs some work" />
     <MESSAGE value="Rearrange the code so embedded Jetty works" />
+    <MESSAGE value="Refactor tests a bit for clarity" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1496,15 +1515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="44" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
@@ -1521,7 +1531,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="188" selection-end="188" vertical-scroll-proportion="0.2385159">
+        <state line="39" column="85" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="50" selection-start="931" selection-end="931" vertical-scroll-proportion="0.90106004">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
