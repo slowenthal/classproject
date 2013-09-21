@@ -15,7 +15,7 @@ import java.io.File;
  */
 public class OneWebAppUnassembled {
 
-  public static final String WARMODULE_OFFSET_FROM_ROOT = "warmodule/src/main/webapp".replaceAll("/", File.separator);
+  public static final String WARMODULE_OFFSET_FROM_ROOT = "warmodule/src/main/webapp".replace('/', File.separatorChar);
 
   public static void main(String[] args) throws Exception
   {
