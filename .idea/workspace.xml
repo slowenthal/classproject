@@ -7,27 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/warmodule/warmodule.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/warmodule_war.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/artifacts/tryjetty_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/warmodule_war_exploded.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/warmodule/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tracker/controller/TrackerServlet.java" afterPath="$PROJECT_DIR$/warmodule/src/main/java/tracker/controller/TrackerServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tracker/model/CassandraData.java" afterPath="$PROJECT_DIR$/warmodule/src/main/java/tracker/model/CassandraData.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/tracker/model/Tracking.java" afterPath="$PROJECT_DIR$/warmodule/src/main/java/tracker/model/Tracking.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/warmodule/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/css/packagetracker.css" afterPath="$PROJECT_DIR$/warmodule/src/main/webapp/css/packagetracker.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/warmodule/src/main/webapp/index.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/webapp/packagetracker.jsp" afterPath="$PROJECT_DIR$/warmodule/src/main/webapp/packagetracker.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/tracker/model/CassandraDataTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/tracker/model/MockServletContext.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/MockServletContext.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/tracker/model/TrackingTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/pom.xml" afterPath="$PROJECT_DIR$/startjetty/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/startjetty.iml" afterPath="$PROJECT_DIR$/startjetty/startjetty.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/MockServletContext.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -36,8 +18,8 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379748479093" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379748479093" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379777297016" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379750268877" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -111,11 +93,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="4" selection-start="918" selection-end="918" vertical-scroll-proportion="0.74204946">
+            <state line="24" column="44" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MockServletContext.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="3" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CassandraDataTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="3" selection-start="188" selection-end="188" vertical-scroll-proportion="0.2385159">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +143,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="52" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+            <state line="9" column="35" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,7 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/todo/Packages.java" />
         <option value="$PROJECT_DIR$/src/todo/Tracking.java" />
         <option value="$PROJECT_DIR$/web/packagetracker.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
@@ -192,6 +193,7 @@
         <option value="$PROJECT_DIR$/warmodule/pom.xml" />
         <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
         <option value="$PROJECT_DIR$/startjetty/pom.xml" />
+        <option value="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
       </list>
     </option>
   </component>
@@ -217,7 +219,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="73" />
-    <option name="y" value="57" />
+    <option name="y" value="58" />
     <option name="width" value="1680" />
     <option name="height" value="940" />
   </component>
@@ -420,7 +422,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="tracker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,6 +562,7 @@
       <recent name="$PROJECT_DIR$/web" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tracker" />
       <recent name="todo.web" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -987,7 +990,11 @@
       <created>1379747331712</created>
       <updated>1379747331712</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rearrange the code so embedded Jetty works">
+      <created>1379750278919</created>
+      <updated>1379750278919</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1011,7 +1018,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="73" y="57" width="1680" height="940" extended-state="0" />
+    <frame x="73" y="58" width="1680" height="940" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27560976" sideWeight="0.9259486" order="7" side_tool="false" content_ui="tabs" />
@@ -1024,7 +1031,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5402439" sideWeight="0.3880049" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.497552" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1882921" sideWeight="0.22804879" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1079,7 +1086,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Embedded Jetty - still needs some work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rearrange the code so embedded Jetty works" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1097,6 +1104,7 @@
     <MESSAGE value="refactor and add JUnit tests" />
     <MESSAGE value="Mavenize.  This means that stuff has moved into standard directories.  The IJ directory structure was nicer for students tho, as it was much more pragmatic" />
     <MESSAGE value="Add Embedded Jetty - still needs some work" />
+    <MESSAGE value="Rearrange the code so embedded Jetty works" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1483,7 +1491,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="52" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+        <state line="9" column="35" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1499,8 +1507,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="4" selection-start="918" selection-end="918" vertical-scroll-proportion="0.74204946">
+        <state line="24" column="44" selection-start="812" selection-end="812" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="3" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="188" selection-end="188" vertical-scroll-proportion="0.2385159">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

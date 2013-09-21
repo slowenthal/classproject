@@ -1,6 +1,7 @@
 package tracker.model;
 
 import junit.framework.TestCase;
+import tracker.testhelpers.MockServletContext;
 
 import javax.servlet.ServletContext;
 

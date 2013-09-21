@@ -1,12 +1,10 @@
 package tracker.model;
 
 import com.datastax.driver.core.Session;
-import junit.framework.Test;
 import junit.framework.TestCase;
+import tracker.testhelpers.MockServletContext;
 
 import javax.servlet.ServletContext;
-import static junit.framework.Assert.assertNotNull;
-import static junit.framework.Assert.assertNull;
 
 
 /**
