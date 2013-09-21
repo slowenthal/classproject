@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/classProject.iml" filepath="$PROJECT_DIR$/classProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/startjetty/startjetty.iml" filepath="$PROJECT_DIR$/startjetty/startjetty.iml" />
       <module fileurl="file://$PROJECT_DIR$/warmodule/warmodule.iml" filepath="$PROJECT_DIR$/warmodule/warmodule.iml" />
     </modules>
