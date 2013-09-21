@@ -19,6 +19,6 @@ detected.
   <!--  + war OR resourceBase                                          -->
   <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   <Set name="contextPath">/tryjetty</Set>
-  <Set name="war"><SystemProperty name="jetty.home" default="."/>/webapps/tryjetty_war.war</Set>
+  <Set name="war"><SystemProperty name="jetty.home" default="."/>/webapps/tryjetty-1.0-SNAPSHOT.war</Set>
 
 </Configure>
