@@ -10,14 +10,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>Playlist</title>
 </head>
 <body>
-<B>Get Stuff Done</B>
-<ul>
-    <c:forEach var="item" items="${todo}">
-        <li>${item}</li>
-    </c:forEach>
-</ul>
+<B>Playlist</B>
+<br/>
+<a href="artists">Visit the Song Database</a>
 </body>
 </html>
