@@ -7,7 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" afterPath="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/debugjetty/debugjetty.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" afterPath="$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/pom.xml" afterPath="$PROJECT_DIR$/startjetty/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/pom.xml" afterPath="$PROJECT_DIR$/warmodule/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/startjetty.iml" afterPath="$PROJECT_DIR$/startjetty/startjetty.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/warmodule/warmodule.iml" afterPath="$PROJECT_DIR$/warmodule/warmodule.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/warmodule_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/warmodule_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/warmodule_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/warmodule_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -16,8 +25,8 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784017228" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784730506" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379904900169" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379869330843" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379691279591" ignored="false" />
@@ -30,7 +39,7 @@
     <file path="/CassandraData.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717268258" ignored="false" />
     <file path="/MockServletContext.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717774406" ignored="false" />
     <file path="/TrackingTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719654016" ignored="false" />
-    <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379780783428" ignored="false" />
+    <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379904418458" ignored="false" />
     <file path="/OneWebAppUnassembled.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784152035" ignored="false" />
     <file path="/JavaVersionTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379785305050" ignored="false" />
     <file path="/OneWebApp.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784138810" ignored="false" />
@@ -52,20 +61,6 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" line="24" class="OneWebAppUnassembled" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" line="21" class="OneWebApp" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -142,7 +137,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="11" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+            <state line="50" column="0" selection-start="1642" selection-end="1642" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,9 +156,7 @@
         <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="85" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -171,7 +164,7 @@
       <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warmodule/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,38 +182,34 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+            <state line="15" column="0" selection-start="535" selection-end="1275" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="OneWebAppUnassembled.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
+        <entry file="file://$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="60" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="29" column="38" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OneWebApp.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OneWebApp.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="41" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="11" column="45" selection-start="210" selection-end="210" vertical-scroll-proportion="0.20905924">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JavaVersionTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="JavaVersionTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="74" selection-start="382" selection-end="382" vertical-scroll-proportion="0.4965157">
+            <state line="19" column="74" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -229,7 +218,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="142" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+            <state line="14" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/todo/web/TrackerServlet.java" />
         <option value="$PROJECT_DIR$/src/tracker/CassandraData.java" />
         <option value="$PROJECT_DIR$/src/tracker/model/CassandraDataTest.java" />
@@ -262,13 +250,14 @@
         <option value="$PROJECT_DIR$/test/tracker/model/CassandraDataTest.java" />
         <option value="$PROJECT_DIR$/test/tracker/model/TrackingTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/tracker/model/MockServletContext.java" />
-        <option value="$PROJECT_DIR$/warmodule/pom.xml" />
         <option value="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/startjetty/pom.xml" />
-        <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" />
         <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
         <option value="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" />
+        <option value="$PROJECT_DIR$/warmodule/pom.xml" />
+        <option value="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" />
+        <option value="$PROJECT_DIR$/startjetty/pom.xml" />
+        <option value="$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -280,22 +269,8 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="webmodule" />
+          <option name="myItemId" value="warmodule" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="webmodule" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -314,8 +289,18 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="classProject" />
+          <option name="myItemId" value="startjetty" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -370,6 +355,9 @@
             <id>Logging issues</id>
           </State>
           <State>
+            <id>Maven</id>
+          </State>
+          <State>
             <id>Naming conventions</id>
           </State>
           <State>
@@ -382,6 +370,11 @@
             <id>Portability issues</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>MavenModelInspection</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -413,6 +406,28 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Tests">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tryjetty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="src/test/java">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="tracker/model">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -463,28 +478,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Tests">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tryjetty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="src/test/java">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="tracker/model">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -499,7 +492,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
+              <option name="myItemId" value="classproject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -509,29 +502,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
+              <option name="myItemId" value="classproject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="warmodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warmodule" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -542,17 +517,17 @@
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/warmodule" />
+    <property name="recentsLimit" value="5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
@@ -564,8 +539,8 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -576,11 +551,11 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="tracker.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="todo.web" />
@@ -588,35 +563,38 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/web" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="tracker" />
-      <recent name="todo.web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/debugjetty/src/main/java" />
       <recent name="$PROJECT_DIR$/classProject" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tracker" />
+      <recent name="todo.web" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.JavaVersionTest.testJavaVersion">
-    <configuration default="false" name="OneWebAppUnassembled" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.OneWebApp">
+    <configuration default="false" name="OneWebApp" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="OneWebAppUnassembled" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="OneWebApp" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="startjetty" />
       <envs />
+      <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Cover" />
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
@@ -716,29 +694,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="OneWebApp" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="OneWebApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="startjetty" />
-      <envs />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -774,6 +729,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -802,17 +770,19 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 9.0.5.v20130815">
@@ -832,21 +802,6 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -1042,22 +997,20 @@
         </option>
       </method>
     </configuration>
-    <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.All in warmodule" />
-      <item index="1" class="java.lang.String" itemvalue="Jetty Server.jetty8" />
-      <item index="2" class="java.lang.String" itemvalue="Application.OneWebAppUnassembled" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.JavaVersionTest.testJavaVersion" />
-      <item index="6" class="java.lang.String" itemvalue="Application.OneWebApp" />
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Application.OneWebApp" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All in warmodule" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.JavaVersionTest.testJavaVersion" />
+      <item index="5" class="java.lang.String" itemvalue="Jetty Server.jetty8" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JavaVersionTest.testJavaVersion" />
-        <item index="1" class="java.lang.String" itemvalue="Application.OneWebApp" />
-        <item index="2" class="java.lang.String" itemvalue="Application.OneWebAppUnassembled" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.OneWebApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JavaVersionTest.testJavaVersion" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TrackingTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CassandraDataTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1183,14 +1136,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36075205" sideWeight="0.60771114" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35135135" sideWeight="0.60771114" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5402439" sideWeight="0.3880049" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.497552" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19053052" sideWeight="0.2079906" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1882921" sideWeight="0.22804879" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -1199,6 +1151,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21448945" sideWeight="0.7344301" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.49510404" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19053052" sideWeight="0.2079906" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1311,14 +1264,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="javaeeDummy://JavaeeElement:/de5a3bc1/MyServlet/tryjetty/web/Web/Servlet">
-      <provider selected="true" editor-type-id="com.intellij.javaee.module.view.web.viewlets.ServletEditorProvider">
-        <state />
+    <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="35" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="javaeeDummy://JavaeeElement:/de5a3bc1/TrackerServlet/tryjetty/web/Web/Servlet">
-      <provider selected="true" editor-type-id="com.intellij.javaee.module.view.web.viewlets.ServletEditorProvider">
-        <state />
+    <entry file="file://$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="60" selection-start="952" selection-end="952" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="74" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="142" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="uml://MAVEN/groupId:tryjetty:1.0-SNAPSHOT">
@@ -1341,14 +1319,14 @@
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/commons-lang:commons-lang:jar:2.5</node>
             <node x="-42.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0</node>
             <node x="-38.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.google.guava:guava:jar:14.0.1</node>
-            <node x="-47.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22</node>
             <node x="-120.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/com.googlecode.concurrentlinkedhashmap:concurrentlinkedhashmap-lru:jar:1.3</node>
+            <node x="-47.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22</node>
             <node x="-74.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.codehaus.jackson:jackson-core-asl:jar:1.9.2</node>
             <node x="-54.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5</node>
             <node x="-86.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.codehaus.jackson:jackson-mapper-asl:jar:1.4.2</node>
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/commons-lang:commons-lang:jar:2.5</node>
-            <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2</node>
             <node x="-73.0" y="-78.0">groupId:tryjetty:1.0-SNAPSHOT</node>
+            <node x="-73.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2</node>
             <node x="-68.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6</node>
             <node x="-31.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/jline:jline:jar:1.0</node>
             <node x="-60.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/com.yammer.metrics:metrics-core:jar:2.2.0</node>
@@ -1383,8 +1361,8 @@
             <node x="-53.5" y="-15.0">javax:javaee-api:jar:6.0</node>
             <node x="-41.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.mindrot:jbcrypt:jar:0.3m</node>
             <node x="-72.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6</node>
-            <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
             <node x="-61.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1</node>
+            <node x="-32.5" y="-15.0">junit:junit:jar:3.8.1</node>
             <node x="-32.0" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1</node>
             <node x="-49.5" y="-15.0">com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1</node>
           </nodes>
@@ -1454,19 +1432,19 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
             <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/org.apache.httpcomponents:httpclient:jar:4.0.1">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
             <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="javax.servlet:jstl:jar:1.2">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="groupId:tryjetty:1.0-SNAPSHOT" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1482,11 +1460,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-codec:commons-codec:jar:1.2">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/commons-lang:commons-lang:jar:2.6">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1582,7 +1560,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1590,7 +1568,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/commons-cli:commons-cli:jar:1.1">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1598,7 +1576,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1606,7 +1584,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-all:jar:1.2.6/org.apache.cassandra.deps:avro:jar:1.4.0-cassandra-1/org.mortbay.jetty:jetty:jar:6.1.22/org.mortbay.jetty:jetty-util:jar:6.1.22">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1614,11 +1592,11 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.thrift:libthrift:jar:0.7.0/javax.servlet:servlet-api:jar:2.5">
+            <edge source="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6" target="com.datastax.cassandra:cassandra-driver-core:jar:1.0.3/org.apache.cassandra:cassandra-thrift:jar:1.2.6/org.apache.thrift:libthrift:jar:0.7.0">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1632,6 +1610,7 @@
             <node>groupId:tryjetty:1.0-SNAPSHOT</node>
           </SelectedNodes>
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
@@ -1652,13 +1631,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="3" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0">
@@ -1669,47 +1641,48 @@
     <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="85" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="142" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+        <state line="19" column="74" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/warmodule/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="535" selection-end="1275" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+        <state line="50" column="0" selection-start="1642" selection-end="1642" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
+    <entry file="file://$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="60" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="29" column="38" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="41" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="74" selection-start="382" selection-end="382" vertical-scroll-proportion="0.4965157">
+        <state line="11" column="45" selection-start="210" selection-end="210" vertical-scroll-proportion="0.20905924">
           <folding />
         </state>
       </provider>
@@ -1776,7 +1749,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>startjetty</last-edited>
+          <last-edited>debugjetty</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

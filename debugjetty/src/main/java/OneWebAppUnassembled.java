@@ -27,7 +27,7 @@ public class OneWebAppUnassembled {
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
     context.setResourceBase(jetty_home + File.separator + WARMODULE_OFFSET_FROM_ROOT);
-    context.setContextPath(OneWebApp.DEPLOYMENT_CONTEXT_PATH);
+    context.setContextPath("/warmodule");
     context.setParentLoaderPriority(true);
 
     server.setHandler(context);
