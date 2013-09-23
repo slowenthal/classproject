@@ -28,9 +28,17 @@ public class User extends CassandraData {
     userid = row.getUUID("user_id");
   }
 
-  public static void addUser(String email, String password, ServletContext context) {
+  public static void addUser(String email, String password, ServletContext context) throws Exception {
+
+    // TODO Should read and write a quorum for this because of the unique requirement
+    // TODO or better should use a transaction
 
     UUID userId = UUID.randomUUID();
+
+    if (getUser(email, context) != null) {
+      throw new UserExistsException();
+    }
+
 
     String queryText = "INSERT INTO playlist.users (email, password, user_id) values ('"
             + email + "','"

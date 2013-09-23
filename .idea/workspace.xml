@@ -7,36 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TitleServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Titles.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deployment/CQL/playlist.cql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/playlist_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/playlist_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/webapp/titles.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugjetty/debugjetty.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/main/java/tracker/model/CassandraData.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/main/webapp/css/packagetracker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/main/webapp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/CassandraDataTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/testhelpers/MockServletContext.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/versioncheck/JavaVersionTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/warmodule/warmodule.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/debugjetty/src/main/java/OneWebAppUnassembled.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/main/java/tracker/controller/TrackerServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/main/java/tracker/model/Tracking.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Artists.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/main/webapp/packagetracker.jsp" afterPath="$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/warmodule/src/test/java/tracker/model/TrackingTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/ArtistTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" afterPath="$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startjetty/startjetty.iml" afterPath="$PROJECT_DIR$/startjetty/startjetty.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/warmodule_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/warmodule_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserExistsException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classProject.iml" afterPath="$PROJECT_DIR$/classProject.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -45,8 +19,8 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690190902" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379915523513" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379905243935" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917467802" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379916742439" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913604949" ignored="false" />
@@ -75,9 +49,10 @@
     <file path="/Titles.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379914023126" ignored="false" />
     <file path="/titles.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913435444" ignored="false" />
     <file path="/TitleServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913506599" ignored="false" />
-    <file path="/Users.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379916353198" ignored="false" />
+    <file path="/Users.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917688394" ignored="false" />
     <file path="/User.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379916328080" ignored="false" />
-    <file path="/UserTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379916222938" ignored="false" />
+    <file path="/UserTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917529413" ignored="false" />
+    <file path="/UserExistsException.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917483470" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +86,34 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/playlist/src/test/java/playlist/versioncheck/JavaVersionTest.java" line="24" class="playlist.versioncheck.JavaVersionTest" package="playlist.versioncheck">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" line="38" class="playlist.model.User" package="playlist.model">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" line="37" class="playlist.model.User" package="playlist.model">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -203,7 +206,34 @@
       <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="18" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.71428573">
+            <state line="48" column="37" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5522648">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserExistsException.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserExistsException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="50" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="artists.csv" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deployment/CQL/CSV/artists.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7629" column="6" selection-start="119763" selection-end="119763" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="8" selection-start="170" selection-end="170" vertical-scroll-proportion="-2.5">
               <folding />
             </state>
           </provider>
@@ -212,7 +242,7 @@
       <file leaf-file-name="UserTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="4" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
+            <state line="51" column="0" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,42 +266,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="28" selection-start="852" selection-end="852" vertical-scroll-proportion="-13.888889">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SongTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="37" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="titles.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/titles.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="584" selection-end="584" vertical-scroll-proportion="-7.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -290,7 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/playlist/src/main/java/tracker/controller/ArtistServlet.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Songs.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Artists.java" />
@@ -304,6 +297,7 @@
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Titles.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Users.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserExistsException.java" />
         <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" />
       </list>
@@ -811,28 +805,6 @@
               <option name="myItemId" value="deployment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CQL" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deployment" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -891,6 +863,9 @@
       <recent name="$PROJECT_DIR$/playlist/src/main/webapp" />
       <recent name="$PROJECT_DIR$/deployment/CQL" />
       <recent name="$PROJECT_DIR$/web" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="playlist.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/debugjetty/src/main/java" />
@@ -1499,10 +1474,14 @@
       <created>1379905247192</created>
       <updated>1379905247192</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="starting to look like a playlist app">
+      <created>1379916746728</created>
+      <updated>1379916746728</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -1514,6 +1493,7 @@
       <are-modules-shown value="false" />
       <flatten-packages value="false" />
       <is-autoscroll-to-source value="true" />
+      <todo-filter name="steve todo" />
     </todo-panel>
     <todo-panel id="default-changelist">
       <are-packages-shown value="false" />
@@ -1592,7 +1572,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="get it working in the debugger properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="starting to look like a playlist app" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1617,6 +1597,7 @@
     <MESSAGE value="set up multi-module pom file" />
     <MESSAGE value="Working standalone jetty with web app (at least on mac)." />
     <MESSAGE value="get it working in the debugger properly" />
+    <MESSAGE value="starting to look like a playlist app" />
   </component>
   <component name="VssConfiguration">
     <option name="CLIENT_PATH" value="" />
@@ -1660,29 +1641,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebAppUnassembled.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="73" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deployment/CQL/CSV/songs.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deployment/CQL/packages.cql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="127" selection-start="323" selection-end="381" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="3" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
@@ -1773,16 +1731,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/deployment/CQL/CSV/artists.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7629" column="6" selection-start="119763" selection-end="119763" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="8" selection-start="170" selection-end="170" vertical-scroll-proportion="-2.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserExistsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="4" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
+        <state line="51" column="0" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="18" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.71428573">
+        <state line="48" column="37" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5522648">
           <folding />
         </state>
       </provider>

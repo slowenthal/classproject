@@ -41,5 +41,27 @@ public class UserTest extends TestCase {
 
   }
 
+  public void testAddSameUserTwice() throws Exception {
+
+    User.addUser("steve","pw1", context);
+    User user = User.getUser("steve", context);
+    assertEquals("pw1",user.getPassword());
+
+    boolean thrown = false;
+    try {
+      User.addUser("steve","pw2", context);
+    } catch (UserExistsException e) {
+      thrown = true;
+    }
+
+    assertTrue("UserExistsException not thrown", thrown);
+
+    user = User.getUser("steve", context);
+    assertEquals("pw1",user.getPassword());
+
+    User.deleteUser("steve", context);
+
+  }
+
 
 }
