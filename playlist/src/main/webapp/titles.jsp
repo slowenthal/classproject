@@ -9,21 +9,13 @@
 <link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<h1>Track a Package</h1>
-<p>Use this form to view the progress of a package:</p>
-<form id="form1" name="form1" method="get" action="">
-  Package id: 
-    <input type="text" name="q" id="q" />
-  <input type="submit" name="button" id="button" value="Search" />
-</form>
-<p>&nbsp;</p>
+<h1>Songs By ${artist}</h1>
+
 <b>Results</b>
 <table>
-    <c:forEach var="waypoint" items="${trackings}">
+    <c:forEach var="title" items="${titles}">
         <tr>
-            <td>${waypoint.status_timestamp}</td>
-            <td>${waypoint.location}</td>
-            <td>${waypoint.notes}</td>
+            <td>${title.title}</td>
         </tr>
     </c:forEach>
 </table>

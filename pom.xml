@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>warmodule</module>
+        <module>playlist</module>
         <module>startjetty</module>
     </modules>
 

@@ -1,4 +1,4 @@
-package tracker.model;
+package playlist.model;
 
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
@@ -16,34 +16,27 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Tracking extends CassandraData {
+public class Artists extends CassandraData {
 
   private String package_id;
   private Date status_timestamp;
   private String location;
   private String notes;
 
-  Tracking(Row row) {
-      package_id = row.getString("package_id");
-      location = row.getString("location");
-      notes = row.getString("notes");
-      status_timestamp = row.getDate("status_timestamp");
-  }
-
   // Static finder method
 
-  public static List<Tracking> findTrackingById(String packageId, ServletContext context) {
+  public static List<String> listArtistByLetter(String first_letter, ServletContext context) {
 
-    String queryText = "SELECT * FROM tracker.trackpoints WHERE package_id = '" + packageId + "'";
+    String queryText = "SELECT * FROM playlist.artists_by_first_letter WHERE first_letter = '" + first_letter + "'";
     ResultSet results = getSession(context).execute(queryText);
 
-    List<Tracking> trackings = new ArrayList<Tracking>();
+    List<String> artists = new ArrayList<String>();
 
     for (Row row : results) {
-       trackings.add(new Tracking(row));
+       artists.add(row.getString("artist"));     // Lets use column 0 since there is only one column
     }
 
-    return trackings;
+    return artists;
   }
 
 

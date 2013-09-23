@@ -12,8 +12,8 @@ import java.io.File;
  */
 public class OneWebApp {
 
-  public static final String WAR_FILE_LOCATION = "warmodule/target/warmodule-1.0-SNAPSHOT.war".replace('/', File.separatorChar);
-  public static final String DEPLOYMENT_CONTEXT_PATH = "/warmodule";
+  public static final String WAR_FILE_LOCATION = "playlist/target/playlist-1.0-SNAPSHOT.war".replace('/', File.separatorChar);
+  public static final String DEPLOYMENT_CONTEXT_PATH = "/playlist";
 
   public static void main(String[] args) throws Exception
   {

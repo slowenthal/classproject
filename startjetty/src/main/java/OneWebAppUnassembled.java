@@ -15,7 +15,7 @@ import java.io.File;
  */
 public class OneWebAppUnassembled {
 
-  public static final String WARMODULE_OFFSET_FROM_ROOT = "warmodule/src/main/webapp".replace('/', File.separatorChar);
+  public static final String WARMODULE_OFFSET_FROM_ROOT = "playlist/src/main/webapp".replace('/', File.separatorChar);
 
   public static void main(String[] args) throws Exception
   {
@@ -27,7 +27,7 @@ public class OneWebAppUnassembled {
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
     context.setResourceBase(jetty_home + File.separator + WARMODULE_OFFSET_FROM_ROOT);
-    context.setContextPath("/warmodule");
+    context.setContextPath("/playlist");
     context.setParentLoaderPriority(true);
 
     server.setHandler(context);

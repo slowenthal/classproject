@@ -1,6 +1,6 @@
-package tracker.controller;
+package playlist.controller;
 
-import tracker.model.Tracking;
+import playlist.model.Titles;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +16,7 @@ import java.util.List;
  * Time: 5:22 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TrackerServlet extends HttpServlet {
+public class TitleServlet extends HttpServlet {
 
  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -24,12 +24,13 @@ public class TrackerServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    String q = request.getParameter("q");
+    String artist = request.getParameter("artist");
 
-    List<Tracking> trackings = Tracking.findTrackingById(q,getServletContext());
+    List<Titles> titles = Titles.listSongsByArtist(artist, getServletContext());
 
-    request.setAttribute("trackings", trackings);
-    getServletContext().getRequestDispatcher("/packagetracker.jsp").forward(request,response);
+    request.setAttribute("artist", artist);
+    request.setAttribute("titles", titles);
+    getServletContext().getRequestDispatcher("/titles.jsp").forward(request,response);
 
   }
 }
