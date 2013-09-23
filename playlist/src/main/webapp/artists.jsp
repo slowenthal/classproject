@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Track a Package</title>
 <link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
 <h1>Artists</h1>

@@ -1,4 +1,4 @@
-package playlist.model;
+package playlist.exceptions;
 
 /**
  * Created with IntelliJ IDEA.

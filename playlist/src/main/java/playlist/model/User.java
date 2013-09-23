@@ -1,11 +1,9 @@
 package playlist.model;
 
-import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
+import playlist.exceptions.UserExistsException;
 
 import javax.servlet.ServletContext;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 /**

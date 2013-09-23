@@ -1,10 +1,10 @@
 package playlist.model;
 
 import junit.framework.TestCase;
+import playlist.exceptions.UserExistsException;
 import playlist.testhelpers.MockServletContext;
 
 import javax.servlet.ServletContext;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
