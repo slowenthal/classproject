@@ -15,6 +15,8 @@
 <body>
 <B>Playlist</B>
 <br/>
+<a href="login">Login</a>
+<br/>
 <a href="artists">Visit the Song Database</a>
 </body>
 </html>

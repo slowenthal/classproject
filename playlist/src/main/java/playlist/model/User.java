@@ -2,6 +2,7 @@ package playlist.model;
 
 import com.datastax.driver.core.Row;
 import playlist.exceptions.UserExistsException;
+import playlist.exceptions.UserLoginException;
 
 import javax.servlet.ServletContext;
 import java.util.UUID;
@@ -26,7 +27,7 @@ public class User extends CassandraData {
     userid = row.getUUID("user_id");
   }
 
-  public static void addUser(String email, String password, ServletContext context) throws Exception {
+  public static void addUser(String email, String password, ServletContext context) throws UserExistsException {
 
     // TODO Should read and write a quorum for this because of the unique requirement
     // TODO or better should use a transaction
@@ -67,6 +68,17 @@ public class User extends CassandraData {
     }
 
     return new User(userRow);
+
+  }
+
+  public static User validateLogin (String email, String password, ServletContext context) throws UserLoginException {
+
+    User user = getUser(email, context);
+    if (user == null || !user.password.contentEquals(password)) {
+         throw new UserLoginException();
+    }
+
+    return user;
 
   }
 

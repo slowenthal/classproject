@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Track a Package</title>
+<link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>Playlist Login</h1>
+${error}
+<form id="form1" name="form1" method="get" action="">
+    E-mail Address:
+    <input type="text" name="email" id="email" />
+    <br/>
+    Password:
+    <input type="password" name="password" id="password" />
+    <br/>
+    <input type="submit" name="button" id="login" value="Login" />
+    <input type="submit" name="button" id="register" value="I Don't Have an Account" />
+</form>
+</body>
+</html>

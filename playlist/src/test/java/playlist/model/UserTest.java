@@ -2,6 +2,7 @@ package playlist.model;
 
 import junit.framework.TestCase;
 import playlist.exceptions.UserExistsException;
+import playlist.exceptions.UserLoginException;
 import playlist.testhelpers.MockServletContext;
 
 import javax.servlet.ServletContext;
@@ -62,6 +63,62 @@ public class UserTest extends TestCase {
     User.deleteUser("steve", context);
 
   }
+
+  public void testValidateLogin() throws Exception {
+
+    User.addUser("steve","pw1", context);
+    User user = User.getUser("steve", context);
+    assertEquals("pw1",user.getPassword());
+
+    User loginUser = User.validateLogin("steve","pw1", context);
+    assertNotNull(loginUser);
+    assertEquals(user.getUserid(), loginUser.getUserid());
+
+    User.deleteUser("steve", context);
+
+  }
+
+  public void testValidateBadPassword() throws Exception {
+
+    User.addUser("steve","pw1", context);
+    User user = User.getUser("steve", context);
+    assertEquals("pw1",user.getPassword());
+
+    User loginUser = null;
+    boolean thrown = false;
+    try {
+      loginUser = User.validateLogin("steve", "badpassword", context);
+    } catch (UserLoginException e) {
+          thrown = true;
+     }
+
+    assertTrue("exception not thrown for bad login", thrown);
+
+    User.deleteUser("steve", context);
+
+  }
+
+  public void testValidateBadEmail() throws Exception {
+
+    User.addUser("steve","pw1", context);
+    User user = User.getUser("steve", context);
+    assertEquals("pw1",user.getPassword());
+
+    User loginUser = null;
+    boolean thrown = false;
+    try {
+      loginUser = User.validateLogin("baduser", "pw1", context);
+    } catch (UserLoginException e) {
+      thrown = true;
+    }
+
+    assertTrue("exception not thrown for bad login", thrown);
+
+    User.deleteUser("steve", context);
+
+  }
+
+
 
 
 }
