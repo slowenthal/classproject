@@ -5,6 +5,8 @@ import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
 import javax.servlet.ServletContext;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 /**
@@ -20,11 +22,15 @@ public class UserDAO extends CassandraData {
   private String email;
   private String password;
   private UUID userid;
+  private List<String> playlists;
+  private Map<String,String> playlists_genre;
 
   UserDAO(Row row) {
     email = row.getString("email");
     password = row.getString("password");
     userid = row.getUUID("user_id");
+    playlists = row.getList("playlists",String.class);
+    playlists_genre = row.getMap("playlists_genre",String.class,String.class);
   }
 
   UserDAO(String email, String password, UUID userid) {
@@ -102,5 +108,14 @@ public class UserDAO extends CassandraData {
   public UUID getUserid() {
     return userid;
   }
+
+  public List<String> getPlaylists() {
+    return playlists;
+  }
+
+  public Map<String, String> getPlaylists_genre() {
+    return playlists_genre;
+  }
+
 
 }

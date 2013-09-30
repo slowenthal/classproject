@@ -51,41 +51,12 @@ public class UsersPlaylistsDAO extends CassandraData {
   }
 
 
-
-  public static List<String> getPlayListNames(String email, ServletContext context) {
-
-    PreparedStatement ps = getSession(context).prepare("SELECT playlists from playlist.users where email = ?");
-    BoundStatement bs = ps.bind(email);
-    ResultSet rs = getSession(context).execute(bs);
-
-    return rs.one().getList(0,java.lang.String.class);
-
-  }
-
-
-  public static List<UsersPlaylistsDAO> getPlayListWithGenre(String email, ServletContext context) {
-
-
-    // Build a statement to retrieve the playlists_genre out of the user table
-
-    PreparedStatement ps = getSession(context).prepare("SELECT playlists_genre from playlist.users where email = ?");
-    BoundStatement bs = ps.bind(email);
-
-    // Build up our special List of Playlists out of the Map, sorted by Genre
-
-
-    // Execute the query
-    Row resultRow = getSession(context).execute(bs).one();
-
-    // Get the Playlist-Genre map from the result row.  Notice that we need to specify both the type of the key
-    // and the type of the value to the getMap function
-
-    Map<String,String> pg = resultRow.getMap(0, java.lang.String.class, java.lang.String.class);
+  public static List<UsersPlaylistsDAO> getPlayListWithGenre(Map<String, String> playlists_genre) {
 
     // Build a list of the playlists sorted by Genre
     List<UsersPlaylistsDAO> playlists_genres = new ArrayList<UsersPlaylistsDAO>();
-    for (String key : pg.keySet()) {
-      playlists_genres.add(new UsersPlaylistsDAO(key, pg.get(key)));
+    for (String key : playlists_genre.keySet()) {
+      playlists_genres.add(new UsersPlaylistsDAO(key, playlists_genre.get(key)));
     }
 
     // Sort the Playlists By Genre
@@ -94,7 +65,6 @@ public class UsersPlaylistsDAO extends CassandraData {
     return  playlists_genres;
 
   }
-
 
 
   // Helper function to sort the List of Playlists by Genre
@@ -110,6 +80,8 @@ public class UsersPlaylistsDAO extends CassandraData {
     });
   }
 
+  // Getters and Setters
+
   public String getPlaylist_name() {
     return playlist_name;
   }
@@ -117,4 +89,5 @@ public class UsersPlaylistsDAO extends CassandraData {
   public String getGenre() {
     return genre;
   }
+
 }

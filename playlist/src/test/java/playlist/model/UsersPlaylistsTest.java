@@ -35,7 +35,7 @@ public class UsersPlaylistsTest extends TestCase {
 
   public void testGetPlayListNames() throws Exception {
 
-    List<String> playlists = UsersPlaylistsDAO.getPlayListNames("testuser", context);
+    List<String> playlists = UserDAO.getUser("testuser", context).getPlaylists();
 
     assertEquals(2,playlists.size());
     assertEquals("Energy Mix", playlists.get(0));
@@ -44,7 +44,9 @@ public class UsersPlaylistsTest extends TestCase {
   }
 
   public void testGetPlayListWithGenre() throws Exception {
-    List<UsersPlaylistsDAO> playlists = UsersPlaylistsDAO.getPlayListWithGenre("testuser", context);
+
+    UserDAO user = UserDAO.getUser("testuser", context);
+    List<UsersPlaylistsDAO> playlists = UsersPlaylistsDAO.getPlayListWithGenre(user.getPlaylists_genre());
 
     assertEquals(2,playlists.size());
     assertEquals("Snooze Music", playlists.get(0).getPlaylist_name());

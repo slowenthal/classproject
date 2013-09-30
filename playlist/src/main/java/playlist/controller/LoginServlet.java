@@ -54,6 +54,10 @@ public class LoginServlet extends HttpServlet {
 
     try {
       UserDAO user = UserDAO.validateLogin(email, password, getServletContext());
+      HttpSession httpSession = request.getSession(true);
+      httpSession.setAttribute("user_id", user.getUserid());
+      httpSession.setAttribute("email", user.getEmail());
+
     } catch (UserLoginException e) {
 
       // Go back to the user screen with an error
