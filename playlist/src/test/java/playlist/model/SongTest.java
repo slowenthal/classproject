@@ -19,14 +19,14 @@ public class SongTest extends TestCase {
 
   public void testFindArtistsStartingWithA() throws Exception {
 
-    List<Titles> songs = Titles.listSongsByArtist("Elton John", context);
+    List<TracksDAO> songs = TracksDAO.listSongsByArtist("Elton John", context);
 
-    assertEquals(21, songs.size());
+    assertEquals(50, songs.size());
 
-    // Check the first title
-    Titles firstTitle = songs.get(0);
+    // Check the first track
+    TracksDAO firstTrack = songs.get(0);
 
-    assertEquals("Bennie And The Jets", firstTitle.getTitle());
+    assertEquals("Amoreena", firstTrack.getTrack());
 
   }
 

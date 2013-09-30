@@ -16,7 +16,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Artists extends CassandraData {
+public class ArtistsDAO extends CassandraData {
 
   private String package_id;
   private Date status_timestamp;

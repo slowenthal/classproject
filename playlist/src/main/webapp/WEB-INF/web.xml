@@ -17,13 +17,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>TitleServlet</servlet-name>
-        <servlet-class>playlist.controller.TitleServlet</servlet-class>
+        <servlet-name>TrackServlet</servlet-name>
+        <servlet-class>playlist.controller.TrackServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>TitleServlet</servlet-name>
-        <url-pattern>/titles</url-pattern>
+        <servlet-name>TrackServlet</servlet-name>
+        <url-pattern>/tracks</url-pattern>
     </servlet-mapping>
 
     <servlet>

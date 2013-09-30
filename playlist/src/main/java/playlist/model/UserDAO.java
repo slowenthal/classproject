@@ -15,19 +15,25 @@ import java.util.UUID;
  * To change this template use File | Settings | File Templates.
  */
 
-public class User extends CassandraData {
+public class UserDAO extends CassandraData {
 
   private String email;
   private String password;
   private UUID userid;
 
-  User (Row row) {
+  UserDAO(Row row) {
     email = row.getString("email");
     password = row.getString("password");
     userid = row.getUUID("user_id");
   }
 
-  public static void addUser(String email, String password, ServletContext context) throws UserExistsException {
+  UserDAO(String email, String password, UUID userid) {
+    this.userid = userid;
+    this.password = password;
+    this.email = email;
+  }
+
+  public static UserDAO addUser(String email, String password, ServletContext context) throws UserExistsException {
 
     // TODO Should read and write a quorum for this because of the unique requirement
     // TODO or better should use a transaction
@@ -44,7 +50,10 @@ public class User extends CassandraData {
             + password + "',"
             + userId + ")";
 
-   getSession(context).execute(queryText);
+    getSession(context).execute(queryText);
+
+    // Return the new user so the caller can get the userid
+    return new UserDAO(email, password, userId);
 
   }
 
@@ -56,7 +65,7 @@ public class User extends CassandraData {
 
   }
 
-  public static User getUser(String email, ServletContext context) {
+  public static UserDAO getUser(String email, ServletContext context) {
 
     String queryText = "SELECT * FROM playlist.users where email = '"
             + email + "'";
@@ -67,15 +76,15 @@ public class User extends CassandraData {
       return null;
     }
 
-    return new User(userRow);
+    return new UserDAO(userRow);
 
   }
 
-  public static User validateLogin (String email, String password, ServletContext context) throws UserLoginException {
+  public static UserDAO validateLogin (String email, String password, ServletContext context) throws UserLoginException {
 
-    User user = getUser(email, context);
+    UserDAO user = getUser(email, context);
     if (user == null || !user.password.contentEquals(password)) {
-         throw new UserLoginException();
+      throw new UserLoginException();
     }
 
     return user;

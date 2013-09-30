@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Track a Package</title>
+<title>Playlist</title>
 <link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 </head>
@@ -43,7 +43,7 @@
 <table>
     <c:forEach var="artist" items="${artists}">
         <tr>
-            <td><a href="titles?artist=${artist}">${artist}</a></td>
+            <td><a href="tracks?artist=${artist}">${artist}</a></td>
         </tr>
     </c:forEach>
 </table>

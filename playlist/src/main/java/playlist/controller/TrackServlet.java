@@ -1,6 +1,6 @@
 package playlist.controller;
 
-import playlist.model.Titles;
+import playlist.model.TracksDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +16,7 @@ import java.util.List;
  * Time: 5:22 PM
  * To change this template use File | Settings | File Templates.
  */
-public class TitleServlet extends HttpServlet {
+public class TrackServlet extends HttpServlet {
 
  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -26,11 +26,12 @@ public class TitleServlet extends HttpServlet {
 
     String artist = request.getParameter("artist");
 
-    List<Titles> titles = Titles.listSongsByArtist(artist, getServletContext());
+    List<TracksDAO> tracks = TracksDAO.listSongsByArtist(artist, getServletContext());
 
     request.setAttribute("artist", artist);
-    request.setAttribute("titles", titles);
-    getServletContext().getRequestDispatcher("/titles.jsp").forward(request,response);
+    request.setAttribute("tracks", tracks);
+    getServletContext().getRequestDispatcher("/tracks.jsp").forward(request,response);
 
   }
+
 }

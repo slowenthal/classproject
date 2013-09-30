@@ -19,20 +19,20 @@ public class ArtistTest extends TestCase {
 
   public void testFindArtistsStartingWithA() throws Exception {
 
-    List<String> artists = Artists.listArtistByLetter("A", context);
+    List<String> artists = ArtistsDAO.listArtistByLetter("A", context);
 
-    assertEquals(175, artists.size());
+    assertEquals(885, artists.size());
 
     // Check the first artist
     String firstArtist = artists.get(0);
 
-    assertEquals("A Day To Remember", firstArtist);
+    assertEquals("A Bay Bay", firstArtist);
 
   }
 
   public void testFindArtistsStartingWithInvalidLetter() throws Exception {
 
-    List<String> artists = Artists.listArtistByLetter("=", context);
+    List<String> artists = ArtistsDAO.listArtistByLetter("=", context);
 
     assertEquals(0, artists.size());
 

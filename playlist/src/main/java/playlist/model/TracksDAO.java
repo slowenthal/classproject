@@ -15,46 +15,46 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 
-public class Titles extends CassandraData {
+public class TracksDAO extends CassandraData {
 
-  private int title_id;
+  private int track_id;
   private String artist;
-  private String title;
+  private String track;
 
-  Titles(Row row) {
-      title_id = row.getInt("title_id");
+  TracksDAO(Row row) {
+      track_id = row.getInt("track_id");
       artist = row.getString("artist");
-      title = row.getString("title");
+      track = row.getString("track");
   }
 
   // Static finder method
 
-  public static List<Titles> listSongsByArtist(String artist, ServletContext context) {
+  public static List<TracksDAO> listSongsByArtist(String artist, ServletContext context) {
 
-    String queryText = "SELECT * FROM playlist.title_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
+    String queryText = "SELECT * FROM playlist.track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
     ResultSet results = getSession(context).execute(queryText);
 
-    List<Titles> titles = new ArrayList<Titles>();
+    List<TracksDAO> tracks = new ArrayList<TracksDAO>();
 
     for (Row row : results) {
-       titles.add(new Titles(row));
+       tracks.add(new TracksDAO(row));
     }
 
-    return titles;
+    return tracks;
   }
 
 
   // Accessors
 
-  public int getTitle_id() {
-    return title_id;
+  public int getTrack_id() {
+    return track_id;
   }
 
   public String getArtist() {
     return artist;
   }
 
-  public String getTitle() {
-    return title;
+  public String getTrack() {
+    return track;
   }
 }

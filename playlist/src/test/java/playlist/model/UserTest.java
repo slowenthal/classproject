@@ -20,12 +20,12 @@ public class UserTest extends TestCase {
 
   public void testInsertUser() throws Exception {
 
-    User.addUser("steve","iforgot", context);
+    UserDAO.addUser("steve", "iforgot", context);
 
   }
   public void testGetUser() throws Exception {
 
-    User user = User.getUser("steve", context);
+    UserDAO user = UserDAO.getUser("steve", context);
 
     assertEquals("steve",user.getEmail());
     assertEquals("iforgot",user.getPassword());
@@ -34,9 +34,9 @@ public class UserTest extends TestCase {
   }
 
   public void testDeleteUser() throws Exception {
-    User.deleteUser("steve", context);
+    UserDAO.deleteUser("steve", context);
 
-    User user = User.getUser("steve", context);
+    UserDAO user = UserDAO.getUser("steve", context);
 
     assertNull("user should be null", user);
 
@@ -44,77 +44,77 @@ public class UserTest extends TestCase {
 
   public void testAddSameUserTwice() throws Exception {
 
-    User.addUser("steve","pw1", context);
-    User user = User.getUser("steve", context);
+    UserDAO.addUser("steve", "pw1", context);
+    UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
     boolean thrown = false;
     try {
-      User.addUser("steve","pw2", context);
+      UserDAO.addUser("steve", "pw2", context);
     } catch (UserExistsException e) {
       thrown = true;
     }
 
     assertTrue("UserExistsException not thrown", thrown);
 
-    user = User.getUser("steve", context);
+    user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    User.deleteUser("steve", context);
+    UserDAO.deleteUser("steve", context);
 
   }
 
   public void testValidateLogin() throws Exception {
 
-    User.addUser("steve","pw1", context);
-    User user = User.getUser("steve", context);
+    UserDAO.addUser("steve", "pw1", context);
+    UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    User loginUser = User.validateLogin("steve","pw1", context);
+    UserDAO loginUser = UserDAO.validateLogin("steve", "pw1", context);
     assertNotNull(loginUser);
     assertEquals(user.getUserid(), loginUser.getUserid());
 
-    User.deleteUser("steve", context);
+    UserDAO.deleteUser("steve", context);
 
   }
 
   public void testValidateBadPassword() throws Exception {
 
-    User.addUser("steve","pw1", context);
-    User user = User.getUser("steve", context);
+    UserDAO.addUser("steve", "pw1", context);
+    UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    User loginUser = null;
+    UserDAO loginUser = null;
     boolean thrown = false;
     try {
-      loginUser = User.validateLogin("steve", "badpassword", context);
+      loginUser = UserDAO.validateLogin("steve", "badpassword", context);
     } catch (UserLoginException e) {
           thrown = true;
      }
 
     assertTrue("exception not thrown for bad login", thrown);
 
-    User.deleteUser("steve", context);
+    UserDAO.deleteUser("steve", context);
 
   }
 
   public void testValidateBadEmail() throws Exception {
 
-    User.addUser("steve","pw1", context);
-    User user = User.getUser("steve", context);
+    UserDAO.addUser("steve", "pw1", context);
+    UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    User loginUser = null;
+    UserDAO loginUser = null;
     boolean thrown = false;
     try {
-      loginUser = User.validateLogin("baduser", "pw1", context);
+      loginUser = UserDAO.validateLogin("baduser", "pw1", context);
     } catch (UserLoginException e) {
       thrown = true;
     }
 
     assertTrue("exception not thrown for bad login", thrown);
 
-    User.deleteUser("steve", context);
+    UserDAO.deleteUser("steve", context);
 
   }
 

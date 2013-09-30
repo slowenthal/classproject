@@ -1,6 +1,6 @@
 package playlist.controller;
 
-import playlist.model.Artists;
+import playlist.model.ArtistsDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +26,7 @@ public class ArtistServlet extends HttpServlet {
 
     String q = request.getParameter("q");
 
-    List<String> artists = Artists.listArtistByLetter(q, getServletContext());
+    List<String> artists = ArtistsDAO.listArtistByLetter(q, getServletContext());
 
     request.setAttribute("artists", artists);
     getServletContext().getRequestDispatcher("/artists.jsp").forward(request,response);

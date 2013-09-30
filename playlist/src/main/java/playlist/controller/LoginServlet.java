@@ -2,15 +2,14 @@ package playlist.controller;
 
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
-import playlist.model.Titles;
-import playlist.model.User;
+import playlist.model.UserDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -54,7 +53,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     try {
-      User user = User.validateLogin(email,password,getServletContext());
+      UserDAO user = UserDAO.validateLogin(email, password, getServletContext());
     } catch (UserLoginException e) {
 
       // Go back to the user screen with an error
@@ -79,8 +78,20 @@ public class LoginServlet extends HttpServlet {
 
     }
 
+    HttpSession httpSession = request.getSession(true);
+
+    // Add the user.  If it's successful, create a login session for it
     try {
-      User.addUser(email,password,getServletContext());
+
+      UserDAO newUser = UserDAO.addUser(email, password, getServletContext());
+
+
+      // Create the user's login session so this application recognizes the user as having logged in
+      // store the new userid in the session
+      // store the login email in the session
+      httpSession.setAttribute("user_id", newUser.getUserid());
+      httpSession.setAttribute("email", newUser.getEmail());
+
     } catch (UserExistsException e) {
 
       // Go back to the user screen with an error
