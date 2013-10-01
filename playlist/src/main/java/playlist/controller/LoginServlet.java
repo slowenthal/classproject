@@ -34,8 +34,12 @@ public class LoginServlet extends HttpServlet {
     if (button.contentEquals("Login")) {
       doLogin(request, response);
     } else if (button.contentEquals("I Don't Have an Account")) {
-      doCreateUser(request,response);
-    } else {
+      doCreateUser(request, response);
+    } else if (button.contentEquals("Logout")) {
+      doLogout(request, response);
+    }
+    else
+    {
       getServletContext().getRequestDispatcher("/login.jsp").forward(request,response);
     }
 
@@ -55,8 +59,7 @@ public class LoginServlet extends HttpServlet {
     try {
       UserDAO user = UserDAO.validateLogin(email, password, getServletContext());
       HttpSession httpSession = request.getSession(true);
-      httpSession.setAttribute("user_id", user.getUserid());
-      httpSession.setAttribute("email", user.getEmail());
+      httpSession.setAttribute("user", user);
 
     } catch (UserLoginException e) {
 
@@ -67,7 +70,7 @@ public class LoginServlet extends HttpServlet {
 
     }
 
-    getServletContext().getRequestDispatcher("/artists").forward(request, response);
+    getServletContext().getRequestDispatcher("/playlists").forward(request, response);
 
   }
 
@@ -91,10 +94,7 @@ public class LoginServlet extends HttpServlet {
 
 
       // Create the user's login session so this application recognizes the user as having logged in
-      // store the new userid in the session
-      // store the login email in the session
-      httpSession.setAttribute("user_id", newUser.getUserid());
-      httpSession.setAttribute("email", newUser.getEmail());
+      httpSession.setAttribute("user", newUser);
 
     } catch (UserExistsException e) {
 
@@ -105,7 +105,17 @@ public class LoginServlet extends HttpServlet {
 
     }
 
-    getServletContext().getRequestDispatcher("/artists").forward(request, response);
+    getServletContext().getRequestDispatcher("/playlists").forward(request, response);
+
+  }
+
+  private void doLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    HttpSession session = request.getSession();
+    if (session != null) {
+      session.setAttribute("user", null);
+    }
+
+    getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
 
   }
 

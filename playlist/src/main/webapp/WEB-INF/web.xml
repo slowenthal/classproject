@@ -21,9 +21,24 @@
         <servlet-class>playlist.controller.TrackServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>PlaylistsServlet</servlet-name>
+        <servlet-class>playlist.controller.PlaylistsServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PlaylistTracksServlet</servlet-name>
+        <servlet-class>playlist.controller.PlaylistTracksServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>TrackServlet</servlet-name>
         <url-pattern>/tracks</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PlaylistTracksServlet</servlet-name>
+        <url-pattern>/playlist_tracks</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -34,6 +49,11 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PlaylistsServlet</servlet-name>
+        <url-pattern>/playlists</url-pattern>
     </servlet-mapping>
 
 
