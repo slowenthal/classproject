@@ -1,5 +1,6 @@
 package playlist.controller;
 
+import playlist.model.PlaylistDAO;
 import playlist.model.TracksDAO;
 import playlist.model.UserDAO;
 
@@ -34,14 +35,28 @@ public class PlaylistsServlet extends HttpServlet {
 
       request.setAttribute("error", "Not Logged In");
       getServletContext().getRequestDispatcher("/login").forward(request,response);
-
-    } else {
-
-      UserDAO userFromDB = UserDAO.getUser(user.getEmail(), getServletContext());
-      request.setAttribute("email", userFromDB.getEmail());
-      request.setAttribute("playlist_names", userFromDB.getPlaylist_names());
-      getServletContext().getRequestDispatcher("/playlists.jsp").forward(request,response);
+      return;
 
     }
+
+    UserDAO userFromDB = UserDAO.getUser(user.getEmail(), getServletContext());
+
+    String button = request.getParameter("button");
+    if (button != null && button.contentEquals("Add")) {
+      String new_playlist_name = request.getParameter("new_playlist_name");
+      if (new_playlist_name != null) {
+        doAddPlaylist(userFromDB, new_playlist_name);
+      }
+
+    }
+
+    request.setAttribute("email", userFromDB.getEmail());
+    request.setAttribute("playlist_names", userFromDB.getPlaylist_names());
+    getServletContext().getRequestDispatcher("/playlists.jsp").forward(request,response);
+
+  }
+
+  private void doAddPlaylist(UserDAO user, String playlistName) {
+    PlaylistDAO.createPlayList(user, playlistName, getServletContext());
   }
 }

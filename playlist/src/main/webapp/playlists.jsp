@@ -6,11 +6,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Playlist</title>
-<link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
+<link href="css/playlist.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <a href="login?button=Logout">Logout</a> <br/>
 <h1>Playlists for ${email}</h1>
+
+<form id="form1" name="form1" method="get" action="">
+Playlist Name:    <input type="text" name="new_playlist_name" id="new_playlist_name" />
+    <input type="submit" name="button" id="add" value="Add" />
+    <br/>
+</form>
 
 <b>Results</b>
 <table>

@@ -47,7 +47,6 @@ public class UserDAO extends CassandraData {
       throw new UserExistsException();
     }
 
-
     String queryText = "INSERT INTO users (email, password, user_id) values ('"
             + email + "','"
             + password + "',"

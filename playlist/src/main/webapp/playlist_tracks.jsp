@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Playlist</title>
-<link href="css/packagetracker.css" rel="stylesheet" type="text/css" />
+<link href="css/playlist.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <a href="login?button=Logout">Logout</a> <br/>

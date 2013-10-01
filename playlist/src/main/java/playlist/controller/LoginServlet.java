@@ -30,7 +30,6 @@ public class LoginServlet extends HttpServlet {
     String button = request.getParameter("button");
     button = button == null ? "" : button;
 
-
     if (button.contentEquals("Login")) {
       doLogin(request, response);
     } else if (button.contentEquals("I Don't Have an Account")) {
@@ -41,8 +40,8 @@ public class LoginServlet extends HttpServlet {
     else
     {
       getServletContext().getRequestDispatcher("/login.jsp").forward(request,response);
+      return;
     }
-
   }
 
 
@@ -53,6 +52,7 @@ public class LoginServlet extends HttpServlet {
     if (email.isEmpty()) {
       request.setAttribute("error", "Email Can Not Be Blank");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+      return;
 
     }
 
@@ -67,7 +67,7 @@ public class LoginServlet extends HttpServlet {
 
       request.setAttribute("error", "Email or Password is Invalid");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
-
+      return;
     }
 
     getServletContext().getRequestDispatcher("/playlists").forward(request, response);
@@ -82,7 +82,7 @@ public class LoginServlet extends HttpServlet {
     if (email.isEmpty()) {
       request.setAttribute("error", "Email Can Not Be Blank");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
-
+      return;
     }
 
     HttpSession httpSession = request.getSession(true);
@@ -102,6 +102,7 @@ public class LoginServlet extends HttpServlet {
 
       request.setAttribute("error", "User Already Exists");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+      return;
 
     }
 
