@@ -31,15 +31,15 @@ public class UserTest extends TestCase {
     assertEquals("iforgot",user.getPassword());
     assertNotNull("UUID is null", user.getUserid());
 
-    UserDAO.deleteUser("steve", context);
+    user.deleteUser(context);
 
   }
 
   public void testDeleteUser() throws Exception {
 
-    UserDAO.addUser("steve", "iforgot", context);
+    UserDAO newUser = UserDAO.addUser("steve", "iforgot", context);
 
-    UserDAO.deleteUser("steve", context);
+    newUser.deleteUser(context);
 
     UserDAO user = UserDAO.getUser("steve", context);
 
@@ -65,7 +65,7 @@ public class UserTest extends TestCase {
     user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    UserDAO.deleteUser("steve", context);
+    user.deleteUser(context);
 
   }
 
@@ -79,13 +79,13 @@ public class UserTest extends TestCase {
     assertNotNull(loginUser);
     assertEquals(user.getUserid(), loginUser.getUserid());
 
-    UserDAO.deleteUser("steve", context);
+    user.deleteUser(context);
 
   }
 
   public void testValidateBadPassword() throws Exception {
 
-    UserDAO.addUser("steve", "pw1", context);
+    UserDAO newUser = UserDAO.addUser("steve", "pw1", context);
     UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
@@ -98,13 +98,13 @@ public class UserTest extends TestCase {
 
     assertTrue("exception not thrown for bad login", thrown);
 
-    UserDAO.deleteUser("steve", context);
+    newUser.deleteUser(context);
 
   }
 
   public void testValidateBadEmail() throws Exception {
 
-    UserDAO.addUser("steve", "pw1", context);
+    UserDAO newUser = UserDAO.addUser("steve", "pw1", context);
     UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
@@ -117,7 +117,7 @@ public class UserTest extends TestCase {
 
     assertTrue("exception not thrown for bad login", thrown);
 
-    UserDAO.deleteUser("steve", context);
+    newUser.deleteUser(context);
 
   }
 
