@@ -10,7 +10,7 @@ copy artists_by_first_letter (first_letter, artist) from 'CSV/artists.csv'  WITH
 /* Teach Lists - Add This */
 alter table users add playlist_names set<text>  ;
 
-create table playlist_tracks (user_id UUID, playlist_name text, track_order timeuuid, genre text, track text, tracklength int, musicfile text, primary key ((user_id, playlist_name), track_order ));
+create table playlist_tracks (user_id UUID, playlist_name text, sequence_no int, artist text, track_name text, track_length_in_seconds int, musicfile text, primary key ((user_id, playlist_name), sequence_no ));
 
 
 

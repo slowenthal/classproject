@@ -91,7 +91,6 @@ public class UserDAO extends CassandraData {
     }
 
     return user;
-
   }
 
   public String getEmail() {

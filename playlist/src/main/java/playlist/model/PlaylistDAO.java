@@ -38,42 +38,26 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  PlaylistDAO(UserDAO user, ResultSet resultSet) {
-
-    // Call the simple constructor with the playlist's user_id and playlist_name to create an empty playlist
-    this(user,
-         resultSet.one().getString("playlist_name"));
-
-    // Add the tracks to the playlist object
-    for (Row row : resultSet)  {
-      trackList.add(new Track(row));
-
-      // Pre-aggregate the playlist length in seconds;
-      playlist_length_in_seconds += row.getInt("track_length_in_seconds");
-    }
-
-  }
-
   public static class Track {
 
     private String track_name;
     private String artist;
     private int track_length_in_seconds;
-    private Integer ordinal;
+    private Integer sequence_no;
 
     public Track(String track_name, String artist, int track_length_in_seconds) {
       this.track_name = track_name;
       this.artist = artist;
       this.track_length_in_seconds = track_length_in_seconds;
 
-      this.ordinal = null;  // A new track created this way has no order - it gets this when we persist it. There is no getter or setter.
+      this.sequence_no = null;  // A new track created this way has no order - it gets this when we persist it. There is no getter or setter.
     }
 
     public Track (Row row) {
       this.track_name = row.getString("track_name");
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
-      this.ordinal = row.getInt("ordinal");
+      this.sequence_no = row.getInt("sequence_no");
     }
 
     public String getTrack_name() {
@@ -93,31 +77,41 @@ public class PlaylistDAO extends CassandraData {
 
   public static PlaylistDAO getPlaylistForUser(UserDAO user, String playlist_name, ServletContext context) {
 
-    PreparedStatement statement = getSession(context).prepare("SELECT user_id, playlist_name, artist, track_name " +
+
+    // Create a new empty playlist object
+    PlaylistDAO newPlaylist = new PlaylistDAO(user, playlist_name);
+
+
+    // Read the tracks from the database
+    PreparedStatement statement = getSession(context).prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, track_length_in_seconds " +
             "FROM playlist_tracks WHERE user_id = ? and playlist_name = ?");
 
     BoundStatement boundStatement = statement.bind(user.getUserid(), playlist_name);
-    ResultSet results = getSession(context).execute(boundStatement);
+    ResultSet resultSet = getSession(context).execute(boundStatement);
 
-    return new PlaylistDAO(user, results);
+    for (Row row : resultSet)  {
+      newPlaylist.trackList.add(new Track(row));
+
+      // Pre-aggregate the playlist length in seconds;
+      newPlaylist.playlist_length_in_seconds += row.getInt("track_length_in_seconds");
+    }
+
+    // Return it
+    return newPlaylist;
+
   }
 
-  public void addTrackToEndOfPlaylist (Track newTrack, ServletContext context) throws Exception {
+  public void deleteTrackFromPlaylist(int ordinalToDelete, ServletContext context) {
 
-    // set the ordinal of the track and add it to the playlist object
-    trackList.add(newTrack);
+    // first adjust the playlist length
+    playlist_length_in_seconds -= this.trackList.get(ordinalToDelete).getTrack_length_in_seconds();
 
-    // Create a list of one track, and add it to the playlist
-    addTracksToPlaylist(Arrays.asList(newTrack), context);
+    // remove the track from this playlist object
+    this.trackList.remove(ordinalToDelete);
 
-  }
-
-  public static void deleteTrackFromPlaylist(PlaylistDAO playlist, int ordinalToDelete, ServletContext context) {
-
-    playlist.trackList.remove(ordinalToDelete);
-
-    PreparedStatement ps = getSession(context).prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and ordinal = ?");
-    BoundStatement bs = ps.bind(playlist.getUser_id(), playlist.getPlaylist_name(), ordinalToDelete);
+    // remove it from the database
+    PreparedStatement ps = getSession(context).prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
+    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, ordinalToDelete);
     getSession(context).execute(bs);
 
    }
@@ -181,30 +175,37 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  private void addTracksToPlaylist(List<Track> newTracks, ServletContext context) throws Exception {
+  public void addTracksToPlaylist(List<Track> newTracks, ServletContext context) throws Exception {
 
     // Prepare an insert statement
     PreparedStatement statement = getSession(context).prepare(
             "INSERT into playlist_tracks" +
-                    " (user_id, playlist_name, ordinal, artist, track_name, track_length_in_seconds) " +
-                    "VALUES (?, ?, ?, ?, ?)"
+                    " (user_id, playlist_name, sequence_no, artist, track_name, track_length_in_seconds) " +
+                    "VALUES (?, ?, ?, ?, ?, ?)"
     );
     BoundStatement boundStatement = statement.bind();
 
-    int newNumber = getTrackList().size();
+    int newNumber = 0;
+
+    if (this.trackList.size() > 0) {
+      newNumber = this.trackList.get(this.trackList.size() - 1).sequence_no + 1;
+    }
+
     for (Track track : newTracks) {
-      track.ordinal = newNumber ++;
+      track.sequence_no = newNumber ++;
 
       // Let's use named parameters this time
       boundStatement.setUUID("user_id", getUser_id());
       boundStatement.setString("playlist_name", getPlaylist_name());
-      boundStatement.setInt("ordinal", track.ordinal);
+      boundStatement.setInt("sequence_no", track.sequence_no);
       boundStatement.setString("track_name", track.getTrack_name());
       boundStatement.setString("artist", track.getArtist());
       boundStatement.setInt("track_length_in_seconds", track.getTrack_length_in_seconds());
 
       getSession(context).execute(boundStatement);
     }
+
+    this.trackList.addAll(newTracks);
   }
 
   public UUID getUser_id() {

@@ -1,5 +1,6 @@
 package playlist.model;
 
+import com.datastax.driver.core.Session;
 import junit.framework.TestCase;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
@@ -18,6 +19,17 @@ public class UserTest extends TestCase {
 
   ServletContext context = new MockServletContext();
 
+  @Override
+  protected void setUp() throws Exception {
+    super.setUp();
+
+    Session session  = CassandraData.getSession(context);
+    session.execute("TRUNCATE users");
+    session.execute("TRUNCATE playlist_tracks");
+
+  }
+
+
   public void testInsertUser() throws Exception {
 
     UserDAO.addUser("steve", "iforgot", context);
@@ -25,6 +37,7 @@ public class UserTest extends TestCase {
   }
   public void testGetUser() throws Exception {
 
+    UserDAO.addUser("steve", "iforgot", context);
     UserDAO user = UserDAO.getUser("steve", context);
 
     assertEquals("steve",user.getEmail());
