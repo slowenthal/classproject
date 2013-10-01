@@ -12,7 +12,7 @@ import javax.servlet.ServletContext;
  * User: stevelowenthal
  * Date: 9/20/13
  * Time: 4:13 PM
- * To change this template use File | Settings | File Templates.
+ *
  */
 public class UserTest extends TestCase {
 
@@ -31,9 +31,14 @@ public class UserTest extends TestCase {
     assertEquals("iforgot",user.getPassword());
     assertNotNull("UUID is null", user.getUserid());
 
+    UserDAO.deleteUser("steve", context);
+
   }
 
   public void testDeleteUser() throws Exception {
+
+    UserDAO.addUser("steve", "iforgot", context);
+
     UserDAO.deleteUser("steve", context);
 
     UserDAO user = UserDAO.getUser("steve", context);
@@ -84,13 +89,12 @@ public class UserTest extends TestCase {
     UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    UserDAO loginUser = null;
     boolean thrown = false;
     try {
-      loginUser = UserDAO.validateLogin("steve", "badpassword", context);
+      UserDAO.validateLogin("steve", "badpassword", context);
     } catch (UserLoginException e) {
           thrown = true;
-     }
+    }
 
     assertTrue("exception not thrown for bad login", thrown);
 
@@ -104,10 +108,9 @@ public class UserTest extends TestCase {
     UserDAO user = UserDAO.getUser("steve", context);
     assertEquals("pw1",user.getPassword());
 
-    UserDAO loginUser = null;
     boolean thrown = false;
     try {
-      loginUser = UserDAO.validateLogin("baduser", "pw1", context);
+      UserDAO.validateLogin("baduser", "pw1", context);
     } catch (UserLoginException e) {
       thrown = true;
     }
@@ -117,8 +120,5 @@ public class UserTest extends TestCase {
     UserDAO.deleteUser("steve", context);
 
   }
-
-
-
 
 }

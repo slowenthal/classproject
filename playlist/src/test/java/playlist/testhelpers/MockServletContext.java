@@ -12,7 +12,7 @@ import java.util.*;
  * User: stevelowenthal
  * Date: 9/20/13
  * Time: 3:49 PM
- * To change this template use File | Settings | File Templates.
+ *
  */
 public class MockServletContext implements ServletContext {
 

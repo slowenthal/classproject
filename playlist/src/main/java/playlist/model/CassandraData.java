@@ -10,7 +10,7 @@ import javax.servlet.ServletContext;
  * User: stevelowenthal
  * Date: 9/18/13
  * Time: 10:01 PM
- * To change this template use File | Settings | File Templates.
+ *
  */
 public class CassandraData {
 
@@ -31,7 +31,7 @@ public class CassandraData {
 
   protected static Session createSession() {
     Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
-    Session session = cluster.connect();
+    Session session = cluster.connect("playlist");
 
     return session;
   }

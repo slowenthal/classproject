@@ -12,7 +12,7 @@ import java.util.List;
  * User: stevelowenthal
  * Date: 9/20/13
  * Time: 8:28 AM
- * To change this template use File | Settings | File Templates.
+ *
  */
 
 public class TracksDAO extends CassandraData {
@@ -31,7 +31,7 @@ public class TracksDAO extends CassandraData {
 
   public static List<TracksDAO> listSongsByArtist(String artist, ServletContext context) {
 
-    String queryText = "SELECT * FROM playlist.track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
+    String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
     ResultSet results = getSession(context).execute(queryText);
 
     List<TracksDAO> tracks = new ArrayList<TracksDAO>();

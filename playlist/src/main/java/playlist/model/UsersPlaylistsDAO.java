@@ -44,7 +44,7 @@ public class UsersPlaylistsDAO extends CassandraData {
 
     // Insert the items into the user table with update statements
 
-    PreparedStatement updatePlaylistPS = getSession(context).prepare("UPDATE playlist.users SET playlists = ?, playlists_genre = ? WHERE email = ?");
+    PreparedStatement updatePlaylistPS = getSession(context).prepare("UPDATE users SET playlists = ?, playlists_genre = ? WHERE email = ?");
     BoundStatement updatePlaylistBS = updatePlaylistPS.bind(playlistStrings, playlist_genres, email);
     getSession(context).execute(updatePlaylistBS);
 

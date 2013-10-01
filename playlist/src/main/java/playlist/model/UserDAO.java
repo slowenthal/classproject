@@ -14,7 +14,7 @@ import java.util.UUID;
  * User: stevelowenthal
  * Date: 9/20/13
  * Time: 8:28 AM
- * To change this template use File | Settings | File Templates.
+ *
  */
 
 public class UserDAO extends CassandraData {
@@ -51,7 +51,7 @@ public class UserDAO extends CassandraData {
     }
 
 
-    String queryText = "INSERT INTO playlist.users (email, password, user_id) values ('"
+    String queryText = "INSERT INTO users (email, password, user_id) values ('"
             + email + "','"
             + password + "',"
             + userId + ")";
@@ -64,7 +64,7 @@ public class UserDAO extends CassandraData {
   }
 
   public static void deleteUser(String email, ServletContext context) {
-    String queryText = "DELETE FROM playlist.users where email = '"
+    String queryText = "DELETE FROM users where email = '"
             + email + "'";
 
     getSession(context).execute(queryText);
@@ -73,7 +73,7 @@ public class UserDAO extends CassandraData {
 
   public static UserDAO getUser(String email, ServletContext context) {
 
-    String queryText = "SELECT * FROM playlist.users where email = '"
+    String queryText = "SELECT * FROM users where email = '"
             + email + "'";
 
     Row userRow = getSession(context).execute(queryText).one();

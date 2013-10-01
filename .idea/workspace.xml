@@ -7,6 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/ArtistTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/ArtistTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/ArtistsDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/ArtistsDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/CassandraData.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/CassandraData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/CassandraDataTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/CassandraDataTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/testhelpers/MockServletContext.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/testhelpers/MockServletContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TrackServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TrackServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/TracksDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/TracksDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UsersPlaylistsDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UsersPlaylistsDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UsersPlaylistsTest.java" afterPath="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UsersPlaylistsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/playlist.iml" afterPath="$PROJECT_DIR$/playlist/playlist.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/playlist_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/playlist_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/pom.xml" afterPath="$PROJECT_DIR$/playlist/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -16,11 +34,11 @@
     <file path="$PROJECT_DIR$/../something/src/spring-config.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379553709925" ignored="false" />
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379979883532" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
-    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379975966120" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379993191360" ignored="false" />
+    <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380579756411" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380576020875" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
-    <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379954216030" ignored="false" />
+    <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380572017912" ignored="false" />
     <file path="/index2.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379637261427" ignored="false" />
     <file path="/packagetracker.htm" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690368023" ignored="false" />
     <file path="/Packages.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703062753" ignored="false" />
@@ -30,29 +48,39 @@
     <file path="/CassandraData.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717268258" ignored="false" />
     <file path="/MockServletContext.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379717774406" ignored="false" />
     <file path="/TrackingTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379719654016" ignored="false" />
-    <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379994054835" ignored="false" />
+    <file path="/pom.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380577611604" ignored="false" />
     <file path="/OneWebAppUnassembled.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784152035" ignored="false" />
     <file path="/JavaVersionTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379785305050" ignored="false" />
     <file path="/OneWebApp.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379784138810" ignored="false" />
-    <file path="/a.dummy" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379915408640" ignored="false" />
-    <file path="/playlist.cql" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379912844720" ignored="false" />
+    <file path="/a.dummy" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380582457724" ignored="false" />
+    <file path="/playlist.cql" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380570809461" ignored="false" />
     <file path="/Artists.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379912214187" ignored="false" />
     <file path="/Songs.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379911231138" ignored="false" />
     <file path="/ArtistTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379912452693" ignored="false" />
     <file path="/ArtistServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379911506641" ignored="false" />
-    <file path="/artists.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379918800493" ignored="false" />
+    <file path="/artists.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380571999614" ignored="false" />
     <file path="/SongServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379912625218" ignored="false" />
-    <file path="/SongTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913336227" ignored="false" />
+    <file path="/SongTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380572072350" ignored="false" />
     <file path="/Titles.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379914023126" ignored="false" />
-    <file path="/titles.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913435444" ignored="false" />
+    <file path="/titles.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380568357067" ignored="false" />
     <file path="/TitleServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379913506599" ignored="false" />
     <file path="/Users.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917688394" ignored="false" />
-    <file path="/User.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379979523441" ignored="false" />
-    <file path="/UserTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379976700505" ignored="false" />
+    <file path="/User.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380466460688" ignored="false" />
+    <file path="/UserTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380576673875" ignored="false" />
     <file path="/UserExistsException.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379917483470" ignored="false" />
-    <file path="/login.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379977592633" ignored="false" />
+    <file path="/login.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380568349337" ignored="false" />
     <file path="$PROJECT_DIR$/../tryjetty/.idea/workspace.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379954043309" ignored="false" />
-    <file path="/LoginServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379979982934" ignored="false" />
+    <file path="/LoginServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380572634621" ignored="false" />
+    <file path="/AllApis.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380223336401" ignored="false" />
+    <file path="$PROJECT_DIR$/../cqlsamples/src/AllApis.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380223939617" ignored="false" />
+    <file path="/Playlist.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380468967816" ignored="false" />
+    <file path="/PlaylistTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380468433990" ignored="false" />
+    <file path="/PlaylistDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380602274317" ignored="false" />
+    <file path="/TrackServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380567353059" ignored="false" />
+    <file path="/UsersPlaylistsDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380573330653" ignored="false" />
+    <file path="/TracksDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380572089546" ignored="false" />
+    <file path="/UserDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380573188312" ignored="false" />
+    <file path="/UsersPlaylistsTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380579182698" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +98,22 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" line="21" class="OneWebApp" package="">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -105,36 +148,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/startjetty/src/main/java/OneWebApp.java" line="21" class="OneWebApp" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/playlist/src/test/java/playlist/versioncheck/JavaVersionTest.java" line="24" class="playlist.versioncheck.JavaVersionTest" package="playlist.versioncheck">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -144,10 +158,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java">
+      <file leaf-file-name="ArtistServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="110" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
+            <state line="16" column="3" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,79 +170,82 @@
       <file leaf-file-name="LoginServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="0" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0">
+            <state line="18" column="2" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="playlist.cql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deployment/CQL/playlist.cql">
+      <file leaf-file-name="TrackServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TrackServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="602" vertical-scroll-proportion="0.0">
+            <state line="16" column="2" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SongTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java">
+      <file leaf-file-name="ArtistsDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/ArtistsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+            <state line="23" column="38" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#681#689#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CassandraData.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/CassandraData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="47" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java">
+      <file leaf-file-name="artists.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="21" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
+            <state line="51" column="61" selection-start="1889" selection-end="1889" vertical-scroll-proportion="-31.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/playlist/pom.xml">
+      <file leaf-file-name="PlaylistDAO.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="24" selection-start="357" selection-end="357" vertical-scroll-proportion="0.17529215">
+            <state line="153" column="34" selection-start="4837" selection-end="4837" vertical-scroll-proportion="0.8041475">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="TracksDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/TracksDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="33" column="38" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
+      <file leaf-file-name="UsersPlaylistsDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UsersPlaylistsDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="44" column="36" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArtistServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
+      <file leaf-file-name="UserDAO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="5" selection-start="462" selection-end="462" vertical-scroll-proportion="-11.25">
+            <state line="65" column="53" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -252,22 +269,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/deployment/CQL/playlist.cql" />
-        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/titles.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TitleServlet.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Titles.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/Users.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserExistsException.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/exceptions/UserLoginException.java" />
-        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/login.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java" />
         <option value="$PROJECT_DIR$/playlist/pom.xml" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UsersPlaylistsTest.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TrackServlet.java" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/testhelpers/MockServletContext.java" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/CassandraDataTest.java" />
+        <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/ArtistTest.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/ArtistsDAO.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/CassandraData.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/TracksDAO.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UsersPlaylistsDAO.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" />
       </list>
     </option>
   </component>
@@ -288,6 +305,10 @@
           <option name="myItemId" value="playlist" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -306,9 +327,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1680" />
-    <option name="height" value="940" />
+    <option name="x" value="76" />
+    <option name="y" value="75" />
+    <option name="width" value="1725" />
+    <option name="height" value="996" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -447,6 +469,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="startjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="playlist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -478,6 +526,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="playlist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="versioncheck" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,66 +679,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playlist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tryjetty" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classproject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="playlist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -726,10 +718,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="playlist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -876,32 +864,32 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/test/tracker/model" />
-    <property name="options.lastSelected" value="vcs.TFS" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/playlist/src/test/java/playlist/model" />
+    <property name="options.lastSelected" value="preferences.toDoOptions" />
     <property name="project.structure.side.proportion" value="0.26456878" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -912,16 +900,17 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="playlist.model" />
+      <recent name="tracker.model" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="tracker.model" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="playlist.model" />
       <recent name="playlist.exceptions" />
       <recent name="playlist.controller" />
-      <recent name="playlist.model" />
       <recent name="tracker.controller" />
       <recent name="todo.web" />
     </key>
@@ -933,10 +922,6 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="playlist.model" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="tracker" />
-      <recent name="todo.web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/playlist/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/debugjetty/src/main/java" />
@@ -944,65 +929,12 @@
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="tracker" />
+      <recent name="todo.web" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.OneWebAppUnassembled">
-    <configuration default="false" name="ArtistTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="playlist.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="playlist" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="playlist.model" />
-      <option name="MAIN_CLASS_NAME" value="playlist.model.ArtistTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="OneWebApp" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="OneWebApp" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="startjetty" />
-      <envs />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Cover" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in warmodule">
     <configuration default="false" name="SongTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1103,6 +1035,66 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
+    <configuration default="false" name="UsersPlaylistsTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="playlist.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="playlist" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="playlist.model" />
+      <option name="MAIN_CLASS_NAME" value="playlist.model.UsersPlaylistsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="playlist.model in playlist" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="playlist.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="playlist" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="playlist.model" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1138,6 +1130,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1166,17 +1171,19 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 9.0.5.v20130815">
@@ -1196,21 +1203,6 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
@@ -1264,16 +1256,16 @@
     </configuration>
     <configuration default="false" name="All in warmodule" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="warmodule" />
+      <module name="playlist" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1281,7 +1273,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1431,19 +1429,19 @@
       <item index="0" class="java.lang.String" itemvalue="Application.OneWebAppUnassembled" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in warmodule" />
       <item index="2" class="java.lang.String" itemvalue="Jetty Server.jetty8" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ArtistTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.OneWebApp" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.SongTest" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.UserTest" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.UserTest.testValidateBadEmail" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SongTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.UserTest.testValidateBadEmail" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.UsersPlaylistsTest" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.playlist.model in playlist" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testValidateBadEmail" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SongTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ArtistTest" />
-        <item index="4" class="java.lang.String" itemvalue="Application.OneWebApp" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.playlist.model in playlist" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UsersPlaylistsTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest.testValidateBadEmail" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SongTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1561,7 +1559,11 @@
       <created>1379993197667</created>
       <updated>1379993197667</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add login page">
+      <created>1379994067903</created>
+      <updated>1379994067904</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1586,34 +1588,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1680" height="940" extended-state="0" />
+    <frame x="76" y="75" width="1725" height="996" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20731707" sideWeight="0.99885976" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44634703" sideWeight="0.99885976" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16666667" sideWeight="0.99940443" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3512195" sideWeight="0.60771114" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17682926" sideWeight="0.60771114" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5402439" sideWeight="0.3880049" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.497552" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32682925" sideWeight="0.497552" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1882921" sideWeight="0.22804879" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804877" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19033048" sideWeight="0.79268295" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11971412" sideWeight="0.55365294" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32950193" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21419829" sideWeight="0.79268295" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804877" sideWeight="0.49510404" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19714116" sideWeight="0.55365294" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30731708" sideWeight="0.49510404" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19053052" sideWeight="0.2079906" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1727,114 +1729,119 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/8.1.12.v20130726/jetty-server-8.1.12.v20130726.jar!/org/eclipse/jetty/server/Request.class">
+    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/versioncheck/JavaVersionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="14" selection-start="9839" selection-end="9839" vertical-scroll-proportion="-6.24">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.12.v20130726/jetty-servlet-8.1.12.v20130726.jar!/org/eclipse/jetty/servlet/Holder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="40" selection-start="4090" selection-end="4090" vertical-scroll-proportion="-5.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="561" selection-end="561" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/exceptions/UserLoginException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="83" selection-start="934" selection-end="957" vertical-scroll-proportion="-13.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/exceptions/UserExistsException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="243" selection-end="243" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="110" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="743" selection-end="743" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="5" selection-start="462" selection-end="462" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="0" selection-start="2097" selection-end="2097" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deployment/CQL/playlist.cql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+        <state line="15" column="13" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="21" selection-start="2421" selection-end="2421" vertical-scroll-proportion="0.0">
+        <state line="112" column="6" selection-start="2781" selection-end="2781" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/UsersPlaylistsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="16" column="0" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#628#647#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/SongTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="3" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
+    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/CassandraDataTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="14" column="2" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/pom.xml">
+    <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/ArtistTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="24" selection-start="357" selection-end="357" vertical-scroll-proportion="0.17529215">
+        <state line="15" column="0" selection-start="268" selection-end="268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="3" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="2" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/TrackServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="2" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="61" selection-start="1889" selection-end="1889" vertical-scroll-proportion="-31.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/ArtistsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="38" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#681#689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/CassandraData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="47" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="53" selection-start="1741" selection-end="1741" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/TracksDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="38" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UsersPlaylistsDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="36" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="34" selection-start="4837" selection-end="4837" vertical-scroll-proportion="0.8041475">
           <folding />
         </state>
       </provider>
@@ -1846,9 +1853,9 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="javaee-facet-resources" />
               <type id="artifact" />
               <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
               <type id="library" />
             </show-content>
           </artifact-editor>
@@ -1889,11 +1896,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.6</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.35452104" />
+                <option value="0.26456878" />
               </list>
             </option>
           </splitter-proportions>

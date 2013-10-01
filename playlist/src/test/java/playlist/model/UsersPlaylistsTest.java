@@ -12,16 +12,18 @@ import java.util.List;
  * User: stevelowenthal
  * Date: 9/29/13
  * Time: 7:49 AM
- * To change this template use File | Settings | File Templates.
+ *
  */
+
 public class UsersPlaylistsTest extends TestCase {
 
   ServletContext context = new MockServletContext();
 
 
-  public void testPersistPlayLists() throws Exception {
 
-    UserDAO newUser = UserDAO.addUser("testuser", "iforgot", context);
+  private void addUserAndPlaylist(String email) throws Exception {
+
+    UserDAO newUser = UserDAO.addUser(email, "iforgot", context);
 
     // Create a list of Playlists
 
@@ -35,15 +37,21 @@ public class UsersPlaylistsTest extends TestCase {
 
   public void testGetPlayListNames() throws Exception {
 
+    addUserAndPlaylist("testUser");
+
     List<String> playlists = UserDAO.getUser("testuser", context).getPlaylists();
 
     assertEquals(2,playlists.size());
     assertEquals("Energy Mix", playlists.get(0));
     assertEquals("Snooze Music", playlists.get(1));
 
+    UserDAO.deleteUser("testuser", context);
+
   }
 
   public void testGetPlayListWithGenre() throws Exception {
+
+    addUserAndPlaylist("testuser");
 
     UserDAO user = UserDAO.getUser("testuser", context);
     List<UsersPlaylistsDAO> playlists = UsersPlaylistsDAO.getPlayListWithGenre(user.getPlaylists_genre());
@@ -52,9 +60,10 @@ public class UsersPlaylistsTest extends TestCase {
     assertEquals("Snooze Music", playlists.get(0).getPlaylist_name());
     assertEquals("Classical", playlists.get(0).getGenre());
     assertEquals("Energy Mix", playlists.get(1).getPlaylist_name());
+
+    UserDAO.deleteUser("testuser", context);
+
   }
 
-  public void testDeleteUser() throws Exception {
-    UserDAO.deleteUser("testuser", context);
-  }
+
 }

@@ -11,8 +11,9 @@ import java.util.List;
  * User: stevelowenthal
  * Date: 9/20/13
  * Time: 4:13 PM
- * To change this template use File | Settings | File Templates.
+ *
  */
+
 public class ArtistTest extends TestCase {
 
   ServletContext context = new MockServletContext();
