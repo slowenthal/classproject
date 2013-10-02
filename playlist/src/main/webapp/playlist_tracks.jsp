@@ -7,12 +7,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Playlist</title>
 <link href="css/playlist.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        function listener(event){
+            window.location.href = 'playlist_tracks?pl=${playlist_name}&button=Add&track_id=' + event.data;
+            document.getElementById("test").innerHTML = "received: "+event.data
+        }
+
+        if (window.addEventListener){
+            addEventListener("message", listener, false)
+        } else {
+            attachEvent("onmessage", listener)
+        }
+    </script>
+
 </head>
+
 <body>
 <a href="login?button=Logout">Logout</a> <br/>
+<a href="playlists">Back to My Playlists</a> <br/>
 <h1>Playlist ${playlist_name} for ${email}</h1>
 
-<b>Results</b>
+<div id="playlist_tracks" style="float: left">
 <table class="tracktable">
     <tr>
         <th>Track Name</th>
@@ -27,6 +43,9 @@
         </tr>
     </c:forEach>
 </table>
-
+</div>
+<div id="picker" style="float: right">
+<iframe src="artists" height="600" width="600"></iframe>
+</div>
 </body>
 </html>

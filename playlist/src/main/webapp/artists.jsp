@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 </head>
 <body>
-<h1>Artists</h1>
+<h1>Song Picker: Artists</h1>
 <a href="artists?q=A">A</a>&nbsp;&nbsp;
 <a href="artists?q=B">B</a>&nbsp;&nbsp;
 <a href="artists?q=C">C</a>&nbsp;&nbsp;
@@ -40,6 +40,7 @@
 
 
 <b>Results</b>
+<form action="artists"></form>
 <table>
     <c:forEach var="artist" items="${artists}">
         <tr>

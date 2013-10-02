@@ -17,7 +17,7 @@ public class SongTest extends TestCase {
 
   ServletContext context = new MockServletContext();
 
-  public void testFindArtistsStartingWithA() throws Exception {
+  public void testFindTracksByArtist() throws Exception {
 
     List<TracksDAO> songs = TracksDAO.listSongsByArtist("Elton John", context);
 
@@ -27,6 +27,15 @@ public class SongTest extends TestCase {
     TracksDAO firstTrack = songs.get(0);
 
     assertEquals("Amoreena", firstTrack.getTrack());
+
+  }
+
+  public void testFindTrackById() throws Exception {
+
+    TracksDAO track = TracksDAO.getTrackById(500, context);
+
+    assertEquals(500, track.getTrack_id());
+    assertEquals("Don't Stop 'Til You Get Enough", track.getTrack());
 
   }
 

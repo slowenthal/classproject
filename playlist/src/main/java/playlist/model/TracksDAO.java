@@ -1,5 +1,7 @@
 package playlist.model;
 
+import com.datastax.driver.core.BoundStatement;
+import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 
@@ -41,6 +43,14 @@ public class TracksDAO extends CassandraData {
     }
 
     return tracks;
+  }
+
+  public static TracksDAO getTrackById(int track_id, ServletContext context) {
+    PreparedStatement preparedStatement = getSession(context).prepare("SELECT * FROM track_by_id WHERE track_id = ?");
+    BoundStatement boundStatement = preparedStatement.bind(track_id);
+    ResultSet resultSet = getSession(context).execute(boundStatement);
+
+    return new TracksDAO(resultSet.one());
   }
 
 
