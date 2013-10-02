@@ -10,7 +10,7 @@
 
     <script type="text/javascript">
         function listener(event){
-            window.location.href = 'playlist_tracks?pl=${playlist_name}&button=Add&track_id=' + event.data;
+            window.location.href = 'playlist_tracks?pl=${playlist_name}&button=addTrack&track_id=' + event.data;
             document.getElementById("test").innerHTML = "received: "+event.data
         }
 
@@ -24,19 +24,23 @@
 </head>
 
 <body>
-<a href="login?button=Logout">Logout</a> <br/>
+<a href="login?button=logout">Logout</a> <br/>
 <a href="playlists">Back to My Playlists</a> <br/>
 <h1>Playlist ${playlist_name} for ${email}</h1>
-
-<div id="playlist_tracks" style="float: left">
+<form id="form1" name="form1" method="get" action="">
+<input type="hidden" name="pl" value="${playlist_name}"/>
+<button type="submit" name="button" value="deletePlaylist">Delete this Playlist</button>
+<div id="playlist_tracks" style="height:400px;width:500px;float:left;">
 <table class="tracktable">
     <tr>
+        <th></th>
         <th>Track Name</th>
         <th>Artist</th>
         <th>Length (s)</th>
     </tr>
     <c:forEach var="track" items="${tracks}">
         <tr>
+            <td><button type="submit" name="deleteTrack" value="${track.sequence_no}">-</button></td>
             <td>${track.track_name}</td>
             <td>${track.artist}</td>
             <td>${track.track_length_in_seconds}</td>
@@ -44,8 +48,10 @@
     </c:forEach>
 </table>
 </div>
-<div id="picker" style="float: right">
-<iframe src="artists" height="600" width="600"></iframe>
+<h1>Song Picker: </h1>
+<div id="picker" style="height:800px;width:500px;float:left;">
+<iframe src="artists" height="400" width="400"></iframe>
 </div>
+</form>
 </body>
 </html>

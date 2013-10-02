@@ -14,7 +14,7 @@
     </script>
 </head>
 <body>
-<h1>Song Picker: </h1>
+<%@ include file="alphabet.jspf" %>
 <h1>Songs By ${artist}</h1>
 
 <b>Results</b>

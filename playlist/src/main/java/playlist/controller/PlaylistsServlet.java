@@ -47,7 +47,6 @@ public class PlaylistsServlet extends HttpServlet {
       if (new_playlist_name != null) {
         doAddPlaylist(userFromDB, new_playlist_name);
       }
-
     }
 
     request.setAttribute("email", userFromDB.getEmail());
@@ -59,4 +58,5 @@ public class PlaylistsServlet extends HttpServlet {
   private void doAddPlaylist(UserDAO user, String playlistName) {
     PlaylistDAO.createPlayList(user, playlistName, getServletContext());
   }
+
 }

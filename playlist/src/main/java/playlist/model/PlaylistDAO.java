@@ -71,6 +71,10 @@ public class PlaylistDAO extends CassandraData {
     public int getTrack_length_in_seconds() {
       return track_length_in_seconds;
     }
+
+    public Integer getSequence_no() {
+      return sequence_no;
+    }
   }
 
   // Static finder method
@@ -103,11 +107,18 @@ public class PlaylistDAO extends CassandraData {
 
   public void deleteTrackFromPlaylist(int ordinalToDelete, ServletContext context) {
 
-    // first adjust the playlist length
-    playlist_length_in_seconds -= this.trackList.get(ordinalToDelete).getTrack_length_in_seconds();
+    // Find the track to delete
+    Track trackToDelete = null;
+    for (int i = 0; i < this.trackList.size(); i++) {
+      if (this.trackList.get(i).sequence_no == ordinalToDelete) {
+        trackToDelete = this.trackList.get(i);
+        this.trackList.remove(i);
+        break;
+      }
+    }
 
-    // remove the track from this playlist object
-    this.trackList.remove(ordinalToDelete);
+    // first adjust the playlist length
+    playlist_length_in_seconds -= trackToDelete != null ? trackToDelete.getTrack_length_in_seconds() : 0;
 
     // remove it from the database
     PreparedStatement ps = getSession(context).prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
@@ -185,7 +196,7 @@ public class PlaylistDAO extends CassandraData {
     );
     BoundStatement boundStatement = statement.bind();
 
-    int newNumber = 0;
+    int newNumber = 1;
 
     if (this.trackList.size() > 0) {
       newNumber = this.trackList.get(this.trackList.size() - 1).sequence_no + 1;

@@ -18,8 +18,8 @@ ${error}
     Password:
     <input type="password" name="password" id="password" />
     <br/>
-    <input type="submit" name="button" id="login" value="Login" />
-    <input type="submit" name="button" id="register" value="I Don't Have an Account" />
+    <button type="submit" name="button" id="login" value="login">Login</button>
+    <button type="submit" name="button" id="register" value="newAccount">I Don't Have an Account</button>
 </form>
 </body>
 </html>

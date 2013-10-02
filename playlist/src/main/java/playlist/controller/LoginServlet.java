@@ -30,11 +30,11 @@ public class LoginServlet extends HttpServlet {
     String button = request.getParameter("button");
     button = button == null ? "" : button;
 
-    if (button.contentEquals("Login")) {
+    if (button.contentEquals("login")) {
       doLogin(request, response);
-    } else if (button.contentEquals("I Don't Have an Account")) {
+    } else if (button.contentEquals("newAccount")) {
       doCreateUser(request, response);
-    } else if (button.contentEquals("Logout")) {
+    } else if (button.contentEquals("logout")) {
       doLogout(request, response);
     }
     else

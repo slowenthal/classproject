@@ -37,13 +37,39 @@ public class PlaylistTracksServlet extends HttpServlet {
       return;
     }
 
+    //
+    // Initialize the parameters that are returned from the web page
+    //
+
     String playlist_name = request.getParameter("pl");
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, playlist_name, getServletContext());
 
     String button = request.getParameter("button");
-    if (button != null && button.contentEquals("Add")) {
-      Integer track_id = new Integer(request.getParameter("track_id"));
-      doAddPlaylistTrack(playlist, track_id);
+    String deleteTrack = request.getParameter("deleteTrack");
+
+    //
+    // If a button was pressed, carry out the button's action
+    //
+
+    if (button != null) {
+      if (button.contentEquals("addTrack")) {
+        Integer track_id = new Integer(request.getParameter("track_id"));
+        doAddPlaylistTrack(playlist, track_id);
+      } else if (button.contentEquals("deletePlaylist")) {
+
+        // Clicked to delete the WHOLE playlist
+         doDeletePlaylist(playlist);
+
+        // Now go back to the playlists page
+         getServletContext().getRequestDispatcher("/playlists").forward(request,response);
+        return;
+      }
+
+    } else if (deleteTrack != null) {
+
+      // Delete one track
+        int sequence_no = Integer.parseInt(deleteTrack);
+        doDeleteTrack(playlist, sequence_no);
     }
 
     request.setAttribute("email", user.getEmail());
@@ -63,6 +89,14 @@ public class PlaylistTracksServlet extends HttpServlet {
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }
-
   }
+
+  void doDeletePlaylist(PlaylistDAO playlist) {
+    playlist.deletePlayList(getServletContext());
+  }
+
+  void doDeleteTrack(PlaylistDAO playlist, int sequence_no) {
+      playlist.deleteTrackFromPlaylist(sequence_no, getServletContext());
+  }
+
 }

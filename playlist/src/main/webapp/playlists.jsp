@@ -16,9 +16,7 @@
 Playlist Name:    <input type="text" name="new_playlist_name" id="new_playlist_name" />
     <input type="submit" name="button" id="add" value="Add" />
     <br/>
-</form>
 
-<b>Results</b>
 <table>
     <c:forEach var="playlist_name" items="${playlist_names}">
         <tr>
@@ -26,6 +24,6 @@ Playlist Name:    <input type="text" name="new_playlist_name" id="new_playlist_n
         </tr>
     </c:forEach>
 </table>
-
+</form>
 </body>
 </html>
