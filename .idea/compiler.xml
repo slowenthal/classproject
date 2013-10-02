@@ -22,7 +22,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="debug" />
         <module name="playlist" />
+        <module name="startdebug" />
         <module name="startjetty" />
         <module name="tryjetty" />
         <module name="warmodule" />

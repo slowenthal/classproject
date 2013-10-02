@@ -13,7 +13,7 @@ import java.io.File;
  *  the need to build and deploy the WAR file.
  *
  */
-public class OneWebAppUnassembled {
+public class StartDebug {
 
   public static final String WARMODULE_OFFSET_FROM_ROOT = "playlist/src/main/webapp".replace('/', File.separatorChar);
 
