@@ -21,7 +21,7 @@ public class StartDebug {
   {
 
 	BasicConfigurator.configure();
-    String jetty_home = System.getProperty("jetty.home",".");
+    String jetty_home = System.getProperty("jetty.home","..");
 
     Server server = new Server(8080);
 
