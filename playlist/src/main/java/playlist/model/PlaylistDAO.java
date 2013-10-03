@@ -6,10 +6,7 @@ import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 
 import javax.servlet.ServletContext;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -156,6 +153,7 @@ public class PlaylistDAO extends CassandraData {
     getSession(context).execute(bs);
 
     // Update the user object too
+
     user.getPlaylist_names().add(playlist_name);
 
     return new PlaylistDAO(user,playlist_name);

@@ -33,7 +33,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     if (user == null) {
 
       request.setAttribute("error", "Not Logged In");
-      getServletContext().getRequestDispatcher("/login").forward(request,response);
+      response.sendRedirect("login");
       return;
     }
 

@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed348285-8ce1-4415-b50c-50896aaae16a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/deployment/CQL/CSV/artists.csv" afterPath="$PROJECT_DIR$/scripts/CQL/CSV/artists.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/deployment/CQL/CSV/songs.csv" afterPath="$PROJECT_DIR$/scripts/CQL/CSV/songs.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/deployment/CQL/CSV/transactions_shuffled.csv" afterPath="$PROJECT_DIR$/scripts/CQL/CSV/transactions_shuffled.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startdebug/pom.xml" afterPath="$PROJECT_DIR$/startdebug/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startdebug/startdebug.iml" afterPath="$PROJECT_DIR$/startdebug/startdebug.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" afterPath="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tryjetty.iws" />
@@ -21,7 +20,7 @@
     <file path="/index.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379979883532" ignored="false" />
     <file path="/ToDo.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379690304039" ignored="false" />
     <file path="/fragment.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380756601080" ignored="false" />
-    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380758797455" ignored="false" />
+    <file path="/Dummy.txt" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380759680509" ignored="false" />
     <file path="/CStar.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379567180563" ignored="false" />
     <file path="/TrackerServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1379703638187" ignored="false" />
     <file path="/web.xml" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380666577824" ignored="false" />
@@ -61,14 +60,14 @@
     <file path="$PROJECT_DIR$/../cqlsamples/src/AllApis.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380223939617" ignored="false" />
     <file path="/Playlist.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380468967816" ignored="false" />
     <file path="/PlaylistTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380468433990" ignored="false" />
-    <file path="/PlaylistDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380757010856" ignored="false" />
+    <file path="/PlaylistDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380760241014" ignored="false" />
     <file path="/TrackServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380567353059" ignored="false" />
     <file path="/UsersPlaylistsDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380602940356" ignored="false" />
     <file path="/TracksDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380683008375" ignored="false" />
-    <file path="/UserDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380653061891" ignored="false" />
+    <file path="/UserDAO.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380760357601" ignored="false" />
     <file path="/UsersPlaylistsTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380579182698" ignored="false" />
     <file path="/PlaylistDAOTest.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380661752956" ignored="false" />
-    <file path="/PlaylistsServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380738434820" ignored="false" />
+    <file path="/PlaylistsServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380759816045" ignored="false" />
     <file path="/playlists.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380738333147" ignored="false" />
     <file path="/PlaylistTracksServlet.java" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380745577167" ignored="false" />
     <file path="/playlist_tracks.jsp" changelist="ed348285-8ce1-4415-b50c-50896aaae16a" time="1380745276511" ignored="false" />
@@ -168,7 +167,16 @@
       <file leaf-file-name="PlaylistDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="157" column="33" selection-start="5084" selection-end="5084" vertical-scroll-proportion="0.0">
+            <state line="156" column="4" selection-start="5011" selection-end="5011" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="40" selection-start="875" selection-end="875" vertical-scroll-proportion="0.60470086">
               <folding />
             </state>
           </provider>
@@ -183,10 +191,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/startdebug/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="102" selection-start="686" selection-end="686" vertical-scroll-proportion="0.5192308">
+            <state line="29" column="29" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -201,15 +209,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StartJetty.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/startjetty/src/main/java/StartJetty.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="58" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -219,28 +218,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ArtistServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PlaylistsServlet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="22" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
+            <state line="36" column="29" selection-start="1066" selection-end="1104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlaylistDAOTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/src/test/java/playlist/model/PlaylistDAOTest.java">
+      <file leaf-file-name="PlaylistTracksServlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="10" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/playlist/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -273,22 +272,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/playlist/src/main/webapp/tracks.jsp" />
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/alphabet.jspf" />
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java" />
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/playlists.jsp" />
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/playlist/src/main/webapp/playlist_tracks.jsp" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java" />
         <option value="$PROJECT_DIR$/startjetty/pom.xml" />
         <option value="$PROJECT_DIR$/debug/pom.xml" />
         <option value="$PROJECT_DIR$/startdebug/src/main/java/StartDebug.java" />
         <option value="$PROJECT_DIR$/playlist/src/test/java/playlist/model/PlaylistDAOTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java" />
-        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" />
         <option value="$PROJECT_DIR$/startdebug/pom.xml" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java" />
+        <option value="$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java" />
       </list>
     </option>
   </component>
@@ -609,6 +608,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tryjetty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playlist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="playlist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1411,7 +1444,11 @@
       <created>1380758802542</created>
       <updated>1380758802542</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Refactor with a debug target">
+      <created>1380759687321</created>
+      <updated>1380759687321</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1585,32 +1622,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="745" selection-end="745" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/artists.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="664" selection-end="664" vertical-scroll-proportion="-8.125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/playlist_tracks.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="12" selection-start="1470" selection-end="1470" vertical-scroll-proportion="-10.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="73" selection-start="3283" selection-end="3283" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playlist/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
@@ -1662,27 +1673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="4" selection-start="2211" selection-end="2212" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="22" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="33" selection-start="5084" selection-end="5084" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/startjetty/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="411" selection-end="1050" vertical-scroll-proportion="0.0">
@@ -1699,7 +1689,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/startdebug/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="102" selection-start="686" selection-end="686" vertical-scroll-proportion="0.5192308">
+        <state line="29" column="29" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="4" selection-start="2211" selection-end="2212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/ArtistServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="29" selection-start="1066" selection-end="1104" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/controller/PlaylistTracksServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-servlet/8.1.12.v20130726/jetty-servlet-8.1.12.v20130726.jar!/org/eclipse/jetty/servlet/ServletHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="14" selection-start="4206" selection-end="4206" vertical-scroll-proportion="0.35099337">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/PlaylistDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="156" column="4" selection-start="5011" selection-end="5011" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playlist/src/main/java/playlist/model/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="40" selection-start="875" selection-end="875" vertical-scroll-proportion="0.60470086">
           <folding />
         </state>
       </provider>

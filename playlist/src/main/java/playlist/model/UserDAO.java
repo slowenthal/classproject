@@ -6,6 +6,7 @@ import playlist.exceptions.UserLoginException;
 
 import javax.servlet.ServletContext;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.UUID;
 
 /**
@@ -28,6 +29,11 @@ public class UserDAO extends CassandraData {
     password = row.getString("password");
     userid = row.getUUID("user_id");
     playlist_names = row.getSet("playlist_names",String.class);
+
+    // If the size is 0 we get a useless Set, so lets add a real one
+    if (playlist_names.size() == 0) {
+       playlist_names = new TreeSet<String>();
+    }
   }
 
   UserDAO(String email, String password, UUID userid) {
