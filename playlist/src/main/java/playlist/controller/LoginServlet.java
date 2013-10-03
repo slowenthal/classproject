@@ -70,7 +70,7 @@ public class LoginServlet extends HttpServlet {
       return;
     }
 
-    getServletContext().getRequestDispatcher("/playlists").forward(request, response);
+    response.sendRedirect("playlists");
 
   }
 
@@ -106,7 +106,7 @@ public class LoginServlet extends HttpServlet {
 
     }
 
-    getServletContext().getRequestDispatcher("/playlists").forward(request, response);
+    response.sendRedirect("playlists");
 
   }
 

@@ -155,6 +155,9 @@ public class PlaylistDAO extends CassandraData {
     BoundStatement bs = preparedStatement.bind(user.getEmail());
     getSession(context).execute(bs);
 
+    // Update the user object too
+    user.getPlaylist_names().add(playlist_name);
+
     return new PlaylistDAO(user,playlist_name);
 
   }

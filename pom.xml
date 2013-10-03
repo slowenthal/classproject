@@ -12,6 +12,7 @@
     <modules>
         <module>playlist</module>
         <module>startjetty</module>
+        <module>startdebug</module>
     </modules>
 
 </project>
