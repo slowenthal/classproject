@@ -1,3 +1,5 @@
+package startjetty;
+
 import org.apache.log4j.BasicConfigurator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
@@ -14,20 +16,31 @@ import java.io.File;
  *  the need to build and deploy the WAR file.
  *
  */
-public class StartDebug {
+public class StartJetty {
 
-  public static final String WARMODULE_OFFSET_FROM_ROOT = "playlist/src/main/webapp" ;
+  public static final String WEBAPP_DIR = "webapp" ;
   public static void main(String[] args) throws Exception
   {
 
-	BasicConfigurator.configure();
-    String jetty_home = System.getProperty("jetty.home","..");
+    BasicConfigurator.configure();
+    String jetty_home = System.getProperty("jetty.home", ".");
+
+    String webAppDir = jetty_home + "/" + WEBAPP_DIR;
+    if (!(new File(webAppDir)).exists()) {
+      // If we don't have webapp, assume we're running out of a source tree
+      webAppDir = jetty_home + "/src/main/" + WEBAPP_DIR;
+      if (!(new File(webAppDir)).exists()) {
+        throw new Exception("Can't find the webapp dir");
+      }
+    }
 
     Server server = new Server(8080);
 
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
-    context.setResourceBase(jetty_home + "/" + WARMODULE_OFFSET_FROM_ROOT);
+    context.setResourceBase(webAppDir);
+
+    // TODO - INFO log point
     System.out.printf("Resouce Base: %s\n", context.getResourceBase());
     context.setContextPath("/playlist");
     context.setParentLoaderPriority(true);
