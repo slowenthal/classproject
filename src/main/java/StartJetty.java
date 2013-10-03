@@ -1,10 +1,8 @@
-package startjetty;
-
 import org.apache.log4j.BasicConfigurator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-import java.io.File;
+import java.net.URL;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,25 +21,25 @@ public class StartJetty {
   {
 
     BasicConfigurator.configure();
-    String jetty_home = System.getProperty("jetty.home", ".");
 
-    String webAppDir = jetty_home + "/" + WEBAPP_DIR;
-    if (!(new File(webAppDir)).exists()) {
-      // If we don't have webapp, assume we're running out of a source tree
-      webAppDir = jetty_home + "/src/main/" + WEBAPP_DIR;
-      if (!(new File(webAppDir)).exists()) {
-        throw new Exception("Can't find the webapp dir");
-      }
+    //
+    // The web resources get copied into the jar or class directories
+    // because we declared them as resources in Maven
+    // This is how we get the uri to it.  Even works in the debugger
+    //
+
+    URL webdirInJarURI = StartJetty.class.getClassLoader().getResource(WEBAPP_DIR);
+
+    if (webdirInJarURI == null) {
+      throw new Exception("Can't locate " + WEBAPP_DIR);
     }
 
     Server server = new Server(8080);
 
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
-    context.setResourceBase(webAppDir);
+    context.setResourceBase(webdirInJarURI.toExternalForm());
 
-    // TODO - INFO log point
-    System.out.printf("Resouce Base: %s\n", context.getResourceBase());
     context.setContextPath("/playlist");
     context.setParentLoaderPriority(true);
 
