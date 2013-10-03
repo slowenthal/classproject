@@ -40,6 +40,7 @@ public class UserDAO extends CassandraData {
     this.userid = userid;
     this.password = password;
     this.email = email;
+    this.playlist_names = new TreeSet<String>();
   }
 
   public static UserDAO addUser(String email, String password, ServletContext context) throws UserExistsException {
