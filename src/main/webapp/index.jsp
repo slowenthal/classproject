@@ -9,14 +9,5 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Playlist</title>
-</head>
-<body>
-<B>Playlist</B>
-<br/>
-<a href="login">Login</a>
-<br/>
-<a href="artists">Visit the Song Database</a>
-</body>
+<jsp:forward page="home"/>
 </html>

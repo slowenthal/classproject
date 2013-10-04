@@ -46,6 +46,11 @@
         <servlet-class>playlist.controller.LoginServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>playlist.controller.HomeServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
@@ -56,5 +61,8 @@
         <url-pattern>/playlists</url-pattern>
     </servlet-mapping>
 
-
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
 </web-app>
