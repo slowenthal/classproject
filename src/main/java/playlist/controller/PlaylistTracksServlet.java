@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * Created with IntelliJ IDEA.
@@ -69,7 +70,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     } else if (deleteTrack != null) {
 
       // Delete one track
-        int sequence_no = Integer.parseInt(deleteTrack);
+        long sequence_no = Long.parseLong(deleteTrack);
         doDeleteTrack(playlist, sequence_no);
     }
 
@@ -98,7 +99,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     playlist.deletePlayList();
   }
 
-  void doDeleteTrack(PlaylistDAO playlist, int sequence_no) {
+  void doDeleteTrack(PlaylistDAO playlist, long sequence_no) {
       playlist.deleteTrackFromPlaylist(sequence_no);
   }
 

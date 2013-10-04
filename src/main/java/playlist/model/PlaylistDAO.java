@@ -6,6 +6,7 @@ import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -42,7 +43,7 @@ public class PlaylistDAO extends CassandraData {
     private String artist;
     private int track_length_in_seconds;
     private String genre;
-    private Integer sequence_no;
+    private Date sequence_no;
 
     public Track(TracksDAO track) {
       this.track_name = track.getTrack();
@@ -56,7 +57,7 @@ public class PlaylistDAO extends CassandraData {
       this.track_name = row.getString("track_name");
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
-      this.sequence_no = row.getInt("sequence_no");
+      this.sequence_no = row.getDate("sequence_no");
       this.genre = row.getString("genre");
     }
 
@@ -72,8 +73,8 @@ public class PlaylistDAO extends CassandraData {
       return track_length_in_seconds;
     }
 
-    public Integer getSequence_no() {
-      return sequence_no;
+    public long getSequence_no() {
+      return sequence_no.getTime();
     }
 
     public String getGenre() {
@@ -109,12 +110,12 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public void deleteTrackFromPlaylist(int ordinalToDelete) {
+  public void deleteTrackFromPlaylist(long ordinalToDelete) {
 
     // Find the track to delete
     Track trackToDelete = null;
     for (int i = 0; i < this.trackList.size(); i++) {
-      if (this.trackList.get(i).sequence_no == ordinalToDelete) {
+      if (this.trackList.get(i).sequence_no.getTime() == ordinalToDelete) {
         trackToDelete = this.trackList.get(i);
         this.trackList.remove(i);
         break;
@@ -126,7 +127,7 @@ public class PlaylistDAO extends CassandraData {
 
     // remove it from the database
     PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
-    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, ordinalToDelete);
+    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, new Date(ordinalToDelete));
     getSession().execute(bs);
 
    }
@@ -204,19 +205,13 @@ public class PlaylistDAO extends CassandraData {
     );
     BoundStatement boundStatement = statement.bind();
 
-    int newNumber = 1;
-
-    if (this.trackList.size() > 0) {
-      newNumber = this.trackList.get(this.trackList.size() - 1).sequence_no + 1;
-    }
-
     for (Track track : newTracks) {
-      track.sequence_no = newNumber ++;
+      track.sequence_no = new Date();
 
       // Let's use named parameters this time
       boundStatement.setUUID("user_id", getUser_id());
       boundStatement.setString("playlist_name", getPlaylist_name());
-      boundStatement.setInt("sequence_no", track.sequence_no);
+      boundStatement.setDate("sequence_no", track.sequence_no);
       boundStatement.setString("track_name", track.getTrack_name());
       boundStatement.setString("artist", track.getArtist());
       boundStatement.setInt("track_length_in_seconds", track.getTrack_length_in_seconds());

@@ -73,7 +73,7 @@ public class PlaylistDAOTest extends TestCase {
     assertEquals(1, tracksList.size());
     assertEquals(20, playlist.getPlaylist_length_in_seconds());
 
-    playlist.deleteTrackFromPlaylist(1);
+    playlist.deleteTrackFromPlaylist(tracksList.get(0).getSequence_no());
     assertEquals(0, playlist.getPlaylist_length_in_seconds());
 
     playlist.deletePlayList();

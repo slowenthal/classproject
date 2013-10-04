@@ -14,7 +14,7 @@ copy artists_by_first_letter (first_letter, artist) from 'CSV/artists.csv'  WITH
 /* Teach Lists - Add This */
 alter table users add playlist_names set<text>  ;
 
-create table playlist_tracks (user_id UUID, playlist_name text, sequence_no int, artist text, track_name text, genre text, track_length_in_seconds int, musicfile text, primary key ((user_id, playlist_name), sequence_no ));
+create table playlist_tracks (user_id UUID, playlist_name text, sequence_no timestamp, artist text, track_name text, genre text, track_length_in_seconds int, musicfile text, primary key ((user_id, playlist_name), sequence_no ));
 
 create table statistics (counter_name text PRIMARY KEY, counter_value counter);
 
