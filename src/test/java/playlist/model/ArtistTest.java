@@ -22,12 +22,12 @@ public class ArtistTest extends TestCase {
 
     List<String> artists = ArtistsDAO.listArtistByLetter("A", context);
 
-    assertEquals(885, artists.size());
+    assertEquals(245, artists.size());
 
     // Check the first artist
     String firstArtist = artists.get(0);
 
-    assertEquals("A Bay Bay", firstArtist);
+    assertEquals("A Certain Ratio", firstArtist);
 
   }
 

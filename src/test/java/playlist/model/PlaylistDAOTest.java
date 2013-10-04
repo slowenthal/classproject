@@ -36,7 +36,8 @@ public class PlaylistDAOTest extends TestCase {
     UserDAO user = UserDAO.addUser("testuser1","pw",context);
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1",context);
 
-    PlaylistDAO.Track track1 = new PlaylistDAO.Track("Track1","Artist1", 20);
+    TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
+    PlaylistDAO.Track track1 = new PlaylistDAO.Track(newTrack);
 
     newPlaylist.addTracksToPlaylist(Arrays.asList(track1), context);
 
@@ -45,7 +46,8 @@ public class PlaylistDAOTest extends TestCase {
 
     assertEquals(1, tracksList.size());
 
-    PlaylistDAO.Track track2 = new PlaylistDAO.Track("Track2","Artist2", 10);
+    newTrack = new TracksDAO("2","Artist2","Track2", "rock", 10);
+    PlaylistDAO.Track track2 = new PlaylistDAO.Track(newTrack);
     playlist.addTracksToPlaylist(Arrays.asList(track2), context);
     playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1", context);
     tracksList = playlist.getTrackList();
@@ -64,7 +66,8 @@ public class PlaylistDAOTest extends TestCase {
     UserDAO user = UserDAO.addUser("testuser1","pw",context);
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1",context);
 
-    PlaylistDAO.Track track1 = new PlaylistDAO.Track("Track1","Artist1", 20);
+    TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
+    PlaylistDAO.Track track1 = new PlaylistDAO.Track(newTrack);
 
     newPlaylist.addTracksToPlaylist(Arrays.asList(track1), context);
 

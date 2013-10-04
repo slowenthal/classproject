@@ -19,23 +19,23 @@ public class SongTest extends TestCase {
 
   public void testFindTracksByArtist() throws Exception {
 
-    List<TracksDAO> songs = TracksDAO.listSongsByArtist("Elton John", context);
+    List<TracksDAO> songs = TracksDAO.listSongsByArtist("The Pioneers", context);
 
-    assertEquals(50, songs.size());
+    assertEquals(44, songs.size());
 
     // Check the first track
     TracksDAO firstTrack = songs.get(0);
 
-    assertEquals("Amoreena", firstTrack.getTrack());
+    assertEquals("Ali Button", firstTrack.getTrack());
 
   }
 
   public void testFindTrackById() throws Exception {
 
-    TracksDAO track = TracksDAO.getTrackById(500, context);
+    TracksDAO track = TracksDAO.getTrackById("TRXQAEJ128F426C456", context);
 
-    assertEquals(500, track.getTrack_id());
-    assertEquals("Don't Stop 'Til You Get Enough", track.getTrack());
+    assertEquals("TRXQAEJ128F426C456", track.getTrack_id());
+    assertEquals("Don't Fear The Reaper", track.getTrack());
 
   }
 

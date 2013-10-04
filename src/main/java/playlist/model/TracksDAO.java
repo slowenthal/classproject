@@ -19,14 +19,27 @@ import java.util.List;
 
 public class TracksDAO extends CassandraData {
 
-  private int track_id;
+  private String track_id;
   private String artist;
   private String track;
+  private String genre;
+  private int track_length_in_seconds;
 
   TracksDAO(Row row) {
-      track_id = row.getInt("track_id");
+      track_id = row.getString("track_id");
       artist = row.getString("artist");
       track = row.getString("track");
+      genre = row.getString("genre");
+      track_length_in_seconds = row.getInt("track_length_in_seconds");
+
+  }
+
+  public TracksDAO(String track_id, String artist, String track, String genre, int track_length_in_seconds) {
+    this.track_id = track_id;
+    this.artist = artist;
+    this.track = track;
+    this.genre = genre;
+    this.track_length_in_seconds = track_length_in_seconds;
   }
 
   // Static finder method
@@ -45,7 +58,23 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static TracksDAO getTrackById(int track_id, ServletContext context) {
+  public static List<TracksDAO> listSongsByGenre(String genre, ServletContext context) {
+
+    // TODO - How do we get the subsequent chunks of data?
+
+    String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + genre.replace("'","''") + "' LIMIT 200;";
+    ResultSet results = getSession(context).execute(queryText);
+
+    List<TracksDAO> tracks = new ArrayList<TracksDAO>();
+
+    for (Row row : results) {
+      tracks.add(new TracksDAO(row));
+    }
+
+    return tracks;
+  }
+
+  public static TracksDAO getTrackById(String track_id, ServletContext context) {
     PreparedStatement preparedStatement = getSession(context).prepare("SELECT * FROM track_by_id WHERE track_id = ?");
     BoundStatement boundStatement = preparedStatement.bind(track_id);
     ResultSet resultSet = getSession(context).execute(boundStatement);
@@ -56,7 +85,7 @@ public class TracksDAO extends CassandraData {
 
   // Accessors
 
-  public int getTrack_id() {
+  public String getTrack_id() {
     return track_id;
   }
 
@@ -66,5 +95,13 @@ public class TracksDAO extends CassandraData {
 
   public String getTrack() {
     return track;
+  }
+
+  public String getGenre() {
+    return genre;
+  }
+
+  public int getTrack_length_in_seconds() {
+    return track_length_in_seconds;
   }
 }

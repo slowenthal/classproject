@@ -25,6 +25,8 @@
     <c:forEach var="track" items="${tracks}">
         <tr>
             <td><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/>${track.track}</td>
+            <td>${track.genre}</td>
+            <td>${track.track_length_in_seconds}</td>
         </tr>
     </c:forEach>
 </table>

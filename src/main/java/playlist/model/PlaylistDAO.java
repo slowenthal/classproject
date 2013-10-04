@@ -40,13 +40,14 @@ public class PlaylistDAO extends CassandraData {
     private String track_name;
     private String artist;
     private int track_length_in_seconds;
+    private String genre;
     private Integer sequence_no;
 
-    public Track(String track_name, String artist, int track_length_in_seconds) {
-      this.track_name = track_name;
-      this.artist = artist;
-      this.track_length_in_seconds = track_length_in_seconds;
-
+    public Track(TracksDAO track) {
+      this.track_name = track.getTrack();
+      this.artist = track.getArtist();
+      this.track_length_in_seconds = track.getTrack_length_in_seconds();
+      this.genre = track.getGenre();
       this.sequence_no = null;  // A new track created this way has no order - it gets this when we persist it. There is no getter or setter.
     }
 
@@ -55,6 +56,7 @@ public class PlaylistDAO extends CassandraData {
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
       this.sequence_no = row.getInt("sequence_no");
+      this.genre = row.getString("genre");
     }
 
     public String getTrack_name() {
@@ -72,6 +74,10 @@ public class PlaylistDAO extends CassandraData {
     public Integer getSequence_no() {
       return sequence_no;
     }
+
+    public String getGenre() {
+      return genre;
+    }
   }
 
   // Static finder method
@@ -84,7 +90,7 @@ public class PlaylistDAO extends CassandraData {
 
 
     // Read the tracks from the database
-    PreparedStatement statement = getSession(context).prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, track_length_in_seconds " +
+    PreparedStatement statement = getSession(context).prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds " +
             "FROM playlist_tracks WHERE user_id = ? and playlist_name = ?");
 
     BoundStatement boundStatement = statement.bind(user.getUserid(), playlist_name);
@@ -192,8 +198,8 @@ public class PlaylistDAO extends CassandraData {
     // Prepare an insert statement
     PreparedStatement statement = getSession(context).prepare(
             "INSERT into playlist_tracks" +
-                    " (user_id, playlist_name, sequence_no, artist, track_name, track_length_in_seconds) " +
-                    "VALUES (?, ?, ?, ?, ?, ?)"
+                    " (user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?)"
     );
     BoundStatement boundStatement = statement.bind();
 
@@ -213,6 +219,7 @@ public class PlaylistDAO extends CassandraData {
       boundStatement.setString("track_name", track.getTrack_name());
       boundStatement.setString("artist", track.getArtist());
       boundStatement.setInt("track_length_in_seconds", track.getTrack_length_in_seconds());
+      boundStatement.setString("genre", track.getGenre());
 
       getSession(context).execute(boundStatement);
     }

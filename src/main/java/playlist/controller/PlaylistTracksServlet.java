@@ -53,7 +53,7 @@ public class PlaylistTracksServlet extends HttpServlet {
 
     if (button != null) {
       if (button.contentEquals("addTrack")) {
-        Integer track_id = new Integer(request.getParameter("track_id"));
+        String track_id = request.getParameter("track_id");
         doAddPlaylistTrack(playlist, track_id);
       } else if (button.contentEquals("deletePlaylist")) {
 
@@ -73,17 +73,16 @@ public class PlaylistTracksServlet extends HttpServlet {
     }
 
     request.setAttribute("email", user.getEmail());
-    request.setAttribute("playlist_name", playlist_name);
-    request.setAttribute("tracks", playlist.getTrackList());
+    request.setAttribute("playlist", playlist);
     getServletContext().getRequestDispatcher("/playlist_tracks.jsp").forward(request,response);
 
   }
 
-  void doAddPlaylistTrack(PlaylistDAO playlist, int track_id) throws ServletException {
+  void doAddPlaylistTrack(PlaylistDAO playlist, String track_id) throws ServletException {
     // Grab the Track information from the DB
     TracksDAO track = TracksDAO.getTrackById(track_id, getServletContext());
 
-    PlaylistDAO.Track newTrack = new PlaylistDAO.Track(track.getTrack(), track.getArtist(), 10);
+    PlaylistDAO.Track newTrack = new PlaylistDAO.Track(track);
     try {
       playlist.addTracksToPlaylist(Arrays.asList(newTrack), getServletContext());
     } catch (Exception e) {
