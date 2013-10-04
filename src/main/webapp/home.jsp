@@ -34,5 +34,7 @@ Cluster name: ${cassandra_info.clusterName} <br/>
 <a href="login">Login</a>
 <br/>
 <a href="artists">Visit the Song Database</a>
+<br/>
+<a href="stats">Statistics</a>
 </body>
 </html>

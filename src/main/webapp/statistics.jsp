@@ -10,13 +10,12 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
 </head>
 <body>
-<%@ include file="alphabet.jspf" %>
-<form action="artists"></form>
+<h1>Statistics</h1>
 <table>
-    <%--@elvariable id="artists" type="java.util.List"--%>
-    <c:forEach var="artist" items="${artists}">
+    <%--@elvariable id="statistics" type="java.util.List<playlist.model.StatisticsDAO>"--%>
+    <c:forEach var="stat" items="${statistics}">
         <tr>
-            <td><a href="tracks?artist=${artist}">${artist}</a></td>
+            <td>${stat.counter_name} = ${stat.counter_value}</td>
         </tr>
     </c:forEach>
 </table>

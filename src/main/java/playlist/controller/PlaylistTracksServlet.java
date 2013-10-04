@@ -1,6 +1,7 @@
 package playlist.controller;
 
 import playlist.model.PlaylistDAO;
+import playlist.model.StatisticsDAO;
 import playlist.model.TracksDAO;
 import playlist.model.UserDAO;
 
@@ -91,6 +92,9 @@ public class PlaylistTracksServlet extends HttpServlet {
   }
 
   void doDeletePlaylist(PlaylistDAO playlist) {
+
+    StatisticsDAO.decrement_counter("playlists", getServletContext());
+
     playlist.deletePlayList(getServletContext());
   }
 

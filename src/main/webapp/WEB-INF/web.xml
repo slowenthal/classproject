@@ -31,6 +31,11 @@
         <servlet-class>playlist.controller.PlaylistTracksServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>StatisticsServlet</servlet-name>
+        <servlet-class>playlist.controller.StatisticsServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>TrackServlet</servlet-name>
         <url-pattern>/tracks</url-pattern>
@@ -65,5 +70,12 @@
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>StatisticsServlet</servlet-name>
+        <url-pattern>/stats</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>

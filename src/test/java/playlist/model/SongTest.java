@@ -30,6 +30,19 @@ public class SongTest extends TestCase {
 
   }
 
+  public void testFindTracksByGenre() throws Exception {
+
+    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical", context);
+
+    assertEquals(200, songs.size());
+
+    // Check the first track
+    TracksDAO firstTrack = songs.get(0);
+
+    assertEquals("Concerto grosso No. 10 en Ré Mineur_ Op. 6: Air lento", firstTrack.getTrack());
+
+  }
+
   public void testFindTrackById() throws Exception {
 
     TracksDAO track = TracksDAO.getTrackById("TRXQAEJ128F426C456", context);
@@ -38,6 +51,5 @@ public class SongTest extends TestCase {
     assertEquals("Don't Fear The Reaper", track.getTrack());
 
   }
-
 
 }
