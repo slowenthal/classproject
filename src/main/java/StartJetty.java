@@ -1,4 +1,3 @@
-import org.apache.log4j.BasicConfigurator;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.webapp.WebAppContext;
 
@@ -16,11 +15,17 @@ import java.net.URL;
  */
 public class StartJetty {
 
-  public static final String WEBAPP_DIR = "webapp" ;
+  final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(StartJetty.class);
+  static final String WEBAPP_DIR = "webapp" ;
+
   public static void main(String[] args) throws Exception
   {
 
-    BasicConfigurator.configure();
+    // Using full class names to avoid confusion between Log4j and SLF4j
+    org.apache.log4j.BasicConfigurator.configure();
+
+    // Change this to a different level for more output
+    org.apache.log4j.Logger.getRootLogger().setLevel(org.apache.log4j.Level.INFO);
 
     //
     // The web resources get copied into the jar or class directories
@@ -33,6 +38,8 @@ public class StartJetty {
     if (webdirInJarURI == null) {
       throw new Exception("Can't locate " + WEBAPP_DIR);
     }
+
+    logger.info("Web Resources Directory: " + webdirInJarURI.toExternalForm());
 
     Server server = new Server(8080);
 
