@@ -5,9 +5,7 @@ import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
 
-import javax.servlet.ServletContext;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -21,19 +19,6 @@ import java.util.List;
 public class TracksDAO extends CassandraData {
 
   // Hard Coded Genres for now
-
-  private static final List<String> GENRES = Arrays.asList(
-          "classic pop and rock",
-          "classical",
-          "dance and electronica",
-          "folk",
-          "hip-hop",
-          "jazz and blues",
-          "metal",
-          "pop",
-          "punk",
-          "soul and reggae"
-  );
 
   private String track_id;
   private String artist;

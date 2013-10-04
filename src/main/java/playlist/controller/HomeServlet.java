@@ -14,7 +14,7 @@ import java.io.IOException;
  * User: stevelowenthal
  * Date: 10/3/13
  * Time: 7:09 PM
- * To change this template use File | Settings | File Templates.
+ *  change this template use File | Settings | File Templates.
  */
 public class HomeServlet extends HttpServlet {
 

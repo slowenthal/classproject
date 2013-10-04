@@ -2,14 +2,12 @@ package playlist.model;
 
 import com.datastax.driver.core.Row;
 
-import javax.servlet.ServletContext;
-
 /**
  * Created with IntelliJ IDEA.
  * User: stevelowenthal
  * Date: 10/3/13
  * Time: 7:08 PM
- * To change this template use File | Settings | File Templates.
+ * To change  template use File | Settings | File Templates.
  */
 public class CassandraInfo extends CassandraData {
 

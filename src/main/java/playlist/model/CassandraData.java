@@ -3,8 +3,6 @@ package playlist.model;
 import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
 
-import javax.servlet.ServletContext;
-
 /**
  * Created with IntelliJ IDEA.
  * User: stevelowenthal
@@ -33,9 +31,7 @@ public class CassandraData {
 
   protected static Session createSession() {
     Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
-    Session session = cluster.connect("playlist");
-
-    return session;
+    return cluster.connect("playlist");
   }
 
 }
