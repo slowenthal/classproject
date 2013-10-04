@@ -8,6 +8,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Playlist</title>
 <link href="css/playlist.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
+
 </head>
 <body>
 <h1>Playlist Login</h1>

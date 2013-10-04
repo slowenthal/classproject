@@ -17,10 +17,13 @@
 <html>
 <head>
     <title>Playlist</title>
+    <link rel="shortcut icon" href="images/favicon.png"/>
+
 </head>
 <body>
 <B>Playlist</B>
 <br/>
+<img src="images/favicon.png"/>
 Welcome to the playlist application. <br/>
 Java version: ${java_version} <br/>
 Cassandra version: ${cassandra_info.cassandraVersion} <br/>

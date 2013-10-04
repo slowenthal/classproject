@@ -43,6 +43,7 @@ public class StartJetty {
 
     Server server = new Server(8080);
 
+
     WebAppContext context = new WebAppContext();
     context.setDescriptor(context+"/WEB-INF/web.xml");
     context.setResourceBase(webdirInJarURI.toExternalForm());
