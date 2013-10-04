@@ -1,3 +1,14 @@
+<a href="tracks?genre=classic pop and rock">classic pop and rock</a>
+<a href="tracks?genre=classical">classical</a>
+<a href="tracks?genre=dance and electronica">dance and electronica</a>
+<a href="tracks?genre=folk">folk</a>
+<a href="tracks?genre=hip-hop">hip-hop</a>
+<a href="tracks?genre=jazz and blues">jazz and blues</a>
+<a href="tracks?genre=metal">metal</a>
+<a href="tracks?genre=pop">pop</a>
+<a href="tracks?genre=punk">punk</a>
+<a href="tracks?genre=soul and reggae">soul and reggae</a>
+<br/>
 <a href="artists?q=A">A</a>&nbsp;&nbsp;
 <a href="artists?q=B">B</a>&nbsp;&nbsp;
 <a href="artists?q=C">C</a>&nbsp;&nbsp;

@@ -25,8 +25,19 @@ public class TrackServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     String artist = request.getParameter("artist");
+    String genre = request.getParameter("genre");
 
-    List<TracksDAO> tracks = TracksDAO.listSongsByArtist(artist, getServletContext());
+    List<TracksDAO> tracks;
+    if (artist != null) {
+
+      // Assume we're searching by artist
+      tracks = TracksDAO.listSongsByArtist(artist, getServletContext());
+    } else {
+
+      // Assume we're searching by genre
+      tracks = TracksDAO.listSongsByGenre(genre, getServletContext());
+
+    }
 
     request.setAttribute("artist", artist);
     request.setAttribute("tracks", tracks);

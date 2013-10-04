@@ -9,27 +9,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Playlist</title>
 <link href="css/playlist.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript">
-        function addTrack(id) {
-            parent.postMessage(id, '*');
-        }
-    </script>
+
 </head>
 <body>
 <%@ include file="alphabet.jspf" %>
 <h1>Songs By ${artist}</h1>
 
-<b>Results</b>
+<script type="text/javascript">
+    function addTrack(id) {
+        parent.postMessage(id, '*');
+    }
+</script>
+
 <form id="form1" name="form1" method="get" action="">
-<table>
-    <c:forEach var="track" items="${tracks}">
-        <tr>
-            <td><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/>${track.track}</td>
-            <td>${track.genre}</td>
-            <td>${track.track_length_in_seconds}</td>
-        </tr>
-    </c:forEach>
-</table>
- </form>
+    <table>
+        <c:forEach var="track" items="${tracks}">
+            <tr>
+                <td><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/>${track.track}</td>
+                <td>${track.genre}</td>
+                <td>${track.track_length_in_seconds}</td>
+            </tr>
+        </c:forEach>
+    </table>
+</form>
+
 </body>
 </html>

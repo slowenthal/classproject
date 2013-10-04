@@ -7,6 +7,7 @@ import com.datastax.driver.core.Row;
 
 import javax.servlet.ServletContext;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -19,6 +20,21 @@ import java.util.List;
 
 public class TracksDAO extends CassandraData {
 
+  // Hard Coded Genres for now
+
+  private static final List<String> GENRES = Arrays.asList(
+          "classic pop and rock",
+          "classical",
+          "dance and electronica",
+          "folk",
+          "hip-hop",
+          "jazz and blues",
+          "metal",
+          "pop",
+          "punk",
+          "soul and reggae"
+  );
+
   private String track_id;
   private String artist;
   private String track;
@@ -26,11 +42,11 @@ public class TracksDAO extends CassandraData {
   private int track_length_in_seconds;
 
   TracksDAO(Row row) {
-      track_id = row.getString("track_id");
-      artist = row.getString("artist");
-      track = row.getString("track");
-      genre = row.getString("genre");
-      track_length_in_seconds = row.getInt("track_length_in_seconds");
+    track_id = row.getString("track_id");
+    artist = row.getString("artist");
+    track = row.getString("track");
+    genre = row.getString("genre");
+    track_length_in_seconds = row.getInt("track_length_in_seconds");
 
   }
 
@@ -52,7 +68,7 @@ public class TracksDAO extends CassandraData {
     List<TracksDAO> tracks = new ArrayList<TracksDAO>();
 
     for (Row row : results) {
-       tracks.add(new TracksDAO(row));
+      tracks.add(new TracksDAO(row));
     }
 
     return tracks;
@@ -62,7 +78,7 @@ public class TracksDAO extends CassandraData {
 
     // TODO - How do we get the subsequent chunks of data?
 
-    String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + genre.replace("'","''") + "' LIMIT 200;";
+    String queryText = "SELECT * FROM track_by_genre WHERE genre = '" + genre.replace("'","''") + "' LIMIT 200;";
     ResultSet results = getSession(context).execute(queryText);
 
     List<TracksDAO> tracks = new ArrayList<TracksDAO>();
