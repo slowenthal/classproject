@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<%--@elvariable id="q" type="java.lang.String"--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ﻿<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -16,6 +17,7 @@
 <input type="hidden" id="q" name="q" value="${q}"/>
 <button name="order" value="up">↑</button>
 <button name="order" value="down">↓</button>
+    <h2>Artists starting with "${q}"</h2>
     <table>
         <%--@elvariable id="artists" type="java.util.List"--%>
         <c:forEach var="artist" items="${artists}">

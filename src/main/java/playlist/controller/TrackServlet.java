@@ -27,12 +27,12 @@ public class TrackServlet extends HttpServlet {
     String artist = request.getParameter("artist");
     String genre = request.getParameter("genre");
 
-    List<TracksDAO> tracks;
+    List<TracksDAO> tracks = null;
     if (artist != null) {
 
       // Assume we're searching by artist
       tracks = TracksDAO.listSongsByArtist(artist);
-    } else {
+    } else if (genre != null) {
 
       // Assume we're searching by genre
       tracks = TracksDAO.listSongsByGenre(genre);
@@ -40,6 +40,7 @@ public class TrackServlet extends HttpServlet {
     }
 
     request.setAttribute("artist", artist);
+    request.setAttribute("genre", genre);
     request.setAttribute("tracks", tracks);
     getServletContext().getRequestDispatcher("/tracks.jsp").forward(request,response);
 

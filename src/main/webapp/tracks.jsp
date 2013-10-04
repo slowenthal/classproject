@@ -1,4 +1,5 @@
 ﻿<%--@elvariable id="artist" type="java.lang.String"--%>
+<%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ﻿<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -14,7 +15,17 @@
 <body>
 <section class="menu small">
 <%@ include file="alphabet.jspf" %>
-<h2>Songs By ${artist}</h2>
+    <c:choose>
+        <c:when test="${not empty genre}">
+            <h2>${genre} Songs</h2>
+        </c:when>
+        <c:when test="${not empty artist}">
+            <h2>Songs By ${artist}</h2>
+        </c:when>
+        <c:otherwise>
+            <h2>Click a Genre or Artist Letter Above</h2>
+        </c:otherwise>
+    </c:choose>
 
 <script type="text/javascript">
     function addTrack(id) {

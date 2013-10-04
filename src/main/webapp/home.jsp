@@ -35,7 +35,7 @@
 		<h1>Places to Go:</h1>
 		<nav>
 			<a href="login">Login</a>
-			<a href="artists">Visit the Song Database</a>
+			<a href="tracks">Visit the Song Database</a>
 			<a href="stats">Statistics</a>
 		</nav>
 	</section>
