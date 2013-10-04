@@ -18,9 +18,14 @@ public class ArtistsDAO extends CassandraData {
 
   // Static finder method
 
-  public static List<String> listArtistByLetter(String first_letter) {
+  // TODO - one of the exersizes is to add the desc
+  public static List<String> listArtistByLetter(String first_letter, boolean desc) {
 
-    String queryText = "SELECT * FROM artists_by_first_letter WHERE first_letter = '" + first_letter + "'";
+    String queryText = "SELECT * FROM artists_by_first_letter WHERE first_letter = '" + first_letter + "'"
+
+            // TODO separate this out for one of the exersizes
+            + (desc ? " ORDER BY artist DESC" : "");
+
     ResultSet results = getSession().execute(queryText);
 
     List<String> artists = new ArrayList<String>();

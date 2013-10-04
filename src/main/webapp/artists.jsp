@@ -11,7 +11,10 @@
 </head>
 <body>
 <%@ include file="alphabet.jspf" %>
-<form action="artists"></form>
+<form id="form1" name="form1" method="get" action="">
+<input type="hidden" id="q" name="q" value="${q}"/>
+<button name="order" value="up">↑</button>
+<button name="order" value="down">↓</button>
 <table>
     <%--@elvariable id="artists" type="java.util.List"--%>
     <c:forEach var="artist" items="${artists}">

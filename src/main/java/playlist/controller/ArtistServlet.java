@@ -25,10 +25,14 @@ public class ArtistServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     String q = request.getParameter("q");
+    String dir = request.getParameter("order");
 
-    List<String> artists = ArtistsDAO.listArtistByLetter(q);
+    boolean desc = dir != null && dir.contentEquals("down");
+
+    List<String> artists = ArtistsDAO.listArtistByLetter(q, desc);
 
     request.setAttribute("artists", artists);
+    request.setAttribute("q", q);
     getServletContext().getRequestDispatcher("/artists.jsp").forward(request,response);
 
   }
