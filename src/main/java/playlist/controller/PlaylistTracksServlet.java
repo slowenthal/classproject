@@ -43,7 +43,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     //
 
     String playlist_name = request.getParameter("pl");
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, playlist_name, getServletContext());
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, playlist_name);
 
     String button = request.getParameter("button");
     String deleteTrack = request.getParameter("deleteTrack");
@@ -81,11 +81,11 @@ public class PlaylistTracksServlet extends HttpServlet {
 
   void doAddPlaylistTrack(PlaylistDAO playlist, String track_id) throws ServletException {
     // Grab the Track information from the DB
-    TracksDAO track = TracksDAO.getTrackById(track_id, getServletContext());
+    TracksDAO track = TracksDAO.getTrackById(track_id);
 
     PlaylistDAO.Track newTrack = new PlaylistDAO.Track(track);
     try {
-      playlist.addTracksToPlaylist(Arrays.asList(newTrack), getServletContext());
+      playlist.addTracksToPlaylist(Arrays.asList(newTrack));
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }
@@ -93,13 +93,13 @@ public class PlaylistTracksServlet extends HttpServlet {
 
   void doDeletePlaylist(PlaylistDAO playlist) {
 
-    StatisticsDAO.decrement_counter("playlists", getServletContext());
+    StatisticsDAO.decrement_counter("playlists");
 
-    playlist.deletePlayList(getServletContext());
+    playlist.deletePlayList();
   }
 
   void doDeleteTrack(PlaylistDAO playlist, int sequence_no) {
-      playlist.deleteTrackFromPlaylist(sequence_no, getServletContext());
+      playlist.deleteTrackFromPlaylist(sequence_no);
   }
 
 }

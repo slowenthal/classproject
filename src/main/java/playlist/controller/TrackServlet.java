@@ -31,11 +31,11 @@ public class TrackServlet extends HttpServlet {
     if (artist != null) {
 
       // Assume we're searching by artist
-      tracks = TracksDAO.listSongsByArtist(artist, getServletContext());
+      tracks = TracksDAO.listSongsByArtist(artist);
     } else {
 
       // Assume we're searching by genre
-      tracks = TracksDAO.listSongsByGenre(genre, getServletContext());
+      tracks = TracksDAO.listSongsByGenre(genre);
 
     }
 

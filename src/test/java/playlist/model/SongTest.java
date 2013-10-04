@@ -1,9 +1,6 @@
 package playlist.model;
 
 import junit.framework.TestCase;
-import playlist.testhelpers.MockServletContext;
-
-import javax.servlet.ServletContext;
 import java.util.List;
 
 /**
@@ -15,11 +12,9 @@ import java.util.List;
  */
 public class SongTest extends TestCase {
 
-  ServletContext context = new MockServletContext();
-
   public void testFindTracksByArtist() throws Exception {
 
-    List<TracksDAO> songs = TracksDAO.listSongsByArtist("The Pioneers", context);
+    List<TracksDAO> songs = TracksDAO.listSongsByArtist("The Pioneers");
 
     assertEquals(44, songs.size());
 
@@ -32,7 +27,7 @@ public class SongTest extends TestCase {
 
   public void testFindTracksByGenre() throws Exception {
 
-    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical", context);
+    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical");
 
     assertEquals(200, songs.size());
 
@@ -45,7 +40,7 @@ public class SongTest extends TestCase {
 
   public void testFindTrackById() throws Exception {
 
-    TracksDAO track = TracksDAO.getTrackById("TRXQAEJ128F426C456", context);
+    TracksDAO track = TracksDAO.getTrackById("TRXQAEJ128F426C456");
 
     assertEquals("TRXQAEJ128F426C456", track.getTrack_id());
     assertEquals("Don't Fear The Reaper", track.getTrack());

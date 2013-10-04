@@ -24,10 +24,10 @@ public class HomeServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    StatisticsDAO.increment_counter("page hits: home", getServletContext());
+    StatisticsDAO.increment_counter("page hits: home");
 
     String javaVersion = System.getProperty("java.version");
-    CassandraInfo cassandraInfo = new CassandraInfo(getServletContext());
+    CassandraInfo cassandraInfo = new CassandraInfo();
 
     request.setAttribute("java_version", javaVersion);
     request.setAttribute("cassandra_info", cassandraInfo);

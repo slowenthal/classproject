@@ -1,6 +1,5 @@
 package playlist.controller;
 
-import playlist.model.ArtistsDAO;
 import playlist.model.StatisticsDAO;
 
 import javax.servlet.ServletException;
@@ -26,7 +25,7 @@ public class StatisticsServlet extends HttpServlet {
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-    List<StatisticsDAO> statistics = StatisticsDAO.getStatistics(getServletContext());
+    List<StatisticsDAO> statistics = StatisticsDAO.getStatistics();
 
     request.setAttribute("statistics", statistics);
     getServletContext().getRequestDispatcher("/statistics.jsp").forward(request,response);

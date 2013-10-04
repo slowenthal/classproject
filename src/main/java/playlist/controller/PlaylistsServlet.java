@@ -2,7 +2,6 @@ package playlist.controller;
 
 import playlist.model.PlaylistDAO;
 import playlist.model.StatisticsDAO;
-import playlist.model.TracksDAO;
 import playlist.model.UserDAO;
 
 import javax.servlet.ServletException;
@@ -11,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
-import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.
@@ -40,7 +37,7 @@ public class PlaylistsServlet extends HttpServlet {
 
     }
 
-    UserDAO userFromDB = UserDAO.getUser(user.getEmail(), getServletContext());
+    UserDAO userFromDB = UserDAO.getUser(user.getEmail());
 
     String button = request.getParameter("button");
     if (button != null && button.contentEquals("Add")) {
@@ -58,9 +55,9 @@ public class PlaylistsServlet extends HttpServlet {
 
   private void doAddPlaylist(UserDAO user, String playlistName) {
 
-    StatisticsDAO.increment_counter("playlists", getServletContext());
+    StatisticsDAO.increment_counter("playlists");
 
-    PlaylistDAO.createPlayList(user, playlistName, getServletContext());
+    PlaylistDAO.createPlayList(user, playlistName);
   }
 
 }

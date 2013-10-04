@@ -82,7 +82,7 @@ public class PlaylistDAO extends CassandraData {
 
   // Static finder method
 
-  public static PlaylistDAO getPlaylistForUser(UserDAO user, String playlist_name, ServletContext context) {
+  public static PlaylistDAO getPlaylistForUser(UserDAO user, String playlist_name) {
 
 
     // Create a new empty playlist object
@@ -90,11 +90,11 @@ public class PlaylistDAO extends CassandraData {
 
 
     // Read the tracks from the database
-    PreparedStatement statement = getSession(context).prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds " +
+    PreparedStatement statement = getSession().prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds " +
             "FROM playlist_tracks WHERE user_id = ? and playlist_name = ?");
 
     BoundStatement boundStatement = statement.bind(user.getUserid(), playlist_name);
-    ResultSet resultSet = getSession(context).execute(boundStatement);
+    ResultSet resultSet = getSession().execute(boundStatement);
 
     for (Row row : resultSet)  {
       newPlaylist.trackList.add(new Track(row));
@@ -108,7 +108,7 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public void deleteTrackFromPlaylist(int ordinalToDelete, ServletContext context) {
+  public void deleteTrackFromPlaylist(int ordinalToDelete) {
 
     // Find the track to delete
     Track trackToDelete = null;
@@ -124,39 +124,39 @@ public class PlaylistDAO extends CassandraData {
     playlist_length_in_seconds -= trackToDelete != null ? trackToDelete.getTrack_length_in_seconds() : 0;
 
     // remove it from the database
-    PreparedStatement ps = getSession(context).prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
+    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
     BoundStatement bs = ps.bind(this.user_id, this.playlist_name, ordinalToDelete);
-    getSession(context).execute(bs);
+    getSession().execute(bs);
 
    }
 
 
-  public void deletePlayList(ServletContext context) {
+  public void deletePlayList() {
 
     // Change single quotes to a pair of single quotes for escaping into the database
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
-    PreparedStatement preparedStatement = getSession(context).prepare("BEGIN BATCH " +
+    PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
             "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
             "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
             "APPLY BATCH;");
 
     BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
 
-    getSession(context).execute(bs);
+    getSession().execute(bs);
 
   }
 
-  public static PlaylistDAO createPlayList(UserDAO user, String playlist_name, ServletContext context) {
+  public static PlaylistDAO createPlayList(UserDAO user, String playlist_name) {
 
 
     // Change single quotes to a pair of single quotes for escaping into the database
     String fixed_playlist_name = playlist_name.replace("'","''");
 
-    PreparedStatement preparedStatement = getSession(context).prepare(
+    PreparedStatement preparedStatement = getSession().prepare(
             "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE email = ?");
     BoundStatement bs = preparedStatement.bind(user.getEmail());
-    getSession(context).execute(bs);
+    getSession().execute(bs);
 
     // Update the user object too
 
@@ -167,20 +167,20 @@ public class PlaylistDAO extends CassandraData {
   }
 
 
-  private void deletePlaylistTracks(ServletContext context) {
+  private void deletePlaylistTracks() {
 
     // Delete a whole playlist
 
-    PreparedStatement ps = getSession(context).prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ?");
+    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ?");
     BoundStatement bs = ps.bind(this.user_id, this.playlist_name);
-    getSession(context).execute(bs);
+    getSession().execute(bs);
 
   }
 
-  public void rewritePlaylist(ServletContext context) throws Exception {
+  public void rewritePlaylist() throws Exception {
 
     // First delete the whole playlist
-    deletePlaylistTracks(context);
+    deletePlaylistTracks();
 
     // Now insert all of the track, but first, reset all of the ordinals
     List<Track> tracklist = this.trackList;
@@ -189,14 +189,14 @@ public class PlaylistDAO extends CassandraData {
     this.trackList = new ArrayList<Track>();
 
     // Add them back
-    addTracksToPlaylist(tracklist, context);
+    addTracksToPlaylist(tracklist);
 
   }
 
-  public void addTracksToPlaylist(List<Track> newTracks, ServletContext context) throws Exception {
+  public void addTracksToPlaylist(List<Track> newTracks) throws Exception {
 
     // Prepare an insert statement
-    PreparedStatement statement = getSession(context).prepare(
+    PreparedStatement statement = getSession().prepare(
             "INSERT into playlist_tracks" +
                     " (user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?)"
@@ -221,7 +221,7 @@ public class PlaylistDAO extends CassandraData {
       boundStatement.setInt("track_length_in_seconds", track.getTrack_length_in_seconds());
       boundStatement.setString("genre", track.getGenre());
 
-      getSession(context).execute(boundStatement);
+      getSession().execute(boundStatement);
     }
 
     this.trackList.addAll(newTracks);

@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    StatisticsDAO.increment_counter("page hits: login", getServletContext());
+    StatisticsDAO.increment_counter("page hits: login");
 
     String button = request.getParameter("button");
     button = button == null ? "" : button;
@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     try {
-      UserDAO user = UserDAO.validateLogin(email, password, getServletContext());
+      UserDAO user = UserDAO.validateLogin(email, password);
       HttpSession httpSession = request.getSession(true);
       httpSession.setAttribute("user", user);
 
@@ -67,14 +67,14 @@ public class LoginServlet extends HttpServlet {
 
       // Go back to the user screen with an error
 
-      StatisticsDAO.increment_counter("failed logins", getServletContext());
+      StatisticsDAO.increment_counter("failed logins");
 
       request.setAttribute("error", "Email or Password is Invalid");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
     }
 
-    StatisticsDAO.increment_counter("valid logins", getServletContext());
+    StatisticsDAO.increment_counter("valid logins");
 
     response.sendRedirect("playlists");
 
@@ -96,10 +96,10 @@ public class LoginServlet extends HttpServlet {
     // Add the user.  If it's successful, create a login session for it
     try {
 
-      StatisticsDAO.increment_counter("users", getServletContext());
+      StatisticsDAO.increment_counter("users");
 
 
-      UserDAO newUser = UserDAO.addUser(email, password, getServletContext());
+      UserDAO newUser = UserDAO.addUser(email, password);
 
 
       // Create the user's login session so this application recognizes the user as having logged in

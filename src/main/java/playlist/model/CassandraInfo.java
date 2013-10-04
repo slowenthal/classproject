@@ -1,11 +1,8 @@
 package playlist.model;
 
-import com.datastax.driver.core.ResultSet;
 import com.datastax.driver.core.Row;
-import com.datastax.driver.core.Session;
 
 import javax.servlet.ServletContext;
-import javax.servlet.http.HttpSession;
 
 /**
  * Created with IntelliJ IDEA.
@@ -19,9 +16,9 @@ public class CassandraInfo extends CassandraData {
   private String clusterName;
   private String cassandraVersion;
 
-  public CassandraInfo(ServletContext context) {
+  public CassandraInfo() {
 
-    Row row = getSession(context).execute("select cluster_name, release_version from system.local").one();
+    Row row = getSession().execute("select cluster_name, release_version from system.local").one();
     cassandraVersion = row.getString("release_version");
     clusterName = row.getString("cluster_name");
 

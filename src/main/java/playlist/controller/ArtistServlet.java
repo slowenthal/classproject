@@ -26,7 +26,7 @@ public class ArtistServlet extends HttpServlet {
 
     String q = request.getParameter("q");
 
-    List<String> artists = ArtistsDAO.listArtistByLetter(q, getServletContext());
+    List<String> artists = ArtistsDAO.listArtistByLetter(q);
 
     request.setAttribute("artists", artists);
     getServletContext().getRequestDispatcher("/artists.jsp").forward(request,response);

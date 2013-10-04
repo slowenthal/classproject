@@ -19,10 +19,10 @@ public class ArtistsDAO extends CassandraData {
 
   // Static finder method
 
-  public static List<String> listArtistByLetter(String first_letter, ServletContext context) {
+  public static List<String> listArtistByLetter(String first_letter) {
 
     String queryText = "SELECT * FROM artists_by_first_letter WHERE first_letter = '" + first_letter + "'";
-    ResultSet results = getSession(context).execute(queryText);
+    ResultSet results = getSession().execute(queryText);
 
     List<String> artists = new ArrayList<String>();
 

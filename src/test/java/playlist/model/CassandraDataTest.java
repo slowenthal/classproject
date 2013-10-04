@@ -2,9 +2,7 @@ package playlist.model;
 
 import com.datastax.driver.core.Session;
 import junit.framework.TestCase;
-import playlist.testhelpers.MockServletContext;
 
-import javax.servlet.ServletContext;
 
 
 /**
@@ -30,8 +28,7 @@ public class CassandraDataTest extends TestCase {
   public void testCassandraSession() throws Exception{
 
     // Validate that the session is not null
-    ServletContext context = new MockServletContext();
-    Session session = CassandraData.getSession(context);
+    Session session = CassandraData.getSession();
 
 
     assertNotNull("session is null", session);
@@ -39,7 +36,7 @@ public class CassandraDataTest extends TestCase {
     // validate we get the same session when we call getSession a second time
     // because getSession is supposed to store the result the first time it's called.
 
-    Session session2 = CassandraData.getSession(context);
+    Session session2 = CassandraData.getSession();
 
     assertEquals("sessions are not equal", session, session2);
 

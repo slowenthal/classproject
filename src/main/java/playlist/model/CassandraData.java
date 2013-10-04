@@ -15,17 +15,19 @@ import javax.servlet.ServletContext;
 public class CassandraData {
 
 
-  public static final String C_STAR_SESSION = "CStarSession";
+  private static Session cassandraSesson = null;
 
-  public static Session getSession(ServletContext context) {
-    Session session = (Session) context.getAttribute(C_STAR_SESSION);
+  CassandraData () {
+    // Do nothing
+  }
 
-    if (session == null) {
-      session = createSession();
-      context.setAttribute(C_STAR_SESSION, session);
+  public static Session getSession() {
+
+    if (cassandraSesson == null) {
+      cassandraSesson = createSession();
     }
 
-    return session;
+    return cassandraSesson;
 
   }
 

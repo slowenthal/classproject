@@ -27,10 +27,10 @@ public class StatisticsDAO extends CassandraData {
 
   // Static finder method
 
-  public static List<StatisticsDAO> getStatistics(ServletContext context) {
+  public static List<StatisticsDAO> getStatistics() {
 
     String queryText = "SELECT * FROM statistics";
-    ResultSet results = getSession(context).execute(queryText);
+    ResultSet results = getSession().execute(queryText);
 
     List<StatisticsDAO> statistics = new ArrayList<StatisticsDAO>();
 
@@ -41,17 +41,17 @@ public class StatisticsDAO extends CassandraData {
     return statistics;
   }
 
-  public static void increment_counter(String counter_name, ServletContext context) {
+  public static void increment_counter(String counter_name) {
 
     String queryText = "UPDATE statistics set counter_value = counter_value + 1 where counter_name = '" + counter_name +"'";
-    getSession(context).execute(queryText);
+    getSession().execute(queryText);
 
   }
 
-  public static void decrement_counter(String counter_name, ServletContext context) {
+  public static void decrement_counter(String counter_name) {
 
     String queryText = "UPDATE statistics set counter_value = counter_value - 1 where counter_name = '" + counter_name +"'";
-    getSession(context).execute(queryText);
+    getSession().execute(queryText);
 
   }
 

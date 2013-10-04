@@ -1,9 +1,6 @@
 package playlist.model;
 
 import junit.framework.TestCase;
-import playlist.testhelpers.MockServletContext;
-
-import javax.servlet.ServletContext;
 import java.util.List;
 
 /**
@@ -16,11 +13,9 @@ import java.util.List;
 
 public class ArtistTest extends TestCase {
 
-  ServletContext context = new MockServletContext();
-
   public void testFindArtistsStartingWithA() throws Exception {
 
-    List<String> artists = ArtistsDAO.listArtistByLetter("A", context);
+    List<String> artists = ArtistsDAO.listArtistByLetter("A");
 
     assertEquals(245, artists.size());
 
@@ -33,7 +28,7 @@ public class ArtistTest extends TestCase {
 
   public void testFindArtistsStartingWithInvalidLetter() throws Exception {
 
-    List<String> artists = ArtistsDAO.listArtistByLetter("=", context);
+    List<String> artists = ArtistsDAO.listArtistByLetter("=");
 
     assertEquals(0, artists.size());
 

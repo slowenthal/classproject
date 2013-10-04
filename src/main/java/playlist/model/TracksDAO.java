@@ -60,10 +60,10 @@ public class TracksDAO extends CassandraData {
 
   // Static finder method
 
-  public static List<TracksDAO> listSongsByArtist(String artist, ServletContext context) {
+  public static List<TracksDAO> listSongsByArtist(String artist) {
 
     String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
-    ResultSet results = getSession(context).execute(queryText);
+    ResultSet results = getSession().execute(queryText);
 
     List<TracksDAO> tracks = new ArrayList<TracksDAO>();
 
@@ -74,12 +74,12 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static List<TracksDAO> listSongsByGenre(String genre, ServletContext context) {
+  public static List<TracksDAO> listSongsByGenre(String genre) {
 
     // TODO - How do we get the subsequent chunks of data?
 
     String queryText = "SELECT * FROM track_by_genre WHERE genre = '" + genre.replace("'","''") + "' LIMIT 200;";
-    ResultSet results = getSession(context).execute(queryText);
+    ResultSet results = getSession().execute(queryText);
 
     List<TracksDAO> tracks = new ArrayList<TracksDAO>();
 
@@ -90,10 +90,10 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static TracksDAO getTrackById(String track_id, ServletContext context) {
-    PreparedStatement preparedStatement = getSession(context).prepare("SELECT * FROM track_by_id WHERE track_id = ?");
+  public static TracksDAO getTrackById(String track_id) {
+    PreparedStatement preparedStatement = getSession().prepare("SELECT * FROM track_by_id WHERE track_id = ?");
     BoundStatement boundStatement = preparedStatement.bind(track_id);
-    ResultSet resultSet = getSession(context).execute(boundStatement);
+    ResultSet resultSet = getSession().execute(boundStatement);
 
     return new TracksDAO(resultSet.one());
   }
