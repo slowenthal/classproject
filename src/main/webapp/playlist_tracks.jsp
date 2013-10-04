@@ -26,36 +26,40 @@
 </head>
 
 <body>
-<a href="login?button=logout">Logout</a> <br/>
-<a href="playlists">Back to My Playlists</a> <br/>
-<h1>Playlist ${playlist.playlist_name} for ${email}.  Total length: ${playlist.playlist_length_in_seconds}</h1>
-<form id="form1" name="form1" method="get" action="">
-<input type="hidden" name="pl" value="${playlist.playlist_name}"/>
-<button type="submit" name="button" value="deletePlaylist">Delete this Playlist</button>
-<div id="playlist_tracks" style="height:400px;width:500px;float:left;">
-<table class="tracktable">
-    <tr>
-        <th></th>
-        <th>Track Name</th>
-        <th>Artist</th>
-        <th>Genre</th>
-        <th>Length (s)</th>
-    </tr>
-    <c:forEach var="track" items="${playlist.trackList}">
-        <tr>
-            <td><button type="submit" name="deleteTrack" value="${track.sequence_no}">-</button></td>
-            <td>${track.track_name}</td>
-            <td>${track.artist}</td>
-            <td>${track.genre}</td>
-            <td>${track.track_length_in_seconds}</td>
-        </tr>
-    </c:forEach>
-</table>
-</div>
-<h1>Song Picker: </h1>
-<div id="picker" style="height:800px;width:500px;float:left;">
-<iframe src="artists" height="400" width="400"></iframe>
-</div>
-</form>
+<section class="tracks">
+    <a href="login?button=logout">Logout</a> <br/>
+    <a href="playlists">Back to My Playlists</a> <br/>
+    <h2>Playlist ${playlist.playlist_name} for ${email}</h2>
+    <h2>Total length: ${playlist.playlist_length_in_seconds}</h2>
+    <form id="form1" name="form1" method="get" action="">
+    <input type="hidden" name="pl" value="${playlist.playlist_name}"/>
+    <button type="submit" class="track_delete" name="button" value="deletePlaylist">Delete this Playlist</button>
+    <div id="playlist_tracks" style="height:auto;width:500px;float:left;">
+        <table class="tracktable">
+            <tr>
+                <th></th>
+                <th>Track Name</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Length (s)</th>
+            </tr>
+            <c:forEach var="track" items="${playlist.trackList}">
+                <tr>
+                    <td><button type="submit" name="deleteTrack" value="${track.sequence_no}">-</button></td>
+                    <td>${track.track_name}</td>
+                    <td>${track.artist}</td>
+                    <td>${track.genre}</td>
+                    <td>${track.track_length_in_seconds}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
+
+    <div id="picker" style="height:800px;width:800px;">
+        <h2>Song Picker: </h2>
+        <iframe src="artists" height="auto" width="400"></iframe>
+    </div>
+    </form>
+</section>
 </body>
 </html>

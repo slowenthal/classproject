@@ -29,7 +29,10 @@ public class ArtistServlet extends HttpServlet {
 
     boolean desc = dir != null && dir.contentEquals("down");
 
-    List<String> artists = ArtistsDAO.listArtistByLetter(q, desc);
+    List<String> artists = null;
+    if (q != null && !q.isEmpty()) {
+      artists = ArtistsDAO.listArtistByLetter(q, desc);
+    }
 
     request.setAttribute("artists", artists);
     request.setAttribute("q", q);

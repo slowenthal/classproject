@@ -12,8 +12,9 @@
 
 </head>
 <body>
+<section class="menu small">
 <%@ include file="alphabet.jspf" %>
-<h1>Songs By ${artist}</h1>
+<h2>Songs By ${artist}</h2>
 
 <script type="text/javascript">
     function addTrack(id) {
@@ -22,16 +23,17 @@
 </script>
 
 <form id="form1" name="form1" method="get" action="">
-    <table>
+    <table class="table">
         <c:forEach var="track" items="${tracks}">
             <tr>
-                <td><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/>${track.track}</td>
-                <td>${track.genre}</td>
-                <td>${track.track_length_in_seconds}</td>
+                <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
+                <td class="field_track">${track.track}</td>
+                <td class="field_genre">${track.genre}</td>
+                <td class="field_sec">${track.track_length_in_seconds}</td>
             </tr>
         </c:forEach>
     </table>
 </form>
-
+</section>
 </body>
 </html>

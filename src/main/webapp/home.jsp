@@ -14,27 +14,30 @@
 <%--@elvariable id="java_version" type="java.lang.String"--%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
     <title>Playlist</title>
     <link rel="shortcut icon" href="images/favicon.png"/>
-
+    <link rel="stylesheet" href="css/playlist.css">
 </head>
 <body>
-<B>Playlist</B>
-<br/>
-<img src="images/favicon.png"/>
-Welcome to the playlist application. <br/>
-Java version: ${java_version} <br/>
-Cassandra version: ${cassandra_info.cassandraVersion} <br/>
-Cluster name: ${cassandra_info.clusterName} <br/>
-<br/>
-<br/>
-<b>Places to Go:</b> <br/>
-<a href="login">Login</a>
-<br/>
-<a href="artists">Visit the Song Database</a>
-<br/>
-<a href="stats">Statistics</a>
+	<header>
+		<h1>Playlist</h1>
+		<img class="dim" src="images/favicon.png"/>
+		Welcome to the playlist application. <br/>
+		Java version: ${java_version} <br/>
+		Cassandra version: ${cassandra_info.cassandraVersion} <br/>
+		Cluster name: ${cassandra_info.clusterName}
+	</header>
+
+	<section class="menu">
+		<h1>Places to Go:</h1>
+		<nav>
+			<a href="login">Login</a>
+			<a href="artists">Visit the Song Database</a>
+			<a href="stats">Statistics</a>
+		</nav>
+	</section>
 </body>
 </html>

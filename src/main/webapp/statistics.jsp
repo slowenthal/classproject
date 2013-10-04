@@ -10,15 +10,16 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
 </head>
 <body>
-<h1>Statistics</h1>
-<table>
-    <%--@elvariable id="statistics" type="java.util.List<playlist.model.StatisticsDAO>"--%>
-    <c:forEach var="stat" items="${statistics}">
-        <tr>
-            <td>${stat.counter_name} = ${stat.counter_value}</td>
-        </tr>
-    </c:forEach>
-</table>
-
+<section class="menu small">
+    <h1>Statistics</h1>
+    <table class="info">
+        <%--@elvariable id="statistics" type="java.util.List<playlist.model.StatisticsDAO>"--%>
+        <c:forEach var="stat" items="${statistics}">
+            <tr>
+                <td>${stat.counter_name} = ${stat.counter_value}</td>
+            </tr>
+        </c:forEach>
+    </table>
+</section>
 </body>
 </html>

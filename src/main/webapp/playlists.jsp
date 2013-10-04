@@ -11,21 +11,23 @@
 <link href="css/playlist.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<a href="login?button=Logout">Logout</a> <br/>
-<h1>Playlists for ${email}</h1>
+<section class="menu small">
+    <a href="login?button=Logout">Logout</a> <br/>
+    <h1>Playlists for ${email}</h1>
 
-<form id="form1" name="form1" method="get" action="">
-Playlist Name:    <input type="text" name="new_playlist_name" id="new_playlist_name" />
-    <input type="submit" name="button" id="add" value="Add" />
-    <br/>
+    <form id="form1" class="playlist_form" name="form1" method="get" action="">
+    Playlist Name:    <input type="text" name="new_playlist_name" id="new_playlist_name" />
+        <input type="submit" name="button" id="add" value="Add" />
+        <br/>
 
-<table>
-    <c:forEach var="playlist_name" items="${playlist_names}">
-        <tr>
-            <td><a href="playlist_tracks?pl=${playlist_name}">${playlist_name}</a></td>
-        </tr>
-    </c:forEach>
-</table>
-</form>
+    <table>
+        <c:forEach var="playlist_name" items="${playlist_names}">
+            <tr>
+                <td><a href="playlist_tracks?pl=${playlist_name}">${playlist_name}</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+    </form>
+</section>
 </body>
 </html>

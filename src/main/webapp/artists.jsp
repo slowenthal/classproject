@@ -10,19 +10,20 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
 </head>
 <body>
-<%@ include file="alphabet.jspf" %>
+<section class="menu small">
+    <%@ include file="alphabet.jspf" %>
 <form id="form1" name="form1" method="get" action="">
 <input type="hidden" id="q" name="q" value="${q}"/>
 <button name="order" value="up">↑</button>
 <button name="order" value="down">↓</button>
-<table>
-    <%--@elvariable id="artists" type="java.util.List"--%>
-    <c:forEach var="artist" items="${artists}">
-        <tr>
-            <td><a href="tracks?artist=${artist}">${artist}</a></td>
-        </tr>
-    </c:forEach>
-</table>
-
+    <table>
+        <%--@elvariable id="artists" type="java.util.List"--%>
+        <c:forEach var="artist" items="${artists}">
+            <tr>
+                <td><a href="tracks?artist=${artist}">${artist}</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+</section>
 </body>
 </html>

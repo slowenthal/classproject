@@ -12,17 +12,27 @@
 
 </head>
 <body>
-<h1>Playlist Login</h1>
+<c:if test="${not empty error}">
+<p class="error">
+</c:if>
 ${error}
-<form id="form1" name="form1" method="get" action="">
-    E-mail Address:
-    <input type="text" name="email" id="email" />
-    <br/>
-    Password:
-    <input type="password" name="password" id="password" />
-    <br/>
-    <button type="submit" name="button" id="login" value="login">Login</button>
-    <button type="submit" name="button" id="register" value="newAccount">I Don't Have an Account</button>
+</p>
+<form id="form1" name="form1" class="login_form" method="get" action="">
+    <h1>PLAYLIST LOGIN</h1>
+    <p>
+        <label for="email">E-mail Address</label>
+        <input type="text" name="email" placeholder="Enter your email here" required>
+    </p>
+    <p>
+         <label for="password">Password</label>
+         <input type="password" name="password" placeholder="Password" required>
+    </p>
+ 
+    <p>
+        <button type="submit" name="button" id="login" value="login">Login</button>
+        <button type="submit" name="button" id="register" value="newAccount">I Don't Have an Account</button>
+    </p>       
 </form>
+
 </body>
 </html>
