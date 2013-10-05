@@ -1,6 +1,8 @@
 package playlist.model;
 
+import com.datastax.driver.core.ConsistencyLevel;
 import com.datastax.driver.core.Row;
+import com.datastax.driver.core.SimpleStatement;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
@@ -58,7 +60,10 @@ public class UserDAO extends CassandraData {
             + password + "',"
             + userId + ")";
 
-    getSession().execute(queryText);
+    // We want to run this statement with CL quorum
+    SimpleStatement simpleStatement = new SimpleStatement(queryText);
+    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+    getSession().execute(simpleStatement);
 
     // Return the new user so the caller can get the userid
     return new UserDAO(email, password, userId);
@@ -66,10 +71,12 @@ public class UserDAO extends CassandraData {
   }
 
   public void deleteUser() {
-    String queryText = "DELETE FROM users where email = '"
-            + this.email + "'";
+    SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where email = '"
+            + this.email + "'");
 
-    getSession().execute(queryText);
+    // Delete users with CL = Quorum
+    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+    getSession().execute(simpleStatement);
 
   }
 
