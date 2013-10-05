@@ -7,12 +7,18 @@ import com.datastax.driver.core.Row;
  *
  * Copyright 2013 DataStax
  *
+ * This class returns various data about the Cassandra cluster to which the application is connected
+ *
  */
 
 public class CassandraInfo extends CassandraData {
 
   private String clusterName;
   private String cassandraVersion;
+
+  /**
+   * Constructor to query cassandra for the release_version and cluster_name
+   */
 
   public CassandraInfo() {
 

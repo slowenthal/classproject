@@ -210,7 +210,12 @@ public class PlaylistDAO extends CassandraData {
     BoundStatement boundStatement = statement.bind();
 
     for (Track track : newTracks) {
+
+      // Since the track sequence is like a time-series, set it's sequence to the current time
+      // Also update the total time for the playlist locally.
+
       track.sequence_no = new Date();
+      this.playlist_length_in_seconds += track.track_length_in_seconds;
 
       // Let's use named parameters this time
       boundStatement.setUUID("user_id", getUser_id());

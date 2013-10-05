@@ -8,16 +8,41 @@ import com.datastax.driver.core.Session;
  *
  * Copyright 2013 DataStax
  *
+ * This is a Singleton class that holds 1 Cassandra session that all requests will share.
+ * It has 1 public method to return that session.
+ *
+ *
+ *
+ *
  */
 
 public class CassandraData {
 
+  //
+  // A static variable that holds the session.  Only one of these will exist for the whole application
+  //
 
   private static Session cassandraSesson = null;
+
+  /**
+   * Required constructor, but it doesn't need to do anything.
+   */
 
   CassandraData () {
     // Do nothing
   }
+
+  /**
+   *
+   *  Return the Cassandra session.
+   *  When the application starts up, the session
+   *  is set to null.  When this function is called, it checks to see if the session is null.
+   *  If so, it creates a new session, and sets the static session.
+   *
+   *  All of the DAO classes are subclasses of this
+   *
+   * @return - a valid cassandra session
+   */
 
   public static Session getSession() {
 
@@ -29,10 +54,26 @@ public class CassandraData {
 
   }
 
+  /**
+   *
+   * Create a new cassandra Cluster() and Session().  Returns the Session.
+   *
+   * @return A new Cassandra session
+   */
+
   protected static Session createSession() {
     Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
     return cluster.connect("playlist");
   }
+
+  /**
+   *
+   * Format seconds to 000:00
+   *
+   * @param seconds - An integer repesenting a number of seconds
+   * @return         - A string in the format <minutes>:<seconds>
+   *
+   */
 
   protected static String secondsToMS (int seconds) {
     return (seconds / 60) + ":" + ((seconds % 60 < 10 ? "0" : "") ) + (seconds % 60);

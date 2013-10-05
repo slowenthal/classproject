@@ -25,6 +25,26 @@ public class PlaylistTracksServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    // We add playlists with a post method
+
+    HttpSession httpSession = request.getSession(true);
+
+    String button = request.getParameter("button");
+    String playlist_name = request.getParameter("pl");
+    UserDAO user = (UserDAO) httpSession.getAttribute("user");
+
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, playlist_name);
+
+    if (button != null) {
+      if (button.contentEquals("addTrack")) {
+        String track_id = request.getParameter("track_id");
+        doAddPlaylistTrack(playlist, track_id);
+      }
+    }
+
+    request.setAttribute("email", user.getEmail());
+    request.setAttribute("playlist", playlist);
+    getServletContext().getRequestDispatcher("/playlist_tracks.jsp").forward(request,response);
   }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -54,10 +74,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     //
 
     if (button != null) {
-      if (button.contentEquals("addTrack")) {
-        String track_id = request.getParameter("track_id");
-        doAddPlaylistTrack(playlist, track_id);
-      } else if (button.contentEquals("deletePlaylist")) {
+     if (button.contentEquals("deletePlaylist")) {
 
         // Clicked to delete the WHOLE playlist
          doDeletePlaylist(playlist);

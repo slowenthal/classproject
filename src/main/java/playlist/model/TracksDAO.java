@@ -50,7 +50,7 @@ public class TracksDAO extends CassandraData {
     String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
     ResultSet results = getSession().execute(queryText);
 
-    List<TracksDAO> tracks = new ArrayList<TracksDAO>();
+    List<TracksDAO> tracks = new ArrayList<>();
 
     for (Row row : results) {
       tracks.add(new TracksDAO(row));
@@ -66,7 +66,7 @@ public class TracksDAO extends CassandraData {
     String queryText = "SELECT * FROM track_by_genre WHERE genre = '" + genre.replace("'","''") + "' LIMIT 200;";
     ResultSet results = getSession().execute(queryText);
 
-    List<TracksDAO> tracks = new ArrayList<TracksDAO>();
+    List<TracksDAO> tracks = new ArrayList<>();
 
     for (Row row : results) {
       tracks.add(new TracksDAO(row));

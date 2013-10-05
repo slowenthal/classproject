@@ -19,8 +19,10 @@ Copyright 2013 DataStax
 
     <script type="text/javascript">
         function listener(event){
-            window.location.href = 'playlist_tracks?pl=${playlist.playlist_name}&button=addTrack&track_id=' + event.data;
-            document.getElementById("test").innerHTML = "received: "+event.data
+           // window.location.href = 'playlist_tracks?pl=${playlist.playlist_name}&button=addTrack&track_id=' + event.data;
+           var track_id_input = document.getElementById("track_id") ;
+           track_id_input.setAttribute("value", event.data) ;
+           addplaylist = document.getElementById("addplaylist").submit();
         }
 
         if (window.addEventListener){
@@ -30,9 +32,17 @@ Copyright 2013 DataStax
         }
     </script>
 
+
 </head>
 
 <body>
+<%--Hidden form to post adding the playlist--%>
+<form id="addplaylist" style="display: hidden" action="playlist_tracks?pl=${playlist.playlist_name}" method="POST">
+    <input type="hidden" id="pl" name="pl" value="${playlist.playlist_name}"/>
+    <input type="hidden" id="track_id" name="track_id"/>
+    <input type="hidden" id="button" name="button" value="addTrack"/>
+</form>
+
 <section class="tracks">
     <a href="login?button=logout">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>

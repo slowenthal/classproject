@@ -11,6 +11,9 @@ import java.util.List;
  *
  * Copyright 2013 DataStax
  *
+ * Handles the collection of counter statistics for the application.  It has methods to increment and decrement
+ * counters in Cassandra, as well as return a list of them
+ *
  */
 
 
@@ -26,6 +29,15 @@ public class StatisticsDAO extends CassandraData {
 
   // Static finder method
 
+  /**
+   *
+   * Retrieve the statistics
+   *
+   * @return - Return a List of Statistics objects. Each includes
+   * the counter name and its value.
+   *
+   */
+
   public static List<StatisticsDAO> getStatistics() {
 
     String queryText = "SELECT * FROM statistics";
@@ -40,12 +52,26 @@ public class StatisticsDAO extends CassandraData {
     return statistics;
   }
 
+  /**
+   *
+   * Increment a statistics counter
+   *
+   * @param counter_name  Counter to Increment
+   */
+
   public static void increment_counter(String counter_name) {
 
     String queryText = "UPDATE statistics set counter_value = counter_value + 1 where counter_name = '" + counter_name +"'";
     getSession().execute(queryText);
 
   }
+
+  /**
+   *
+   * Decerement a statistics counter
+   * @param counter_name Counter to Decrement
+   *
+   */
 
   public static void decrement_counter(String counter_name) {
 
