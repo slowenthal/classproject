@@ -80,7 +80,41 @@ public class TracksDAO extends CassandraData {
     BoundStatement boundStatement = preparedStatement.bind(track_id);
     ResultSet resultSet = getSession().execute(boundStatement);
 
+    // Return null if there is no track found
+
+    if (resultSet.isExhausted()) {
+      return null;
+    }
+
     return new TracksDAO(resultSet.one());
+  }
+
+  /**
+   * Add this track to the database
+   */
+
+  public void add() {
+
+    // Compute the first letter of the artists name for the artists_by_first_letter table
+    String artist_first_letter = this.artist.substring(0,1).toUpperCase();
+
+    PreparedStatement preparedStatement =
+            getSession().prepare("INSERT INTO artists_by_first_letter (first_letter, artist) VALUES (?, ?)");
+    BoundStatement boundStatement = preparedStatement.bind(artist_first_letter, this.artist);
+    getSession().execute(boundStatement);
+
+    preparedStatement = getSession().prepare("INSERT INTO track_by_id (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
+    boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
+    getSession().execute(boundStatement);
+
+    preparedStatement = getSession().prepare("INSERT INTO track_by_genre (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
+    boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
+    getSession().execute(boundStatement);
+
+    preparedStatement = getSession().prepare("INSERT INTO track_by_artist (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
+    boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
+    getSession().execute(boundStatement);
+
   }
 
 
