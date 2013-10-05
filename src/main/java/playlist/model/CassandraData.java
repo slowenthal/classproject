@@ -4,12 +4,12 @@ import com.datastax.driver.core.Cluster;
 import com.datastax.driver.core.Session;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/18/13
- * Time: 10:01 PM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
+
 public class CassandraData {
 
 

@@ -6,12 +6,12 @@ import junit.framework.TestCase;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 10/4/13
- * Time: 11:05 AM
- * To change this template use File | Settings | File Templates.
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
+ *
  */
+
 public class StatisticsDAOTest extends TestCase {
 
   @Override

@@ -5,14 +5,13 @@ import junit.framework.TestCase;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
-
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/20/13
- * Time: 4:13 PM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
+
 public class UserTest extends TestCase {
 
   @Override

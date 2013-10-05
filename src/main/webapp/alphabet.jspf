@@ -1,3 +1,12 @@
+<%--
+
+DataStax Academy Sample Application
+
+Copyright 2013 DataStax
+
+--%>
+
+
 <div class="alphabet">
     <a href="tracks?genre=classic pop and rock">classic pop and rock</a>
     <a href="tracks?genre=classical">classical</a>
@@ -36,5 +45,6 @@
     <a href="artists?q=X">X</a>&nbsp;&nbsp;
     <a href="artists?q=Y">Y</a>&nbsp;&nbsp;
     <a href="artists?q=Z">Z</a>&nbsp;&nbsp;
+    <hr/>
 </div>
 

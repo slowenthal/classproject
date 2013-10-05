@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/20/13
- * Time: 8:28 AM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
+
 
 public class StatisticsDAO extends CassandraData {
 

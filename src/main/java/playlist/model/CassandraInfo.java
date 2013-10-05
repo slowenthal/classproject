@@ -3,12 +3,12 @@ package playlist.model;
 import com.datastax.driver.core.Row;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 10/3/13
- * Time: 7:08 PM
- * To change  template use File | Settings | File Templates.
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
+ *
  */
+
 public class CassandraInfo extends CassandraData {
 
   private String clusterName;

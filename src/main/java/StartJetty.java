@@ -4,15 +4,12 @@ import org.eclipse.jetty.webapp.WebAppContext;
 import java.net.URL;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/20/13
- * Time: 11:42 PM
+ * DataStax Academy Sample Application
  *
- *  This class is for running in the IDE only.  It allows jetty to start the webapp from the class files.  It avoids
- *  the need to build and deploy the WAR file.
+ * Copyright 2013 DataStax
  *
  */
+
 public class StartJetty {
 
   final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(StartJetty.class);

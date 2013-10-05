@@ -4,10 +4,9 @@ package playlist.versioncheck;
 import junit.framework.TestCase;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/21/13
- * Time: 8:44 AM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  *  Tests to check that we are running on the correct version of Java
  *

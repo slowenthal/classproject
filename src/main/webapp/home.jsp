@@ -3,11 +3,10 @@
 
 <%--
 
-  Created by IntelliJ IDEA.
-  User: stevelowenthal
-  Date: 9/18/13
-  Time: 6:13 PM
-  To change this template use File | Settings | File Templates.
+DataStax Academy Sample Application
+
+Copyright 2013 DataStax
+
 --%>
 
 <%--@elvariable id="cassandra_info" type="playlist.model.CassandraInfo"--%>

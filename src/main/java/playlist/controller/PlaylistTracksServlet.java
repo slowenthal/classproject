@@ -15,12 +15,12 @@ import java.util.Arrays;
 import java.util.Date;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/19/13
- * Time: 5:22 PM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
+
 public class PlaylistTracksServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

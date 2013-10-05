@@ -12,12 +12,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/19/13
- * Time: 5:22 PM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
+
 public class PlaylistsServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

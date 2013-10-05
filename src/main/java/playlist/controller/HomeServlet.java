@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 10/3/13
- * Time: 7:09 PM
- *  change this template use File | Settings | File Templates.
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
+ *
  */
+
 public class HomeServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

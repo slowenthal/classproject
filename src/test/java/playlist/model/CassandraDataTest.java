@@ -3,13 +3,10 @@ package playlist.model;
 import com.datastax.driver.core.Session;
 import junit.framework.TestCase;
 
-
-
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 9/20/13
- * Time: 3:34 PM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
 

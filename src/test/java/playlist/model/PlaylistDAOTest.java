@@ -7,13 +7,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created with IntelliJ IDEA.
- * User: stevelowenthal
- * Date: 10/1/13
- * Time: 10:26 AM
+ * DataStax Academy Sample Application
+ *
+ * Copyright 2013 DataStax
  *
  */
-
 
 public class PlaylistDAOTest extends TestCase {
 
