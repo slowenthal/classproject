@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
 <%--
 
 DataStax Academy Sample Application
@@ -18,6 +18,7 @@ Copyright 2013 DataStax
 </head>
 <body>
 <section class="menu small">
+    <a href="home">Home</a>
     <h1>Statistics</h1>
     <table class="info">
         <%--@elvariable id="statistics" type="java.util.List<playlist.model.StatisticsDAO>"--%>

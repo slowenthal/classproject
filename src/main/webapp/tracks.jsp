@@ -1,7 +1,7 @@
-﻿<%--@elvariable id="artist" type="java.lang.String"--%>
+﻿<!DOCTYPE html>
+<%--@elvariable id="artist" type="java.lang.String"--%>
 <%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%--
 
 DataStax Academy Sample Application
@@ -35,6 +35,7 @@ Copyright 2013 DataStax
     </c:choose>
 
 <script type="text/javascript">
+    // When someone clicks the '+' button in the track picker, send a message to the parent window
     function addTrack(id) {
         parent.postMessage(id, '*');
     }

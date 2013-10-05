@@ -12,8 +12,8 @@ import java.net.URL;
 
 public class StartJetty {
 
-  final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(StartJetty.class);
-  static final String WEBAPP_DIR = "webapp" ;
+  private final static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(StartJetty.class);
+  private static final String WEBAPP_DIR = "webapp" ;
 
   public static void main(String[] args) throws Exception
   {

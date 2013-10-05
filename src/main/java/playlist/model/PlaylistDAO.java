@@ -33,7 +33,7 @@ public class PlaylistDAO extends CassandraData {
     this.email = user.getEmail();
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
-    trackList = new ArrayList<Track>();
+    trackList = new ArrayList<>();
 
   }
 
@@ -183,7 +183,7 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public void rewritePlaylist() throws Exception {
+  public void rewritePlaylist() {
 
     // First delete the whole playlist
     deletePlaylistTracks();
@@ -192,14 +192,14 @@ public class PlaylistDAO extends CassandraData {
     List<Track> tracklist = this.trackList;
 
     // remove the tracks from the playlist, so we can add them back and renumber them
-    this.trackList = new ArrayList<Track>();
+    this.trackList = new ArrayList<>();
 
     // Add them back
     addTracksToPlaylist(tracklist);
 
   }
 
-  public void addTracksToPlaylist(List<Track> newTracks) throws Exception {
+  public void addTracksToPlaylist(List<Track> newTracks) {
 
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(

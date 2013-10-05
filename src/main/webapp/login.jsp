@@ -1,5 +1,5 @@
-﻿<%--@elvariable id="error" type="java.lang.String"--%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html>
+<%--@elvariable id="error" type="java.lang.String"--%>
 <%--
 
 DataStax Academy Sample Application
@@ -19,6 +19,9 @@ Copyright 2013 DataStax
 
 </head>
 <body>
+<section class="menu small">
+  <a href="home">Home</a>
+</section>
 <c:if test="${not empty error}">
 <p class="error">
     </c:if>

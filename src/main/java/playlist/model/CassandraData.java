@@ -22,7 +22,7 @@ public class CassandraData {
   // A static variable that holds the session.  Only one of these will exist for the whole application
   //
 
-  private static Session cassandraSesson = null;
+  private static Session cassandraSession = null;
 
   /**
    * Required constructor, but it doesn't need to do anything.
@@ -46,11 +46,11 @@ public class CassandraData {
 
   public static Session getSession() {
 
-    if (cassandraSesson == null) {
-      cassandraSesson = createSession();
+    if (cassandraSession == null) {
+      cassandraSession = createSession();
     }
 
-    return cassandraSesson;
+    return cassandraSession;
 
   }
 
@@ -70,7 +70,7 @@ public class CassandraData {
    *
    * Format seconds to 000:00
    *
-   * @param seconds - An integer repesenting a number of seconds
+   * @param seconds - An integer representing a number of seconds
    * @return         - A string in the format <minutes>:<seconds>
    *
    */

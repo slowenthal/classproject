@@ -1,6 +1,6 @@
-﻿<%--@elvariable id="email" type="java.lang.String"--%>
+﻿<!DOCTYPE html>
+<%--@elvariable id="email" type="java.lang.String"--%>
 <%--@elvariable id="playlist" type="playlist.model.PlaylistDAO"--%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%--
 
 DataStax Academy Sample Application
@@ -44,6 +44,7 @@ Copyright 2013 DataStax
 </form>
 
 <section class="tracks">
+    <a href="home">Home</a>
     <a href="login?button=logout">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>
     <h2>Playlist ${playlist.playlist_name} for ${email}</h2>

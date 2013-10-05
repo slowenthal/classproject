@@ -27,8 +27,8 @@ public class LoginServlet extends HttpServlet {
 
   /**
    *
-   * @param request
-   * @param response
+   * @param request HTTP request
+   * @param response HTTP response
    * @throws ServletException
    * @throws IOException
    */
@@ -74,14 +74,14 @@ public class LoginServlet extends HttpServlet {
 
       // Go back to the user screen with an error
 
-      StatisticsDAO.increment_counter("failed logins");
+      StatisticsDAO.increment_counter("failed login attempts");
 
       request.setAttribute("error", "Email or Password is Invalid");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
     }
 
-    StatisticsDAO.increment_counter("valid logins");
+    StatisticsDAO.increment_counter("valid login attempts");
 
     response.sendRedirect("playlists");
 

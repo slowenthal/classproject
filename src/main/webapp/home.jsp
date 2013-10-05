@@ -1,4 +1,5 @@
-﻿﻿﻿<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+﻿<!DOCTYPE html>
+﻿<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <%--
@@ -11,9 +12,7 @@ Copyright 2013 DataStax
 
 <%--@elvariable id="cassandra_info" type="playlist.model.CassandraInfo"--%>
 <%--@elvariable id="java_version" type="java.lang.String"--%>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <title>Playlist</title>

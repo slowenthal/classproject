@@ -19,10 +19,10 @@ import java.util.List;
 
 public class StatisticsDAO extends CassandraData {
 
-  private String counter_name;
-  private long counter_value;
+  private final String counter_name;
+  private final long counter_value;
 
-  public StatisticsDAO(Row row) {
+  private StatisticsDAO(Row row) {
     counter_name = row.getString("counter_name");
     counter_value = row.getLong("counter_value");
   }
@@ -43,7 +43,7 @@ public class StatisticsDAO extends CassandraData {
     String queryText = "SELECT * FROM statistics";
     ResultSet results = getSession().execute(queryText);
 
-    List<StatisticsDAO> statistics = new ArrayList<StatisticsDAO>();
+    List<StatisticsDAO> statistics = new ArrayList<>();
 
     for (Row row : results) {
        statistics.add(new StatisticsDAO(row));     // Lets use column 0 since there is only one column
@@ -68,7 +68,7 @@ public class StatisticsDAO extends CassandraData {
 
   /**
    *
-   * Decerement a statistics counter
+   * Decrement a statistics counter
    * @param counter_name Counter to Decrement
    *
    */

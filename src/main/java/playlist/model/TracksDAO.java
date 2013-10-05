@@ -20,13 +20,13 @@ public class TracksDAO extends CassandraData {
 
   // Hard Coded Genres for now
 
-  private String track_id;
-  private String artist;
-  private String track;
-  private String genre;
-  private int track_length_in_seconds;
+  private final String track_id;
+  private final String artist;
+  private final String track;
+  private final String genre;
+  private final int track_length_in_seconds;
 
-  TracksDAO(Row row) {
+  private TracksDAO(Row row) {
     track_id = row.getString("track_id");
     artist = row.getString("artist");
     track = row.getString("track");
@@ -83,8 +83,6 @@ public class TracksDAO extends CassandraData {
     return new TracksDAO(resultSet.one());
   }
 
-
-  // Accessors
 
   public String getTrack_id() {
     return track_id;

@@ -23,8 +23,8 @@ public class ArtistsDAO extends CassandraData {
 
   // Static finder method
 
-  // TODO - one of the exersizes is to add the desc
-  // TODO - rewrite this method usinga prepared statement.
+  // TODO - one of the exercises is to add the desc
+  // TODO - rewrite this method using a prepared statement.
 
 
   /**
@@ -48,7 +48,7 @@ public class ArtistsDAO extends CassandraData {
     //
     // Append an ORDER BY clause on to the statement if we want a descending order
     //
-            // TODO separate this out for one of the exersizes
+            // TODO separate this out for one of the exercises
             + (desc ? " ORDER BY artist DESC" : "");
     //
     // Obtain the results in a ResultSet object

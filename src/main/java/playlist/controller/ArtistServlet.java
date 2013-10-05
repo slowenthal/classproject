@@ -18,10 +18,6 @@ import java.util.List;
 
 public class ArtistServlet extends HttpServlet {
 
- protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-  }
-
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     String q = request.getParameter("q");

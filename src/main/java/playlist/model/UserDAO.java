@@ -25,7 +25,7 @@ public class UserDAO extends CassandraData {
   private UUID userid;
   private Set<String> playlist_names;
 
-  UserDAO(Row row) {
+  private UserDAO(Row row) {
     email = row.getString("email");
     password = row.getString("password");
     userid = row.getUUID("user_id");
@@ -33,7 +33,7 @@ public class UserDAO extends CassandraData {
 
     // If the size is 0 we get a useless Set, so lets add a real one
     if (playlist_names.size() == 0) {
-       playlist_names = new TreeSet<String>();
+       playlist_names = new TreeSet<>();
     }
   }
 
@@ -41,7 +41,7 @@ public class UserDAO extends CassandraData {
     this.userid = userid;
     this.password = password;
     this.email = email;
-    this.playlist_names = new TreeSet<String>();
+    this.playlist_names = new TreeSet<>();
   }
 
   public static UserDAO addUser(String email, String password) throws UserExistsException {

@@ -13,8 +13,8 @@ import com.datastax.driver.core.Row;
 
 public class CassandraInfo extends CassandraData {
 
-  private String clusterName;
-  private String cassandraVersion;
+  private final String clusterName;
+  private final String cassandraVersion;
 
   /**
    * Constructor to query cassandra for the release_version and cluster_name
