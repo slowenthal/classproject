@@ -34,4 +34,10 @@ public class CassandraData {
     return cluster.connect("playlist");
   }
 
+  protected static String secondsToMS (int seconds) {
+    return (seconds / 60) + ":" + ((seconds % 60 < 10 ? "0" : "") ) + (seconds % 60);
+
+  }
+
+
 }

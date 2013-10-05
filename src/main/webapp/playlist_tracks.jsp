@@ -30,7 +30,7 @@
     <a href="login?button=logout">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>
     <h2>Playlist ${playlist.playlist_name} for ${email}</h2>
-    <h2>Total length: ${playlist.playlist_length_in_seconds}</h2>
+    <h2>Total length: ${playlist.playlist_length_in_MS}</h2>
     <form id="form1" name="form1" method="get" action="">
     <input type="hidden" name="pl" value="${playlist.playlist_name}"/>
     <button type="submit" class="track_delete" name="button" value="deletePlaylist">Delete this Playlist</button>
@@ -49,7 +49,7 @@
                     <td>${track.track_name}</td>
                     <td>${track.artist}</td>
                     <td>${track.genre}</td>
-                    <td>${track.track_length_in_seconds}</td>
+                    <td>${track.track_length_in_MS}</td>
                 </tr>
             </c:forEach>
         </table>

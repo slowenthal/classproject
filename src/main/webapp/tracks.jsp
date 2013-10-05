@@ -40,7 +40,7 @@
                 <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
                 <td class="field_track">${track.track}</td>
                 <td class="field_genre">${track.genre}</td>
-                <td class="field_sec">${track.track_length_in_seconds}</td>
+                <td class="field_sec">${track.track_length_in_MS}</td>
             </tr>
         </c:forEach>
     </table>
