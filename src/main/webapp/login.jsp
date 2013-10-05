@@ -27,7 +27,7 @@ Copyright 2013 DataStax
     </c:if>
     ${error}
 </p>
-<form id="form1" name="form1" class="login_form" method="get" action="">
+<form id="form1" name="form1" class="login_form" method="post" action="">
     <h1>PLAYLIST LOGIN</h1>
     <p>
         <label for="email">E-mail Address</label>

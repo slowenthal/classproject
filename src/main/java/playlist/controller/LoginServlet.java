@@ -23,19 +23,7 @@ public class LoginServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-  }
-
-  /**
-   *
-   * @param request HTTP request
-   * @param response HTTP response
-   * @throws ServletException
-   * @throws IOException
-   */
-
-  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    StatisticsDAO.increment_counter("page hits: login");
+    // User creation and login is via the post method.  Logout is with a get.
 
     String button = request.getParameter("button");
     button = button == null ? "" : button;
@@ -44,7 +32,18 @@ public class LoginServlet extends HttpServlet {
       doLogin(request, response);
     } else if (button.contentEquals("newAccount")) {
       doCreateUser(request, response);
-    } else if (button.contentEquals("logout")) {
+    }
+
+  }
+
+  protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    StatisticsDAO.increment_counter("page hits: login");
+
+    String button = request.getParameter("button");
+    button = button == null ? "" : button;
+
+    if (button.contentEquals("logout")) {
       doLogout(request, response);
     }
     else
