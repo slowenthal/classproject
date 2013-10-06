@@ -1,6 +1,21 @@
-tryjetty
+class project
 ========
 
+Bulding and Running on Unix
+
+1) Install Java 7 JDK.  Validate it with java -version   It should be 1.7.  Validate the compiler as well with javac -version
+
+2) Install Maven
+
+3) build the project from the classproject directory by typing mvn install
+
+4) To run it, cd to the target directory
+
+run the main class:
+
+java -cp 'playlist-1.0-SNAPSHOT.jar:lib/*' StartJetty
+
+5) Visit the application at http://localhost:8080/playlist
 
 
 Building on Windows
@@ -28,7 +43,7 @@ set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
 
 You may have to figure out how to run CQLSH in your environment - we're making it easier ...
 
-cd <project>/deployment/CQL
+cd <project>/deployment/cql
 
 cqlsh -f packages.cql
 
@@ -42,7 +57,11 @@ Ensure you are in the project root.
 
 Run it as follows:
 
-java -cp "startjetty\target\startjetty-1.0-SNAPSHOT.jar;startjetty\target\lib\*" OneWebApp
+cd to the target directory
+
+java -cp 'playlist-1.0-SNAPSHOT.jar;lib\*' StartJetty
+
+7) Visit the application at http://localhost:8080/playlist
 
 
 
