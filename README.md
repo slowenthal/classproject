@@ -2,23 +2,30 @@ class project
 ========
 
 Bulding and Running on Unix
+-----
 
-1) Install Java 7 JDK.  Validate it with java -version   It should be 1.7.  Validate the compiler as well with javac -version
+1) Install Java 7 JDK.  Validate it with `java -version`   It should be 1.7.  Validate the compiler as well with `javac -version`
 
 2) Install Maven
 
-3) build the project from the classproject directory by typing mvn install
+3) build the project from the classproject directory by typing `mvn install`
 
-4) To run it, cd to the target directory
+4) set up the database
+
+    cd scripts/cql
+    cqlsh -f playlist.cql
+
+5) To run it, cd to the target directory
 
 run the main class:
 
-java -cp 'playlist-1.0-SNAPSHOT.jar:lib/*' StartJetty
+    java -cp 'playlist-1.0-SNAPSHOT.jar:lib/*' StartJetty
 
-5) Visit the application at http://localhost:8080/playlist
+6) Visit the application at `http://localhost:8080/playlist`
 
 
-Building on Windows
+Building and running on Windows
+-----
 
 1) Install Java 7 JDK.  This is required for running the application as well as building it
 
@@ -27,15 +34,15 @@ or do it in a single terminal window.
 
 eg. for a cmd window
 
-set JAVA_HOME=c:\Program Files\Java\jdk1.7.0_40
+    set JAVA_HOME=c:\Program Files\Java\jdk1.7.0_40
 
 Add Java into your path with the new JAVA_HOME:
 
-set PATH=%JAVA_HOME%\bin;%PATH%
+    set PATH=%JAVA_HOME%\bin;%PATH%
 
 2) set up Mave, by unpacking it into a directory, and add its bin directory to the PATH
 
-set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
+    set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
 
 3) Set up Cassandra
 
@@ -43,13 +50,13 @@ set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
 
 You may have to figure out how to run CQLSH in your environment - we're making it easier ...
 
-cd <project>/deployment/cql
-
-cqlsh -f packages.cql
+    cd <project>/deployment/cql
+    
+    cqlsh -f packages.cql
 
 5) Build the project
 
-mvn install
+    mvn install
 
 6) Run a standalone server
 
@@ -57,11 +64,11 @@ Ensure you are in the project root.
 
 Run it as follows:
 
-cd to the target directory
+    cd to the target directory
 
-java -cp 'playlist-1.0-SNAPSHOT.jar;lib\*' StartJetty
+    java -cp 'playlist-1.0-SNAPSHOT.jar;lib\*' StartJetty
 
-7) Visit the application at http://localhost:8080/playlist
+7) Visit the application at `http://localhost:8080/playlist`
 
 
 
