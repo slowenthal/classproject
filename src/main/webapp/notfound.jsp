@@ -25,7 +25,7 @@ Copyright 2013 DataStax
 <a href="home">Home</a>
  <div id="not_implemented">
     Not Yet Implemented
- <div>
+ </div>
 </section>
 </body>
 </html>
