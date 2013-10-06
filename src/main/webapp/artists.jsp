@@ -22,7 +22,7 @@ Copyright 2013 DataStax
 </head>
 <body>
 <section class="menu small">
-    <%@ include file="alphabet.jspf" %>
+    <%@ include file="trackheader.jspf" %>
     <form id="form1" name="form1" method="get" action="">
         <input type="hidden" id="q" name="q" value="${q}"/>
         <button name="order" value="up">↑</button>
@@ -32,7 +32,7 @@ Copyright 2013 DataStax
             <%--@elvariable id="artists" type="java.util.List"--%>
             <c:forEach var="artist" items="${artists}">
                 <tr>
-                    <td><a href="tracks?artist=${artist}">${artist}</a></td>
+                    <td><a href="tracks?artist=${artist}" id="artist_table">${artist}</a></td>
                 </tr>
             </c:forEach>
         </table>

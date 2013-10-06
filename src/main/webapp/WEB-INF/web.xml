@@ -83,6 +83,14 @@
         <url-pattern>/stats</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>AddTrackServlet</servlet-name>
+        <jsp-file>/add_track.jsp</jsp-file>
+    </servlet>
 
+    <servlet-mapping>
+        <servlet-name>AddTrackServlet</servlet-name>
+        <url-pattern>/add_track</url-pattern>
+    </servlet-mapping>
 
 </web-app>

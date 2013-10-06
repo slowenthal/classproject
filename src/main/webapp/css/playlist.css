@@ -230,7 +230,7 @@ a:link, a:visited {
  
 .login_form input[type=text]:focus,
 .login_form input[type=password]:focus,
-.login_form button[type=submit]:focus {
+.login_form button:focus {
     box-shadow: 
         0 1px 0 rgba(255,255,255,0.2), 
         inset 0 1px 1px rgba(0,0,0,0.1),
@@ -244,7 +244,7 @@ a:link, a:visited {
     outline: 1px solid white;
 }
 
-.login_form button[type=submit], .track_delete {
+.login_form button, .track_delete {
     /* Size and position */
     width: 100%;
     padding: 8px 5px;
@@ -325,6 +325,10 @@ section.tracks{
  
 .no-placeholder .login_form label {
     display: block;
+}
+
+#artist_table {
+    text-transform: none;
 }
 
 
