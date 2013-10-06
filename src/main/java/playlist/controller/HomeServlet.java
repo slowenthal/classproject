@@ -18,10 +18,6 @@ import java.io.IOException;
 
 public class HomeServlet extends HttpServlet {
 
-  protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-  }
-
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     StatisticsDAO.increment_counter("page hits: home");
@@ -33,11 +29,5 @@ public class HomeServlet extends HttpServlet {
     request.setAttribute("cassandra_info", cassandraInfo);
     getServletContext().getRequestDispatcher("/home.jsp").forward(request,response);
 
-
-
   }
-
-
-
-
 }
