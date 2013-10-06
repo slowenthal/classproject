@@ -201,7 +201,7 @@ a:link, a:visited {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
- 
+
     /* Font styles */
     font-family: 'Raleway', 'Lato', Arial, sans-serif;
     color: #fff;
@@ -329,6 +329,10 @@ section.tracks{
 
 #artist_table {
     text-transform: none;
+}
+
+#not_implemented {
+    font-size: 8em;
 }
 
 
