@@ -9,7 +9,7 @@ copy track_by_artist (genre, track_id, artist, track, track_length_in_seconds)  
 copy track_by_genre (genre, track_id, artist, track, track_length_in_seconds)   FROM 'CSV/songs.csv' WITH DELIMITER = '|'  AND HEADER=true;
 
 create table artists_by_first_letter (first_letter text, artist text, primary key (first_letter, artist));
-copy artists_by_first_letter (first_letter, artist) from 'CSV/artists.csv'  WITH DELIMITER = '|';
+copy artists_by_first_letter (first_letter, artist) from 'csv/artists.csv'  WITH DELIMITER = '|';
 
 /* Teach Lists - Add This */
 alter table users add playlist_names set<text>  ;
