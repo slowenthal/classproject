@@ -40,7 +40,7 @@ Add Java into your path with the new JAVA_HOME:
 
     set PATH=%JAVA_HOME%\bin;%PATH%
 
-2) set up Mave, by unpacking it into a directory, and add its bin directory to the PATH
+2) set up Maven, by unpacking it into a directory, and add its bin directory to the PATH
 
     set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
 
