@@ -1,7 +1,7 @@
 class project
 ========
 
-Bulding and Running on Unix
+Building and Running on Unix
 -----
 
 1) Install Java 7 JDK.  Validate it with `java -version`   It should be 1.7.  Validate the compiler as well with `javac -version`
