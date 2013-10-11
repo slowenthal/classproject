@@ -19,7 +19,6 @@ import java.util.List;
 
 public class TrackServlet extends HttpServlet {
 
-
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String button = request.getParameter("button");
 

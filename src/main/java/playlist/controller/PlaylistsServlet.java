@@ -21,10 +21,14 @@ import java.io.IOException;
 public class PlaylistsServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+     doAction(request, response);
   }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+     doAction(request, response);
+  }
+
+  private void doAction(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     HttpSession httpSession = request.getSession(true);
     UserDAO user = (UserDAO) httpSession.getAttribute("user");
 

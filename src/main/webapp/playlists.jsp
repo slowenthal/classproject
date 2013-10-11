@@ -23,7 +23,7 @@ Copyright 2013 DataStax
     <a href="login?button=Logout">Logout</a> <br/>
     <h1>Playlists for ${email}</h1>
 
-    <form id="form1" class="playlist_form" name="form1" method="get" action="">
+    <form id="form1" class="playlist_form" name="form1" method="post" action="">
     Playlist Name: <label for="new_playlist_name">new playlist</label>
         <input id="new_playlist_name" type="text" name="new_playlist_name"/>
         <input type="submit" name="button" id="add" value="Add" />
