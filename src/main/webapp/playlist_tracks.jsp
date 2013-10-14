@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <%--@elvariable id="username" type="java.lang.String"--%>
 <%--@elvariable id="playlist" type="playlist.model.PlaylistDAO"--%>
 <%--@elvariable id="playlist_tracks" type="playlist.model.PlaylistDAO.PlaylistTrack"--%>
