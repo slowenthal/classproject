@@ -23,11 +23,11 @@ Copyright 2013 DataStax
 
 <div class="alphabet">
     <c:forTokens items="${genres}" delims="," var="g">
-        <a href="tracks?genre=${g}">${g}</a>
+        <a href="<c:url value="tracks"><c:param name="genre" value="${g}"/></c:url>">${g}</a>
     </c:forTokens>
     <hr/>
     <c:forTokens items="${letters}" delims="," var="l">
-        <a href="artists?q=${l}">${l}</a>&nbsp;&nbsp;
+        <a href="<c:url value="artists"><c:param name="q" value="${l}"/></c:url>">${l}</a>&nbsp;&nbsp;
     </c:forTokens>
     <hr/>
 </div>

@@ -20,7 +20,7 @@ Copyright 2013 DataStax
 </head>
 <body>
 <section class="menu small">
-  <a href="home">Home</a>
+  <a href="<c:url value="home"/>">Home</a>
 </section>
 <c:if test="${not empty error}">
 <p class="error">

@@ -45,7 +45,7 @@ Copyright 2013 DataStax
 
 <section class="tracks">
     <a href="home">Home</a>
-    <a href="login?button=logout">Logout</a> <br/>
+    <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>
     <h2>Playlist ${playlist.playlist_name} for ${email}</h2>
     <h2>Total length: ${playlist.playlist_length_in_MS}</h2>
