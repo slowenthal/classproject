@@ -335,8 +335,9 @@ section.tracks{
     font-size: 8em;
 }
 
-
-
+.menu.small table {
+     margin: 0 auto;
+}
 
 
 
