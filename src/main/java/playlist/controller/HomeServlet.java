@@ -1,7 +1,6 @@
 package playlist.controller;
 
 import playlist.model.CassandraInfo;
-import playlist.model.StatisticsDAO;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,8 +18,6 @@ import java.io.IOException;
 public class HomeServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    StatisticsDAO.increment_counter("page hits: home");
 
     String javaVersion = System.getProperty("java.version");
     CassandraInfo cassandraInfo = new CassandraInfo();

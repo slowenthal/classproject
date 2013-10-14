@@ -10,11 +10,6 @@ Building and Running on Unix
 
 3. build the project from the classproject directory by typing `mvn install`
 
-4. set up the database
-
-    cd scripts/cql
-    cqlsh -f playlist.cql
-
 5. To run it, cd to the target directory
 
 run the main class:
@@ -45,14 +40,6 @@ Add Java into your path with the new JAVA_HOME:
     set PATH=%PATH%;c:\Users\Steve\apache-maven-3.1.0\bin
 
 3. Set up Cassandra
-
-4. Install the tables and sample data
-
-You may have to figure out how to run CQLSH in your environment - we're making it easier ...
-
-    cd <project>/deployment/cql
-    
-    cqlsh -f packages.cql
 
 5. Build the project
 
