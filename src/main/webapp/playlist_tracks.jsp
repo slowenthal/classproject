@@ -48,7 +48,10 @@ Copyright 2013 DataStax
     <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>
     <h2>Playlist ${playlist.playlist_name} for ${email}</h2>
-    <h2>Total length: ${playlist.playlist_length_in_MS}</h2>
+    <h2>Total length:
+        <fmt:formatNumber value="${playlist.playlist_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
+        <fmt:formatNumber value="${playlist.playlist_length_in_seconds % 60}" minIntegerDigits="2"/>
+    </h2>
     <form id="form1" name="form1" method="get" action="">
     <input type="hidden" name="pl" value="${playlist.playlist_name}"/>
     <button type="submit" class="track_delete" name="button" value="deletePlaylist">Delete this Playlist</button>
@@ -67,7 +70,10 @@ Copyright 2013 DataStax
                     <td>${track.track_name}</td>
                     <td>${track.artist}</td>
                     <td>${track.genre}</td>
-                    <td>${track.track_length_in_MS}</td>
+                    <td>
+                        <fmt:formatNumber value="${track.track_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
+                        <fmt:formatNumber value="${track.track_length_in_seconds % 60}" minIntegerDigits="2"/>
+                    </td>
                 </tr>
             </c:forEach>
         </table>

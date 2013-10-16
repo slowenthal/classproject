@@ -48,7 +48,10 @@ Copyright 2013 DataStax
                 <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
                 <td class="field_track">${track.track}</td>
                 <td class="field_genre">${track.genre}</td>
-                <td class="field_sec">${track.track_length_in_MS}</td>
+                <td class="field_sec">
+                    <fmt:formatNumber value="${track.track_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
+                    <fmt:formatNumber value="${track.track_length_in_seconds % 60}" minIntegerDigits="2"/>
+                </td>
             </tr>
         </c:forEach>
     </table>

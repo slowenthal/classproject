@@ -143,8 +143,4 @@ public class TracksDAO extends CassandraData {
     return track_length_in_seconds;
   }
 
-  public String getTrack_length_in_MS() {
-    return secondsToMS(track_length_in_seconds);
-  }
-
 }

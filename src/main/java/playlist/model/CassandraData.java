@@ -65,20 +65,4 @@ public class CassandraData {
     Cluster cluster = Cluster.builder().addContactPoint("localhost").build();
     return cluster.connect("playlist");
   }
-
-  /**
-   *
-   * Format seconds to 000:00
-   *
-   * @param seconds - An integer representing a number of seconds
-   * @return         - A string in the format <minutes>:<seconds>
-   *
-   */
-
-  protected static String secondsToMS (int seconds) {
-    return (seconds / 60) + ":" + ((seconds % 60 < 10 ? "0" : "") ) + (seconds % 60);
-
-  }
-
-
 }

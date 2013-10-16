@@ -73,10 +73,6 @@ public class PlaylistDAO extends CassandraData {
       return track_length_in_seconds;
     }
 
-    public String getTrack_length_in_MS() {
-      return secondsToMS(track_length_in_seconds);
-    }
-
     public long getSequence_no() {
       return sequence_no.getTime();
     }
@@ -250,11 +246,6 @@ public class PlaylistDAO extends CassandraData {
 
   public String getEmail() {
     return email;
-  }
-
-
-  public String getPlaylist_length_in_MS() {
-    return secondsToMS(playlist_length_in_seconds);
   }
 
 }
