@@ -47,8 +47,10 @@ public class TracksDAO extends CassandraData {
 
   public static List<TracksDAO> listSongsByArtist(String artist) {
 
-    String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist.replace("'","''") + "'";
-    ResultSet results = getSession().execute(queryText);
+    String queryText = "SELECT * FROM track_by_artist WHERE artist = ?";
+    PreparedStatement preparedStatement = getSession().prepare(queryText);
+    BoundStatement boundStatement = preparedStatement.bind(artist);
+    ResultSet results = getSession().execute(boundStatement);
 
     List<TracksDAO> tracks = new ArrayList<>();
 
@@ -63,8 +65,11 @@ public class TracksDAO extends CassandraData {
 
     // TODO - How do we get the subsequent chunks of data?
 
-    String queryText = "SELECT * FROM track_by_genre WHERE genre = '" + genre.replace("'","''") + "' LIMIT 200;";
-    ResultSet results = getSession().execute(queryText);
+    String queryText = "SELECT * FROM track_by_genre WHERE genre = ? LIMIT ?";
+    PreparedStatement preparedStatement = getSession().prepare(queryText);
+    BoundStatement boundStatement = preparedStatement.bind(genre, 10000);
+    ResultSet results = getSession().execute(boundStatement);
+
 
     List<TracksDAO> tracks = new ArrayList<>();
 
