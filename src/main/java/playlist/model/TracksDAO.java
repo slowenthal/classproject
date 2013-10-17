@@ -65,10 +65,11 @@ public class TracksDAO extends CassandraData {
 
   public static List<TracksDAO> listSongsByArtist(String artist) {
 
-    String queryText = "SELECT * FROM track_by_artist WHERE artist = ?";
-    PreparedStatement preparedStatement = getSession().prepare(queryText);
-    BoundStatement boundStatement = preparedStatement.bind(artist);
-    ResultSet results = getSession().execute(boundStatement);
+    // TODO - This bombs if the artist name contains a single-quote.
+    // TODO - Fix this method to use a prepared statement and bound statement
+
+    String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist + "'";
+    ResultSet results = getSession().execute(queryText);
 
     List<TracksDAO> tracks = new ArrayList<>();
 
@@ -79,36 +80,18 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static List<TracksDAO> listSongsByGenre(String genre, int num_tracks) {
+  public static List<TracksDAO> listSongsByGenre(String genre) {
 
-    String queryText = "SELECT * FROM track_by_genre WHERE genre = ? LIMIT ?";
-    PreparedStatement preparedStatement = getSession().prepare(queryText);
-    BoundStatement boundStatement = preparedStatement.bind(genre, num_tracks);
-    boundStatement.setFetchSize(200);
-    ResultSet results = getSession().execute(boundStatement);
-
-
+    ResultSet results = null;
     List<TracksDAO> tracks = new ArrayList<>();
+
+    // TODO - implement the code here to retrieve the songs by genre in the "results" variable
 
     for (Row row : results) {
       tracks.add(new TracksDAO(row));
     }
 
     return tracks;
-  }
-
-  public static TracksDAO getTrackById(UUID track_id) {
-    PreparedStatement preparedStatement = getSession().prepare("SELECT * FROM track_by_id WHERE track_id = ?");
-    BoundStatement boundStatement = preparedStatement.bind(track_id);
-    ResultSet resultSet = getSession().execute(boundStatement);
-
-    // Return null if there is no track found
-
-    if (resultSet.isExhausted()) {
-      return null;
-    }
-
-    return new TracksDAO(resultSet.one());
   }
 
   /**
@@ -125,17 +108,11 @@ public class TracksDAO extends CassandraData {
     BoundStatement boundStatement = preparedStatement.bind(artist_first_letter, this.artist);
     getSession().execute(boundStatement);
 
-    preparedStatement = getSession().prepare("INSERT INTO track_by_id (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
-    boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
-    getSession().execute(boundStatement);
-
-    preparedStatement = getSession().prepare("INSERT INTO track_by_genre (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
-    boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
-    getSession().execute(boundStatement);
-
     preparedStatement = getSession().prepare("INSERT INTO track_by_artist (genre, track_id, artist, track, track_length_in_seconds) VALUES (?, ?, ?, ?, ?)");
     boundStatement = preparedStatement.bind(this.genre, this.track_id, this.artist, this.track, this.track_length_in_seconds);
     getSession().execute(boundStatement);
+
+    // TODO - what are we missing here?
 
   }
 
