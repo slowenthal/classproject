@@ -87,8 +87,10 @@ public class TracksDAO extends CassandraData {
 
     // TODO - implement the code here to retrieve the songs by genre in the "results" variable
 
-    for (Row row : results) {
-      tracks.add(new TracksDAO(row));
+    if (results != null) {
+      for (Row row : results) {
+        tracks.add(new TracksDAO(row));
+      }
     }
 
     return tracks;
