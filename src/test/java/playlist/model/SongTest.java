@@ -29,7 +29,7 @@ public class SongTest extends TestCase {
 
   public void testFindTracksByGenre() throws Exception {
 
-    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical", 10000);
+    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical");
 
     assertEquals(1874, songs.size());
 
@@ -37,15 +37,6 @@ public class SongTest extends TestCase {
     TracksDAO firstTrack = songs.get(0);
 
     assertEquals("Concerto grosso No. 10 en Ré Mineur_ Op. 6: Air lento", firstTrack.getTrack());
-
-  }
-
-  public void testFindTrackById() throws Exception {
-
-    TracksDAO track = TracksDAO.getTrackById(UUID.fromString("5cdbfcb7-ce74-4cf4-b7ee-1a51b798b6b3"));
-
-    assertEquals("5cdbfcb7-ce74-4cf4-b7ee-1a51b798b6b3", track.getTrack_id().toString());
-    assertEquals("Don't Fear The Reaper", track.getTrack());
 
   }
 
@@ -63,16 +54,14 @@ public class SongTest extends TestCase {
     // Validate data is clean
 
     assertEquals(0,TracksDAO.listSongsByArtist("-The Riptanos").size());
-    assertEquals(0, TracksDAO.listSongsByGenre("geek music", 10000).size());
-    assertNull("Track 733262e5-e773-4f0c-b84a-92735c6426f5 exists",TracksDAO.getTrackById(UUID.fromString("733262e5-e773-4f0c-b84a-92735c6426f5")));
+    assertEquals(0,TracksDAO.listSongsByGenre("geek music").size());
 
     TracksDAO tracksDAO = new TracksDAO("-The Riptanos", "Share a Mind", "geek music", "Music File", 100 );
     tracksDAO.add();
 
     assertEquals(1,TracksDAO.listSongsByArtist("-The Riptanos").size());
-    assertEquals(1,TracksDAO.listSongsByGenre("geek music", 10000).size());
-    assertEquals(100,TracksDAO.listSongsByGenre("geek music", 10000).get(0).getTrack_length_in_seconds());
-    assertNotNull("Track 123 exists", TracksDAO.getTrackById(tracksDAO.getTrack_id()));
+    assertEquals(1,TracksDAO.listSongsByGenre("geek music").size());
+    assertEquals(100,TracksDAO.listSongsByGenre("geek music").get(0).getTrack_length_in_seconds());
 
     cleanTestTrack();
   }
