@@ -66,10 +66,13 @@ public class TracksDAO extends CassandraData {
   public static List<TracksDAO> listSongsByArtist(String artist) {
 
     // TODO - This bombs if the artist name contains a single-quote.
-    // TODO - Fix this method to use a prepared statement and bound statement
+    // TODO - Replace the next two lines of this method
+    // TODO - with code which uses a prepared statement and bound statement
 
     String queryText = "SELECT * FROM track_by_artist WHERE artist = '" + artist + "'";
     ResultSet results = getSession().execute(queryText);
+
+    // TODO - Done replacing code
 
     List<TracksDAO> tracks = new ArrayList<>();
 
