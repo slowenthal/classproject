@@ -2,6 +2,7 @@
 <%--@elvariable id="artist" type="java.lang.String"--%>
 <%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
+<%--@elvariable id="howmany" type="java.lang.String"--%>
 <%--
 
 DataStax Academy Sample Application
@@ -40,6 +41,20 @@ Copyright 2013 DataStax
         parent.postMessage(id, '*');
     }
 </script>
+
+    <%--Only show the drop-down if it's by Genre--%>
+<c:if test="${not empty genre}">
+    <form id="howmany" name="howmany" method="get">
+        <input type="hidden" name="genre" value="${genre}"/>
+        <input type="hidden" name="artist" value="${artist}"/>
+        <c:if test="${howmany == ''}"><c:set var="howmany" value="10"/></c:if>
+        <select onchange="this.form.submit()" id="howmanyform" name="howmany">
+            <c:forTokens items="All 5 10 25 100" delims=" " var="opt">
+                <option<c:if test="${opt == howmany}"> selected</c:if>>${opt}</option>
+            </c:forTokens>
+        </select>
+    </form>
+</c:if>
 
 <form id="form1" name="form1" method="get" action="">
     <table class="table">

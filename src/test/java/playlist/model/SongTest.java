@@ -28,7 +28,7 @@ public class SongTest extends TestCase {
 
   public void testFindTracksByGenre() throws Exception {
 
-    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical");
+    List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical", 10000);
 
     assertEquals(200, songs.size());
 
@@ -63,15 +63,15 @@ public class SongTest extends TestCase {
     // Validate data is clean
 
     assertEquals(0,TracksDAO.listSongsByArtist("-The Riptanos").size());
-    assertEquals(0,TracksDAO.listSongsByGenre("geek music").size());
+    assertEquals(0,TracksDAO.listSongsByGenre("geek music", 10000).size());
     assertNull("Track 123 exists",TracksDAO.getTrackById("123"));
 
     TracksDAO tracksDAO = new TracksDAO("123", "-The Riptanos", "Share a Mind", "geek music",100 );
     tracksDAO.add();
 
     assertEquals(1,TracksDAO.listSongsByArtist("-The Riptanos").size());
-    assertEquals(1,TracksDAO.listSongsByGenre("geek music").size());
-    assertEquals(100,TracksDAO.listSongsByGenre("geek music").get(0).getTrack_length_in_seconds());
+    assertEquals(1,TracksDAO.listSongsByGenre("geek music", 10000).size());
+    assertEquals(100,TracksDAO.listSongsByGenre("geek music", 10000).get(0).getTrack_length_in_seconds());
     assertNotNull("Track 123 exists",TracksDAO.getTrackById("123"));
 
     cleanTestTrack();

@@ -46,6 +46,7 @@ public class TrackServlet extends HttpServlet {
       String artist =  request.getParameter("artist");
       String track_name = request.getParameter("track_name");
       String genre = request.getParameter("genre");
+      String howmany = request.getParameter("howmany");
 
       //
       // Construct a new track object
@@ -67,7 +68,7 @@ public class TrackServlet extends HttpServlet {
 
       // Go to that artist to see the new track
 
-      response.sendRedirect("tracks?artist=" + URLEncoder.encode(artist, "UTF-8"));
+      response.sendRedirect("tracks?artist=" + URLEncoder.encode(artist, "UTF-8") + "&howmany=" + howmany);
 
     }
   }
@@ -76,22 +77,34 @@ public class TrackServlet extends HttpServlet {
 
     String artist = request.getParameter("artist");
     String genre = request.getParameter("genre");
+    String howmany = request.getParameter("howmany");
 
     List<TracksDAO> tracks = null;
-    if (artist != null) {
+    if (artist != null && !artist.isEmpty()) {
 
       // Assume we're searching by artist
       tracks = TracksDAO.listSongsByArtist(artist);
     } else if (genre != null) {
 
+      // Compute the limit - if the web sends "0" that means All
+      int limit;
+
+      // If what comes in is not a number or is null, default to 100,000
+      try {
+        limit = Integer.parseInt(howmany);
+      } catch (NumberFormatException e) {
+        limit = 100000;
+      }
+
       // Assume we're searching by genre
-      tracks = TracksDAO.listSongsByGenre(genre);
+      tracks = TracksDAO.listSongsByGenre(genre, limit);
 
     }
 
     request.setAttribute("artist", artist);
     request.setAttribute("genre", genre);
     request.setAttribute("tracks", tracks);
+    request.setAttribute("howmany", howmany);
     getServletContext().getRequestDispatcher("/tracks.jsp").forward(request,response);
 
   }
