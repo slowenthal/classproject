@@ -32,7 +32,7 @@ Copyright 2013 DataStax
             <%--@elvariable id="artists" type="java.util.List"--%>
             <c:forEach var="artist" items="${artists}">
                 <tr>
-                    <td><a href="<c:url value="tracks"><c:param name="artist" value="${artist}"/></c:url>" id="artist_table">${artist}</a></td>
+                    <td><a href="<c:url value="tracks"><c:param name="artist" value="${artist}"/><c:param name="frame" value="${frame}"/></c:url>" id="artist_table">${artist}</a></td>
                 </tr>
             </c:forEach>
         </table>

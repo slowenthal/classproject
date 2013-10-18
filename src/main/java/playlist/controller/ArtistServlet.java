@@ -22,6 +22,7 @@ public class ArtistServlet extends HttpServlet {
 
     String q = request.getParameter("q");
     String dir = request.getParameter("order");
+    String frame = request.getParameter("frame");
 
     boolean desc = dir != null && dir.contentEquals("down");
 
@@ -31,6 +32,7 @@ public class ArtistServlet extends HttpServlet {
     }
 
     request.setAttribute("artists", artists);
+    request.setAttribute("frame", frame);
     request.setAttribute("q", q);
     getServletContext().getRequestDispatcher("/artists.jsp").forward(request,response);
 

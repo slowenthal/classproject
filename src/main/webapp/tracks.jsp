@@ -3,6 +3,7 @@
 <%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
 <%--@elvariable id="howmany" type="java.lang.String"--%>
+<%--@elvariable id="frame" type="java.lang.String"--%>
 <%--
 
 DataStax Academy Sample Application
@@ -60,7 +61,9 @@ Copyright 2013 DataStax
     <table class="table">
         <c:forEach var="track" items="${tracks}">
             <tr>
-                <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
+                <c:if test="${frame == 'true'}">
+                    <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
+                </c:if>
                 <td class="field_track">${track.track}</td>
                 <td class="field_genre">${track.genre}</td>
                 <td class="field_sec">

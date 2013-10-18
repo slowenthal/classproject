@@ -78,6 +78,7 @@ public class TrackServlet extends HttpServlet {
     String artist = request.getParameter("artist");
     String genre = request.getParameter("genre");
     String howmany = request.getParameter("howmany");
+    String frame = request.getParameter("frame");
 
     List<TracksDAO> tracks = null;
     if (artist != null && !artist.isEmpty()) {
@@ -105,6 +106,7 @@ public class TrackServlet extends HttpServlet {
     request.setAttribute("genre", genre);
     request.setAttribute("tracks", tracks);
     request.setAttribute("howmany", howmany);
+    request.setAttribute("frame", frame);
     getServletContext().getRequestDispatcher("/tracks.jsp").forward(request,response);
 
   }

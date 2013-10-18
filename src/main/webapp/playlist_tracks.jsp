@@ -81,7 +81,7 @@ Copyright 2013 DataStax
 
     <div id="picker" style="height:800px;width:800px;">
         <h2>Song Picker: </h2>
-        <iframe src="tracks" height="auto" width="400"></iframe>
+        <iframe src="tracks?frame=true" height="auto" width="400"></iframe>
     </div>
     </form>
 </section>
