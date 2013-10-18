@@ -74,7 +74,7 @@ public class TrackServlet extends HttpServlet {
 
       // Go to that artist to see the new track
 
-      response.sendRedirect("tracks?artist=" + URLEncoder.encode(artist, "UTF-8") + "&howmany=" + howmany);
+      response.sendRedirect("tracks?artist=" + URLEncoder.encode(artist, "UTF-8"));
 
     }
 
@@ -84,7 +84,6 @@ public class TrackServlet extends HttpServlet {
 
     String artist = request.getParameter("artist");
     String genre = request.getParameter("genre");
-    String howmany = request.getParameter("howmany");
     String frame = request.getParameter("frame");
 
     // If howmany is null, default it to 25
@@ -97,25 +96,14 @@ public class TrackServlet extends HttpServlet {
       tracks = TracksDAO.listSongsByArtist(artist);
     } else if (genre != null) {
 
-      // Compute the num_tracks - if the web sends "0" that means All
-      int num_tracks;
-
-      // If what comes in is not a number or is null, default to 100,000
-      try {
-        num_tracks = Integer.parseInt(howmany);
-      } catch (NumberFormatException e) {
-        num_tracks = 100000;
-      }
-
       // Assume we're searching by genre
-      tracks = TracksDAO.listSongsByGenre(genre, num_tracks);
+      tracks = TracksDAO.listSongsByGenre(genre);
 
     }
 
     request.setAttribute("artist", artist);
     request.setAttribute("genre", genre);
     request.setAttribute("tracks", tracks);
-    request.setAttribute("howmany", howmany);
     request.setAttribute("frame", frame);
     getServletContext().getRequestDispatcher("/tracks.jsp").forward(request,response);
 
