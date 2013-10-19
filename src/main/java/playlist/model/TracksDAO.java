@@ -68,11 +68,11 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static List<TracksDAO> listSongsByGenre(String genre, int limit) {
+  public static List<TracksDAO> listSongsByGenre(String genre, int num_tracks) {
 
     String queryText = "SELECT * FROM track_by_genre WHERE genre = ? LIMIT ?";
     PreparedStatement preparedStatement = getSession().prepare(queryText);
-    BoundStatement boundStatement = preparedStatement.bind(genre, limit);
+    BoundStatement boundStatement = preparedStatement.bind(genre, num_tracks);
     ResultSet results = getSession().execute(boundStatement);
 
 
