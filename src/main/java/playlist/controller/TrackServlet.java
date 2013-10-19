@@ -96,18 +96,18 @@ public class TrackServlet extends HttpServlet {
       tracks = TracksDAO.listSongsByArtist(artist);
     } else if (genre != null) {
 
-      // Compute the limit - if the web sends "0" that means All
-      int limit;
+      // Compute the num_tracks - if the web sends "0" that means All
+      int num_tracks;
 
       // If what comes in is not a number or is null, default to 100,000
       try {
-        limit = Integer.parseInt(howmany);
+        num_tracks = Integer.parseInt(howmany);
       } catch (NumberFormatException e) {
-        limit = 100000;
+        num_tracks = 100000;
       }
 
       // Assume we're searching by genre
-      tracks = TracksDAO.listSongsByGenre(genre, limit);
+      tracks = TracksDAO.listSongsByGenre(genre, num_tracks);
 
     }
 
