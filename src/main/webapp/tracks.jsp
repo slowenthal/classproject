@@ -58,6 +58,7 @@ Copyright 2013 DataStax
 </c:if>
 
 <form id="form1" name="form1" method="post" action="">
+    <input type="hidden" name="howmany" value="${howmany}"/>
     <table class="table">
         <c:forEach var="track" items="${tracks}">
             <tr>
