@@ -79,12 +79,24 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
+  /**
+   *
+   * Return a list of TrackDAO objects for a given Genre
+   *
+   * @param genre - a genre
+   * @param num_tracks - the number of rows to return. If we want all of the rows, let's just set this to a really big number.
+   * @return - list of TrackDAO objects
+   */
   public static List<TracksDAO> listSongsByGenre(String genre, int num_tracks) {
 
-    String queryText = "SELECT * FROM track_by_genre WHERE genre = ? LIMIT ?";
+
+    // TODO
+    // TODO - The num_tracks parameter contains the number of rows to return
+    // TODO
+
+    String queryText = "SELECT * FROM track_by_genre WHERE genre = ?";
     PreparedStatement preparedStatement = getSession().prepare(queryText);
-    BoundStatement boundStatement = preparedStatement.bind(genre, num_tracks);
-    boundStatement.setFetchSize(200);
+    BoundStatement boundStatement = preparedStatement.bind(genre);
     ResultSet results = getSession().execute(boundStatement);
 
 
