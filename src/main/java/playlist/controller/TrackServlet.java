@@ -27,18 +27,10 @@ public class TrackServlet extends HttpServlet {
     String track_name = request.getParameter("track_name");
     String genre = request.getParameter("genre");
     String music_file = request.getParameter("music_file");
-    String howmany = request.getParameter("howmany");
-    String star = request.getParameter("star");
 
 
-    if (star != null) {
-      TracksDAO.getTrackById(UUID.fromString(star)).star();
 
-      response.sendRedirect("tracks?howmany=" + howmany
-              + (artist == null ? "" : "&artist=" + URLEncoder.encode(artist, "UTF-8"))
-              + (genre  == null ? "" : "&genre="  + URLEncoder.encode(genre,  "UTF-8")));
-
-    } else if (button != null && button.contentEquals("addTrack")) {
+    if (button != null && button.contentEquals("addTrack")) {
 
       //
       // Get the track_length_in_seconds and validate it's a good integer

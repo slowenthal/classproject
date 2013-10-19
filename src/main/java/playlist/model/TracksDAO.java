@@ -25,7 +25,6 @@ public class TracksDAO extends CassandraData {
   private final String artist;
   private final String track;
   private final String genre;
-  private Boolean starred;
   private final String music_file;
   private final int track_length_in_seconds;
 
@@ -43,12 +42,6 @@ public class TracksDAO extends CassandraData {
     genre = row.getString("genre");
     music_file = row.getString("music_file");
     track_length_in_seconds = row.getInt("track_length_in_seconds");
-
-    try {
-      starred = row.getBool("starred");
-    } catch (Exception e) {
-      starred = false;  // If the field doesn't exist or is null we set it to false
-    }
   }
 
   public TracksDAO(String artist, String track, String genre, String music_file, int track_length_in_seconds) {
@@ -58,7 +51,6 @@ public class TracksDAO extends CassandraData {
     this.genre = genre;
     this.music_file = music_file;
     this.track_length_in_seconds = track_length_in_seconds;
-    starred = false;  // We never set this when adding a track, so leave this one alone
   }
 
   // Static finder method
@@ -121,21 +113,6 @@ public class TracksDAO extends CassandraData {
 
   }
 
-  /**
-   *  Set the track as being starred
-   */
-  public void star() {
-
-    PreparedStatement preparedStatement = getSession().prepare("UPDATE track_by_artist  USING TTL 30 SET starred = true where artist = ? and track = ? and track_id = ?");
-    BoundStatement boundStatement = preparedStatement.bind(artist, track, track_id);
-    getSession().execute(boundStatement);
-
-    preparedStatement = getSession().prepare("UPDATE track_by_genre  USING TTL 30 SET starred = true where genre = ? and artist = ? and track = ? and track_id = ?");
-    boundStatement = preparedStatement.bind(genre, artist, track, track_id);
-    getSession().execute(boundStatement);
-
-  }
-
 
   public UUID getTrack_id() {
     return track_id;
@@ -159,9 +136,5 @@ public class TracksDAO extends CassandraData {
 
   public int getTrack_length_in_seconds() {
     return track_length_in_seconds;
-  }
-
-  public Boolean getStarred() {
-    return starred;
   }
 }
