@@ -86,6 +86,9 @@ public class TrackServlet extends HttpServlet {
     String howmany = request.getParameter("howmany");
     String frame = request.getParameter("frame");
 
+    // If howmany is null, default it to 25
+    howmany = howmany == null ? "25" : howmany;
+
     List<TracksDAO> tracks = null;
     if (artist != null && !artist.isEmpty()) {
 
