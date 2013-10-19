@@ -22,7 +22,22 @@ public class TrackServlet extends HttpServlet {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String button = request.getParameter("button");
 
-    if (button != null && button.contentEquals("addTrack")) {
+    String artist =  request.getParameter("artist");
+    String track_name = request.getParameter("track_name");
+    String genre = request.getParameter("genre");
+    String track_id = request.getParameter("track_id");
+    String howmany = request.getParameter("howmany");
+    String star = request.getParameter("star");
+
+
+    if (star != null) {
+      TracksDAO.getTrackById(star).star();
+
+      response.sendRedirect("tracks?howmany=" + howmany
+              + (artist == null ? "" : "&artist=" + URLEncoder.encode(artist, "UTF-8"))
+              + (genre  == null ? "" : "&genre="  + URLEncoder.encode(genre,  "UTF-8")));
+
+    } else if (button != null && button.contentEquals("addTrack")) {
 
       //
       // Get the track_length_in_seconds and validate it's a good integer
@@ -37,16 +52,6 @@ public class TrackServlet extends HttpServlet {
         return;
 
       }
-
-      //
-      // Get the remaining form fields
-      //
-
-      String track_id = request.getParameter("track_id");
-      String artist =  request.getParameter("artist");
-      String track_name = request.getParameter("track_name");
-      String genre = request.getParameter("genre");
-      String howmany = request.getParameter("howmany");
 
       //
       // Construct a new track object
@@ -71,6 +76,7 @@ public class TrackServlet extends HttpServlet {
       response.sendRedirect("tracks?artist=" + URLEncoder.encode(artist, "UTF-8") + "&howmany=" + howmany);
 
     }
+
   }
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

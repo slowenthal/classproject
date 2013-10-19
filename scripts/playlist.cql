@@ -18,6 +18,10 @@ create table playlist_tracks (user_id UUID, playlist_name text, sequence_no time
 create table statistics (counter_name text PRIMARY KEY, counter_value counter);
 
 
+/* Add the starred field */
+alter table track_by_artist add starred boolean;
+alter table track_by_genre add starred boolean;
+
 
 
 

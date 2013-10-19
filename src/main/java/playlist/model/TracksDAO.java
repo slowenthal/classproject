@@ -24,6 +24,7 @@ public class TracksDAO extends CassandraData {
   private final String artist;
   private final String track;
   private final String genre;
+  private Boolean starred;
   private final int track_length_in_seconds;
 
   private TracksDAO(Row row) {
@@ -33,6 +34,11 @@ public class TracksDAO extends CassandraData {
     genre = row.getString("genre");
     track_length_in_seconds = row.getInt("track_length_in_seconds");
 
+    try {
+      starred = row.getBool("starred");
+    } catch (Exception e) {
+      starred = false;
+    }
   }
 
   public TracksDAO(String track_id, String artist, String track, String genre, int track_length_in_seconds) {
@@ -41,6 +47,7 @@ public class TracksDAO extends CassandraData {
     this.track = track;
     this.genre = genre;
     this.track_length_in_seconds = track_length_in_seconds;
+    starred = false;
   }
 
   // Static finder method
@@ -122,6 +129,18 @@ public class TracksDAO extends CassandraData {
 
   }
 
+  public void star() {
+
+    PreparedStatement preparedStatement = getSession().prepare("UPDATE track_by_artist  USING TTL 30 SET starred = true where artist = ? and track = ? and track_id = ?");
+    BoundStatement boundStatement = preparedStatement.bind(artist, track, track_id);
+    getSession().execute(boundStatement);
+
+    preparedStatement = getSession().prepare("UPDATE track_by_genre  USING TTL 30 SET starred = true where genre = ? and artist = ? and track = ? and track_id = ?");
+    boundStatement = preparedStatement.bind(genre, artist, track, track_id);
+    getSession().execute(boundStatement);
+
+  }
+
 
   public String getTrack_id() {
     return track_id;
@@ -143,4 +162,7 @@ public class TracksDAO extends CassandraData {
     return track_length_in_seconds;
   }
 
+  public Boolean getStarred() {
+    return starred;
+  }
 }

@@ -57,10 +57,14 @@ Copyright 2013 DataStax
     </form>
 </c:if>
 
-<form id="form1" name="form1" method="get" action="">
+<form id="form1" name="form1" method="post" action="">
     <table class="table">
         <c:forEach var="track" items="${tracks}">
             <tr>
+                <c:set var="startype" value="${track.starred ? 'yellowstar.png' : 'emptystar.png'}"/>
+                <c:if test="${empty frame}">
+                    <td class="field_start"><input type="image" src="images/${startype}" name="star" value="${track.track_id}"/></td>
+                </c:if>
                 <c:if test="${frame == 'true'}">
                     <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
                 </c:if>
