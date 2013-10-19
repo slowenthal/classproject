@@ -39,15 +39,11 @@ public class ArtistsDAO extends CassandraData {
     // Build a query. This is an example of executing a simple statement.
     //
 
-    String queryText = "SELECT * FROM artists_by_first_letter WHERE first_letter = '" + first_letter + "'"
+    String queryText = "SELECT * FROM artists_by_first_letter WHERE first_letter = '" + first_letter + "'";
 
-    //
-    // Append an ORDER BY clause on to the statement if we want a descending order
-    //
-            + (desc ? " ORDER BY artist DESC" : "");
-    //
-    // Obtain the results in a ResultSet object
-    //
+    // TODO
+    // TODO - Ensure that if the desc flag is set to true, the query will return the results in descending order
+    // TODO
 
     ResultSet results = getSession().execute(queryText);
 
