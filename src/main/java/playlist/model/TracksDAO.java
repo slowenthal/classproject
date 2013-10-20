@@ -45,7 +45,7 @@ public class TracksDAO extends CassandraData {
     track_length_in_seconds = row.getInt("track_length_in_seconds");
 
     try {
-      starred = row.getBool("starred");
+      starred = false;  // TODO - modify this to set this to the value of the new boolean column
     } catch (Exception e) {
       starred = false;  // If the field doesn't exist or is null we set it to false
     }
@@ -156,13 +156,10 @@ public class TracksDAO extends CassandraData {
    */
   public void star() {
 
-    PreparedStatement preparedStatement = getSession().prepare("UPDATE track_by_artist  USING TTL 30 SET starred = true where artist = ? and track = ? and track_id = ?");
-    BoundStatement boundStatement = preparedStatement.bind(artist, track, track_id);
-    getSession().execute(boundStatement);
-
-    preparedStatement = getSession().prepare("UPDATE track_by_genre  USING TTL 30 SET starred = true where genre = ? and artist = ? and track = ? and track_id = ?");
-    boundStatement = preparedStatement.bind(genre, artist, track, track_id);
-    getSession().execute(boundStatement);
+    // TODO
+    // TODO - Implement the code to update the necessary tables to indicate that a row has been starred
+    // TODO - This is not a static, which means "this" is a track.
+    // TODO
 
   }
 
