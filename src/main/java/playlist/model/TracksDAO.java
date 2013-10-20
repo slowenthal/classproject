@@ -27,6 +27,13 @@ public class TracksDAO extends CassandraData {
   private Boolean starred;
   private final int track_length_in_seconds;
 
+  /**
+   * Constructor to craate a TrackDAO object when given a single Cassandra Row object
+   *
+   * @param row
+   *
+   */
+
   private TracksDAO(Row row) {
     track_id = row.getString("track_id");
     artist = row.getString("artist");
@@ -37,7 +44,7 @@ public class TracksDAO extends CassandraData {
     try {
       starred = row.getBool("starred");
     } catch (Exception e) {
-      starred = false;
+      starred = false;  // If the field doesn't exist or is null we set it to false
     }
   }
 
@@ -47,7 +54,7 @@ public class TracksDAO extends CassandraData {
     this.track = track;
     this.genre = genre;
     this.track_length_in_seconds = track_length_in_seconds;
-    starred = false;
+    starred = false;  // We never set this when adding a track, so leave this one alone
   }
 
   // Static finder method
