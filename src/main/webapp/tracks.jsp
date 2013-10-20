@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿src<!DOCTYPE html>
 <%--@elvariable id="artist" type="java.lang.String"--%>
 <%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
@@ -64,10 +64,12 @@ Copyright 2013 DataStax
             <tr>
                 <c:set var="startype" value="${track.starred ? 'yellowstar.png' : 'emptystar.png'}"/>
                 <c:if test="${empty frame}">
-                    <td class="field_start"><input type="image" src="images/${startype}" name="star" value="${track.track_id}"/></td>
+                    <td class="field_start">
+                        <button name="star" value="${track.track_id}"><img src="images/${startype}"/></button>
+                    </td>
                 </c:if>
                 <c:if test="${frame == 'true'}">
-                    <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
+                <td class="field_plus"><input type="button" name="add" value="+" onclick="addTrack('${track.track_id}')"/></td>
                 </c:if>
                 <td class="field_track">${track.track}</td>
                 <td class="field_genre">${track.genre}</td>
