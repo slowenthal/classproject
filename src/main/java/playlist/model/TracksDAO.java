@@ -134,6 +134,9 @@ public class TracksDAO extends CassandraData {
 
   }
 
+  /**
+   *  Set the track as being starred
+   */
   public void star() {
 
     PreparedStatement preparedStatement = getSession().prepare("UPDATE track_by_artist  USING TTL 30 SET starred = true where artist = ? and track = ? and track_id = ?");
