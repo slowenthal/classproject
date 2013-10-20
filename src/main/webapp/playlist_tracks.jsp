@@ -64,15 +64,15 @@ Copyright 2013 DataStax
                 <th>Genre</th>
                 <th>Length (s)</th>
             </tr>
-            <c:forEach var="track" items="${playlist.trackList}">
+            <c:forEach var="playlistTrack" items="${playlist.playlistTrackList}">
                 <tr>
-                    <td><button type="submit" name="deleteTrack" value="${track.sequence_no}">-</button></td>
-                    <td>${track.track_name}</td>
-                    <td>${track.artist}</td>
-                    <td>${track.genre}</td>
+                    <td><button type="submit" name="deleteTrack" value="${playlistTrack.sequence_no}">-</button></td>
+                    <td>${playlistTrack.track_name}</td>
+                    <td>${playlistTrack.artist}</td>
+                    <td>${playlistTrack.genre}</td>
                     <td>
-                        <fmt:formatNumber value="${track.track_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
-                        <fmt:formatNumber value="${track.track_length_in_seconds % 60}" minIntegerDigits="2"/>
+                        <fmt:formatNumber value="${playlistTrack.track_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
+                        <fmt:formatNumber value="${playlistTrack.track_length_in_seconds % 60}" minIntegerDigits="2"/>
                     </td>
                 </tr>
             </c:forEach>

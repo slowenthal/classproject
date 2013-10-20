@@ -24,7 +24,7 @@ public class PlaylistDAO extends CassandraData {
   private String playlist_name;
   private String email;
   private int playlist_length_in_seconds;
-  private List<Track> trackList;
+  private List<PlaylistTrack> playlistTrackList;
 
   public PlaylistDAO(UserDAO user, String playlist_name) {
 
@@ -33,31 +33,34 @@ public class PlaylistDAO extends CassandraData {
     this.email = user.getEmail();
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
-    trackList = new ArrayList<>();
+    playlistTrackList = new ArrayList<>();
 
   }
 
-  public static class Track {
+  public static class PlaylistTrack {
 
     private String track_name;
     private String artist;
     private int track_length_in_seconds;
     private String genre;
+    private String track_id;
     private Date sequence_no;
 
-    public Track(TracksDAO track) {
+    public PlaylistTrack(TracksDAO track) {
       this.track_name = track.getTrack();
       this.artist = track.getArtist();
       this.track_length_in_seconds = track.getTrack_length_in_seconds();
       this.genre = track.getGenre();
+      this.track_id = track.getTrack_id();
       this.sequence_no = null;  // A new track created this way has no order - it gets this when we persist it. There is no getter or setter.
     }
 
-    public Track (Row row) {
+    public PlaylistTrack(Row row) {
       this.track_name = row.getString("track_name");
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
       this.sequence_no = row.getDate("sequence_no");
+      this.track_id = row.getString("track_id");
       this.genre = row.getString("genre");
     }
 
@@ -80,6 +83,11 @@ public class PlaylistDAO extends CassandraData {
     public String getGenre() {
       return genre;
     }
+
+    public String getTrack_id() {
+      return track_id;
+    }
+
   }
 
   // Static finder method
@@ -99,7 +107,7 @@ public class PlaylistDAO extends CassandraData {
     ResultSet resultSet = getSession().execute(boundStatement);
 
     for (Row row : resultSet)  {
-      newPlaylist.trackList.add(new Track(row));
+      newPlaylist.playlistTrackList.add(new PlaylistTrack(row));
 
       // Pre-aggregate the playlist length in seconds;
       newPlaylist.playlist_length_in_seconds += row.getInt("track_length_in_seconds");
@@ -113,24 +121,24 @@ public class PlaylistDAO extends CassandraData {
   public void deleteTrackFromPlaylist(long ordinalToDelete) {
 
     // Find the track to delete
-    Track trackToDelete = null;
-    for (int i = 0; i < this.trackList.size(); i++) {
-      if (this.trackList.get(i).sequence_no.getTime() == ordinalToDelete) {
-        trackToDelete = this.trackList.get(i);
-        this.trackList.remove(i);
+    PlaylistTrack playlistTrackToDelete = null;
+    for (int i = 0; i < this.playlistTrackList.size(); i++) {
+      if (this.playlistTrackList.get(i).sequence_no.getTime() == ordinalToDelete) {
+        playlistTrackToDelete = this.playlistTrackList.get(i);
+        this.playlistTrackList.remove(i);
         break;
       }
     }
 
     // first adjust the playlist length
-    playlist_length_in_seconds -= trackToDelete != null ? trackToDelete.getTrack_length_in_seconds() : 0;
+    playlist_length_in_seconds -= playlistTrackToDelete != null ? playlistTrackToDelete.getTrack_length_in_seconds() : 0;
 
     // remove it from the database
     PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
     BoundStatement bs = ps.bind(this.user_id, this.playlist_name, new Date(ordinalToDelete));
     getSession().execute(bs);
 
-   }
+  }
 
 
   public void deletePlayList() {
@@ -185,47 +193,47 @@ public class PlaylistDAO extends CassandraData {
     deletePlaylistTracks();
 
     // Now insert all of the track, but first, reset all of the ordinals
-    List<Track> tracklist = this.trackList;
+    List<PlaylistTrack> tracklist = this.playlistTrackList;
 
     // remove the tracks from the playlist, so we can add them back and renumber them
-    this.trackList = new ArrayList<>();
+    this.playlistTrackList = new ArrayList<>();
 
     // Add them back
     addTracksToPlaylist(tracklist);
 
   }
 
-  public void addTracksToPlaylist(List<Track> newTracks) {
+  public void addTracksToPlaylist(List<PlaylistTrack> newPlaylistTracks) {
 
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(
             "INSERT into playlist_tracks" +
-                    " (user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds) " +
-                    "VALUES (?, ?, ?, ?, ?, ?, ?)"
+                    " (user_id, playlist_name, sequence_no, artist, track_name, genre, track_id, track_length_in_seconds) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     );
     BoundStatement boundStatement = statement.bind();
 
-    for (Track track : newTracks) {
+    for (PlaylistTrack playlistTrack : newPlaylistTracks) {
 
-      // Since the track sequence is like a time-series, set it's sequence to the current time
+      // Since the playlistTrack sequence is like a time-series, set it's sequence to the current time
       // Also update the total time for the playlist locally.
 
-      track.sequence_no = new Date();
-      this.playlist_length_in_seconds += track.track_length_in_seconds;
+      playlistTrack.sequence_no = new Date();
+      this.playlist_length_in_seconds += playlistTrack.track_length_in_seconds;
 
       // Let's use named parameters this time
       boundStatement.setUUID("user_id", getUser_id());
       boundStatement.setString("playlist_name", getPlaylist_name());
-      boundStatement.setDate("sequence_no", track.sequence_no);
-      boundStatement.setString("track_name", track.getTrack_name());
-      boundStatement.setString("artist", track.getArtist());
-      boundStatement.setInt("track_length_in_seconds", track.getTrack_length_in_seconds());
-      boundStatement.setString("genre", track.getGenre());
+      boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
+      boundStatement.setString("track_name", playlistTrack.getTrack_name());
+      boundStatement.setString("artist", playlistTrack.getArtist());
+      boundStatement.setInt("track_length_in_seconds", playlistTrack.getTrack_length_in_seconds());
+      boundStatement.setString("genre", playlistTrack.getGenre());
 
       getSession().execute(boundStatement);
     }
 
-    this.trackList.addAll(newTracks);
+    this.playlistTrackList.addAll(newPlaylistTracks);
   }
 
   public UUID getUser_id() {
@@ -236,8 +244,8 @@ public class PlaylistDAO extends CassandraData {
     return playlist_name;
   }
 
-  public List<Track> getTrackList() {
-    return trackList;
+  public List<PlaylistTrack> getPlaylistTrackList() {
+    return playlistTrackList;
   }
 
   public int getPlaylist_length_in_seconds() {

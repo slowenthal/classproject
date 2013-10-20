@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Date;
 
 /**
  * DataStax Academy Sample Application
@@ -98,12 +97,12 @@ public class PlaylistTracksServlet extends HttpServlet {
   }
 
   void doAddPlaylistTrack(PlaylistDAO playlist, String track_id) throws ServletException {
-    // Grab the Track information from the DB
+    // Grab the PlaylistTrack information from the DB
     TracksDAO track = TracksDAO.getTrackById(track_id);
 
-    PlaylistDAO.Track newTrack = new PlaylistDAO.Track(track);
+    PlaylistDAO.PlaylistTrack newPlaylistTrack = new PlaylistDAO.PlaylistTrack(track);
     try {
-      playlist.addTracksToPlaylist(Arrays.asList(newTrack));
+      playlist.addTracksToPlaylist(Arrays.asList(newPlaylistTrack));
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }

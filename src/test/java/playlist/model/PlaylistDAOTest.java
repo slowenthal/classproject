@@ -31,20 +31,20 @@ public class PlaylistDAOTest extends TestCase {
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1");
 
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
-    PlaylistDAO.Track track1 = new PlaylistDAO.Track(newTrack);
+    PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(Arrays.asList(track1));
+    newPlaylist.addTracksToPlaylist(Arrays.asList(playlistTrack1));
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
-    List<PlaylistDAO.Track> tracksList = playlist.getTrackList();
+    List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(1, tracksList.size());
 
     newTrack = new TracksDAO("2","Artist2","Track2", "rock", 10);
-    PlaylistDAO.Track track2 = new PlaylistDAO.Track(newTrack);
-    playlist.addTracksToPlaylist(Arrays.asList(track2));
+    PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
+    playlist.addTracksToPlaylist(Arrays.asList(playlistTrack2));
     playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
-    tracksList = playlist.getTrackList();
+    tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(2, tracksList.size());
 
@@ -61,12 +61,12 @@ public class PlaylistDAOTest extends TestCase {
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1");
 
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
-    PlaylistDAO.Track track1 = new PlaylistDAO.Track(newTrack);
+    PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(Arrays.asList(track1));
+    newPlaylist.addTracksToPlaylist(Arrays.asList(playlistTrack1));
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
-    List<PlaylistDAO.Track> tracksList = playlist.getTrackList();
+    List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(1, tracksList.size());
     assertEquals(20, playlist.getPlaylist_length_in_seconds());
