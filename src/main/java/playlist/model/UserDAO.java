@@ -1,6 +1,7 @@
 package playlist.model;
 
 import com.datastax.driver.core.ConsistencyLevel;
+import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.Row;
 import com.datastax.driver.core.SimpleStatement;
 import playlist.exceptions.UserExistsException;
@@ -56,15 +57,13 @@ public class UserDAO extends CassandraData {
       throw new UserExistsException();
     }
 
-    String queryText = "INSERT INTO users (email, password, user_id) values ('"
-            + email + "','"
-            + password + "',"
-            + userId + ")";
+    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?, ?)";
 
+    PreparedStatement preparedStatement = getSession().prepare(queryText);
     // We want to run this statement with CL quorum
-    SimpleStatement simpleStatement = new SimpleStatement(queryText);
-    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
-    getSession().execute(simpleStatement);
+    preparedStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+
+    getSession().execute(preparedStatement.bind(email, password, userId));
 
     // Return the new user so the caller can get the userid
     return new UserDAO(email, password, userId);
