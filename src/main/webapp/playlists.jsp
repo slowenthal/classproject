@@ -20,7 +20,7 @@ Copyright 2013 DataStax
 <body>
 <section class="menu small">
     <a href="home">Home</a>
-    <a href="login?button=Logout">Logout</a> <br/>
+    <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
     <h1>Playlists for ${email}</h1>
 
     <form id="form1" class="playlist_form" name="form1" method="post" action="">

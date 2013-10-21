@@ -131,7 +131,7 @@ public class LoginServlet extends HttpServlet {
       session.setAttribute("user", null);
     }
 
-    getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
+    response.sendRedirect("login");
 
   }
 
