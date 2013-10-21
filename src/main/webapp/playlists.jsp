@@ -32,7 +32,12 @@ Copyright 2013 DataStax
     <table>
         <c:forEach var="playlist_name" items="${playlist_names}">
             <tr>
-                <td><a href="playlist_tracks?pl=${playlist_name}">${playlist_name}</a></td>
+                <td>
+                    <a href="<c:url value="playlists"><c:param name="button" value="deletePlaylist"/><c:param name="pl" value="${playlist_name}"/></c:url>">-</a>
+                </td>
+                <td>
+                    <a href="<c:url value="playlist_tracks"><c:param name="pl" value="${playlist_name}"/></c:url>">${playlist_name}</a>
+                </td>
             </tr>
         </c:forEach>
     </table>

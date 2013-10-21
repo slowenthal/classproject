@@ -19,7 +19,6 @@ Copyright 2013 DataStax
 
     <script type="text/javascript">
         function listener(event){
-           // window.location.href = 'playlist_tracks?pl=${playlist.playlist_name}&button=addTrack&track_id=' + event.data;
            var track_id_input = document.getElementById("track_id") ;
            track_id_input.setAttribute("value", event.data) ;
            addplaylist = document.getElementById("addplaylist").submit();
@@ -54,7 +53,6 @@ Copyright 2013 DataStax
     </h2>
     <form id="form1" name="form1" method="get" action="">
     <input type="hidden" name="pl" value="${playlist.playlist_name}"/>
-    <button type="submit" class="track_delete" name="button" value="deletePlaylist">Delete this Playlist</button>
     <div id="playlist_tracks" style="height:auto;width:500px;float:left;">
         <table class="tracktable">
             <tr>

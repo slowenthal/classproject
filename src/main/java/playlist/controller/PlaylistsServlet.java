@@ -44,10 +44,22 @@ public class PlaylistsServlet extends HttpServlet {
     UserDAO userFromDB = UserDAO.getUser(user.getEmail());
 
     String button = request.getParameter("button");
-    if (button != null && button.contentEquals("Add")) {
-      String new_playlist_name = request.getParameter("new_playlist_name");
-      if (new_playlist_name != null) {
-        doAddPlaylist(userFromDB, new_playlist_name);
+    String playlist = request.getParameter("pl");
+
+
+    if (button != null) {
+      if (button.contentEquals("deletePlaylist")) {
+
+        // Clicked to delete the WHOLE playlist
+        doDeletePlaylist(new PlaylistDAO(user, playlist));
+        response.sendRedirect("playlists");
+        return;
+
+      } else if (button.contentEquals("Add")) {
+        String new_playlist_name = request.getParameter("new_playlist_name");
+        if (new_playlist_name != null) {
+          doAddPlaylist(userFromDB, new_playlist_name);
+        }
       }
     }
 
@@ -62,6 +74,14 @@ public class PlaylistsServlet extends HttpServlet {
     StatisticsDAO.increment_counter("playlists");
 
     PlaylistDAO.createPlayList(user, playlistName);
+  }
+
+
+  void doDeletePlaylist(PlaylistDAO playlist) {
+
+    StatisticsDAO.decrement_counter("playlists");
+
+    playlist.deletePlayList();
   }
 
 }

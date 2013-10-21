@@ -73,15 +73,6 @@ public class PlaylistTracksServlet extends HttpServlet {
     //
 
     if (button != null) {
-     if (button.contentEquals("deletePlaylist")) {
-
-        // Clicked to delete the WHOLE playlist
-         doDeletePlaylist(playlist);
-
-        // Now go back to the playlists page
-         getServletContext().getRequestDispatcher("/playlists").forward(request,response);
-        return;
-      }
 
     } else if (deleteTrack != null) {
 
@@ -106,13 +97,6 @@ public class PlaylistTracksServlet extends HttpServlet {
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }
-  }
-
-  void doDeletePlaylist(PlaylistDAO playlist) {
-
-    StatisticsDAO.decrement_counter("playlists");
-
-    playlist.deletePlayList();
   }
 
   void doDeleteTrack(PlaylistDAO playlist, long sequence_no) {
