@@ -11,8 +11,6 @@
  Copyright 2013 DataStax
 
 -->
-
-
     <servlet>
         <servlet-name>ArtistsServlet</servlet-name>
         <servlet-class>playlist.controller.ArtistServlet</servlet-class>
@@ -33,24 +31,9 @@
         <servlet-class>playlist.controller.PlaylistsServlet</servlet-class>
     </servlet>
 
-    <servlet>
-        <servlet-name>PlaylistTracksServlet</servlet-name>
-        <servlet-class>playlist.controller.PlaylistTracksServlet</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>StatisticsServlet</servlet-name>
-        <servlet-class>playlist.controller.StatisticsServlet</servlet-class>
-    </servlet>
-
     <servlet-mapping>
         <servlet-name>TrackServlet</servlet-name>
         <url-pattern>/tracks</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>PlaylistTracksServlet</servlet-name>
-        <url-pattern>/playlist_tracks</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -76,11 +59,6 @@
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>StatisticsServlet</servlet-name>
-        <url-pattern>/stats</url-pattern>
     </servlet-mapping>
 
     <servlet>

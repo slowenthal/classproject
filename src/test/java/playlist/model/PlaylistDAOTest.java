@@ -27,58 +27,6 @@ public class PlaylistDAOTest extends TestCase {
 
   }
 
-  public void testAddTrackToPlaylist() throws Exception {
-    UserDAO user = UserDAO.addUser("testuser1","pw");
-    PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1");
-
-    TracksDAO newTrack = new TracksDAO("Artist1","Track1", "rock", "music file 1", 20);
-    PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
-
-    newPlaylist.addTrackToPlaylist(playlistTrack1);
-
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
-    List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
-
-    assertEquals(1, tracksList.size());
-
-    UUID uuid2 = UUID.randomUUID();
-    newTrack = new TracksDAO("Artist2","Track2", "rock", "music fiile 2", 10);
-    PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
-    playlist.addTrackToPlaylist(playlistTrack2);
-    playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
-    tracksList = playlist.getPlaylistTrackList();
-
-    assertEquals(2, tracksList.size());
-
-    assertEquals(30, playlist.getPlaylist_length_in_seconds());
-
-    playlist.deletePlayList();
-    user.deleteUser();
-  }
-
-  public void testDeleteTrackFromPlaylist() throws Exception {
-    UserDAO user = UserDAO.addUser("testuser1","pw");
-    PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user, "Playlist1");
-
-    TracksDAO newTrack = new TracksDAO("Artist1","Track1", "rock", "music file 3", 20);
-    PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
-
-    newPlaylist.addTrackToPlaylist(playlistTrack1);
-
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
-    List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
-
-    assertEquals(1, tracksList.size());
-    assertEquals(20, playlist.getPlaylist_length_in_seconds());
-
-    playlist.deleteTrackFromPlaylist(tracksList.get(0).getSequence_no());
-    assertEquals(0, playlist.getPlaylist_length_in_seconds());
-
-    playlist.deletePlayList();
-    user.deleteUser();
-
-  }
-
   public void testDeletePlayList() throws Exception {
 
     UserDAO user = UserDAO.addUser("testuser1","pw");
