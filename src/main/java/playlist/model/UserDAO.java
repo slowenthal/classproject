@@ -48,9 +48,6 @@ public class UserDAO extends CassandraData {
 
   public static UserDAO addUser(String email, String password) throws UserExistsException {
 
-    // TODO Should read and write a quorum for this because of the unique requirement
-    // TODO or better should use a transaction
-
     UUID userId = UUID.randomUUID();
 
     if (getUser(email) != null) {
