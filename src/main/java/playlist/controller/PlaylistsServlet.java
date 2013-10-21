@@ -50,8 +50,8 @@ public class PlaylistsServlet extends HttpServlet {
     if (button != null) {
       if (button.contentEquals("deletePlaylist")) {
 
-        // Clicked to delete the WHOLE playlist
-        doDeletePlaylist(new PlaylistDAO(user, playlist));
+        // Delete the playlist
+        new PlaylistDAO(user, playlist).deletePlayList();
 
         // Force a re-read in this case
         response.sendRedirect("playlists");
@@ -75,14 +75,6 @@ public class PlaylistsServlet extends HttpServlet {
     StatisticsDAO.increment_counter("playlists");
 
     PlaylistDAO.createPlayList(user, playlistName);
-  }
-
-
-  void doDeletePlaylist(PlaylistDAO playlist) {
-
-    StatisticsDAO.decrement_counter("playlists");
-
-    playlist.deletePlayList();
   }
 
 }

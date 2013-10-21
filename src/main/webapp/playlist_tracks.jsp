@@ -36,7 +36,7 @@ Copyright 2013 DataStax
 
 <body>
 <%--Hidden form to post adding the playlist--%>
-<form id="addplaylist" style="display: hidden" action="playlist_tracks?pl=${playlist.playlist_name}" method="POST">
+<form id="addplaylist" style="display: hidden" action="<c:url value="${playlist_tracks}"><c:param name="pl" value="${playlist.playlist_name}"/></c:url>" method="POST">
     <input type="hidden" id="pl" name="pl" value="${playlist.playlist_name}"/>
     <input type="hidden" id="track_id" name="track_id"/>
     <input type="hidden" id="button" name="button" value="addTrack"/>
