@@ -54,7 +54,7 @@ public class UserDAO extends CassandraData {
       throw new UserExistsException();
     }
 
-    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?, ?)";
+    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
 
     PreparedStatement preparedStatement = getSession().prepare(queryText);
     // We want to run this statement with CL quorum
