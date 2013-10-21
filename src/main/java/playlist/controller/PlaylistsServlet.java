@@ -52,13 +52,14 @@ public class PlaylistsServlet extends HttpServlet {
 
         // Clicked to delete the WHOLE playlist
         doDeletePlaylist(new PlaylistDAO(user, playlist));
+
+        // Force a re-read in this case
         response.sendRedirect("playlists");
         return;
 
       } else if (button.contentEquals("Add")) {
-        String new_playlist_name = request.getParameter("new_playlist_name");
-        if (new_playlist_name != null) {
-          doAddPlaylist(userFromDB, new_playlist_name);
+        if (playlist != null) {
+          doAddPlaylist(userFromDB, playlist);
         }
       }
     }

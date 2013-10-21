@@ -24,8 +24,8 @@ Copyright 2013 DataStax
     <h1>Playlists for ${email}</h1>
 
     <form id="form1" class="playlist_form" name="form1" method="post" action="">
-    Playlist Name: <label for="new_playlist_name">new playlist</label>
-        <input id="new_playlist_name" type="text" name="new_playlist_name"/>
+    Playlist Name: <label for="pl">new playlist</label>
+        <input id="pl" type="text" name="pl"/>
         <input type="submit" name="button" id="add" value="Add" />
         <br/>
 
