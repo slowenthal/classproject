@@ -46,17 +46,28 @@ public class UserDAO extends CassandraData {
     this.playlist_names = new TreeSet<>();
   }
 
+  /**
+   * Static method to add a user.  It generates a new UUID for the user to use as its surrogate key.  It first checks to
+   * ensure that the user does not already exist.  If it exists, we throw a UserExistsException
+   *
+   * @param email new user's email address
+   * @param password new user's password
+   * @return a UserDAO object which also contains the new user_id field (UUID)
+   * @throws UserExistsException
+   */
   public static UserDAO addUser(String email, String password) throws UserExistsException {
-
-    UUID userId = UUID.randomUUID();
 
     if (getUserWithConsistency(email, true) != null) {
       throw new UserExistsException();
     }
 
+    // Generate a new UUID to use as the user's surrogate key
+    UUID userId = UUID.randomUUID();
+
     String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
 
     PreparedStatement preparedStatement = getSession().prepare(queryText);
+
     // We want to run this statement with CL quorum
     preparedStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
 
@@ -67,6 +78,9 @@ public class UserDAO extends CassandraData {
 
   }
 
+  /**
+   * Delete the user.  It does not need to check if the user already exists.
+   */
   public void deleteUser() {
     SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where email = '"
             + this.email + "'");
@@ -78,10 +92,24 @@ public class UserDAO extends CassandraData {
   }
 
 
+  /**
+   * Look up a user by e-mail address and return a UserDAO object for it
+   * @param email The email address to search
+   * @return  A full UserDAO object
+   */
   public static UserDAO getUser(String email) {
     return getUserWithConsistency(email, false);
   }
 
+
+  /**
+   * This is the innards of the getUser routine.  The caller can choose whether to use a consistency level of
+   * Quorum, or just the regular consistency level of One.
+   *
+   * @param email email address to search
+   * @param useQuorum true = use consistency level QUORUM, false = use consistency level ONE
+   * @return a UserDAO object
+   */
   private static UserDAO getUserWithConsistency(String email, boolean useQuorum) {
 
     String queryText = "SELECT * FROM users where email = '"
@@ -99,6 +127,15 @@ public class UserDAO extends CassandraData {
 
   }
 
+  /**
+   * The also retrieves a user based on the email address, but also validates its password.  If the password is invalid, a
+   * UserLoginException is thrown
+   *
+   * @param email  email address to search
+   * @param password  password to validate
+   * @return  a completed UserDAO object
+   * @throws UserLoginException
+   */
   public static UserDAO validateLogin(String email, String password) throws UserLoginException {
 
     UserDAO user = getUserWithConsistency(email, true);
