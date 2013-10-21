@@ -50,7 +50,7 @@ public class UserDAO extends CassandraData {
 
     UUID userId = UUID.randomUUID();
 
-    if (getUser(email) != null) {
+    if (getUserWithConsistency(email, true) != null) {
       throw new UserExistsException();
     }
 
