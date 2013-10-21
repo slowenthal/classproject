@@ -21,10 +21,10 @@ Copyright 2013 DataStax
 <section class="menu small">
     <a href="home">Home</a>
     <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
-    <h1>Playlists for ${email}</h1>
+    <h2>Playlists for ${email}</h2>
 
     <form id="form1" class="playlist_form" name="form1" method="post" action="">
-    Playlist Name: <label for="pl">new playlist</label>
+    <label for="pl">New Playlist Name</label>
         <input id="pl" type="text" name="pl"/>
         <input type="submit" name="button" id="add" value="Add" />
         <br/>
