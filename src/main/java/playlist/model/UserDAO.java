@@ -77,12 +77,19 @@ public class UserDAO extends CassandraData {
 
   }
 
+
   public static UserDAO getUser(String email) {
+    return getUserWithConsistency(email, false);
+  }
+
+  private static UserDAO getUserWithConsistency(String email, boolean useQuorum) {
 
     String queryText = "SELECT * FROM users where email = '"
             + email + "'";
 
-    Row userRow = getSession().execute(queryText).one();
+    SimpleStatement simpleStatement = new SimpleStatement(queryText);
+    simpleStatement.setConsistencyLevel(useQuorum ? ConsistencyLevel.QUORUM : ConsistencyLevel.ONE);
+    Row userRow = getSession().execute(simpleStatement).one();
 
     if (userRow == null) {
       return null;
@@ -94,7 +101,7 @@ public class UserDAO extends CassandraData {
 
   public static UserDAO validateLogin(String email, String password) throws UserLoginException {
 
-    UserDAO user = getUser(email);
+    UserDAO user = getUserWithConsistency(email, true);
     if (user == null || !user.password.contentEquals(password)) {
       throw new UserLoginException();
     }
