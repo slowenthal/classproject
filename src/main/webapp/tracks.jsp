@@ -1,4 +1,4 @@
-﻿src<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <%--@elvariable id="artist" type="java.lang.String"--%>
 <%--@elvariable id="genre" type="java.lang.String"--%>
 <%--@elvariable id="tracks" type="List"--%>
