@@ -23,6 +23,7 @@ public class PlaylistDAO extends CassandraData {
   private String playlist_name;
   private String username;
   private int playlist_length_in_seconds;
+  private List<Object> playlistTrackList;   // Changed to object for compilation
 
   public PlaylistDAO(String username, String playlist_name) {
 
@@ -30,6 +31,7 @@ public class PlaylistDAO extends CassandraData {
     this.username = username;
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
+    playlistTrackList = new ArrayList<>();
 
   }
 
@@ -47,10 +49,9 @@ public class PlaylistDAO extends CassandraData {
     // Change single quotes to a pair of single quotes for escaping into the database
     String fixed_playlist_name = playlist_name.replace("'","''");
 
-    PreparedStatement preparedStatement = getSession().prepare(
-            "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE username = ?");
-    BoundStatement bs = preparedStatement.bind(user.getUsername());
-    getSession().execute(bs);
+    // TODO
+    // TODO - Add the playlist name to the playlist_names Set
+    // TODO
 
     // Update the user object too
 
@@ -60,6 +61,7 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
+
   /**
    * Delete this playlist
    */
@@ -68,12 +70,9 @@ public class PlaylistDAO extends CassandraData {
     // Change single quotes to a pair of single quotes for escaping into the database
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
-    PreparedStatement preparedStatement = getSession().prepare(
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE username = ? ");
-
-    BoundStatement bs = preparedStatement.bind(this.username, this.username, this.playlist_name);
-
-    getSession().execute(bs);
+    // TODO
+    // TODO - Add code here to delete this playlist from the database
+    // TODO
 
   }
 
@@ -85,7 +84,7 @@ public class PlaylistDAO extends CassandraData {
     return playlist_name;
   }
 
-   public int getPlaylist_length_in_seconds() {
+  public int getPlaylist_length_in_seconds() {
     return playlist_length_in_seconds;
   }
 
