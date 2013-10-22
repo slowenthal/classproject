@@ -32,7 +32,7 @@ public class UserDAO extends CassandraData {
     password = row.getString("password");
     userid = row.getUUID("user_id");
 
-    // We do this because we want a sorted set, and Cassnadra only returns a regular set
+    // We do this because we want a sorted set, and Cassandra only returns a regular set
     // the driver gives us a HashLinkedSet. We need to choose our implementation.
     playlist_names = new TreeSet<>();
     playlist_names.addAll(row.getSet("playlist_names", String.class));

@@ -125,7 +125,7 @@ public class LoginServlet extends HttpServlet {
 
   }
 
-  private void doLogout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  private void doLogout(HttpServletRequest request, HttpServletResponse response) throws IOException {
     HttpSession session = request.getSession();
     if (session != null) {
       session.setAttribute("user", null);

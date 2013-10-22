@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <%--@elvariable id="email" type="java.lang.String"--%>
 <%--@elvariable id="playlist" type="playlist.model.PlaylistDAO"--%>
+<%--@elvariable id="playlist_tracks" type="playlist.model.PlaylistDAO.PlaylistTrack"--%>
 <%--
 
 DataStax Academy Sample Application

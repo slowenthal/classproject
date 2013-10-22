@@ -1,6 +1,7 @@
 ﻿
 <!DOCTYPE html>
 <%--@elvariable id="q" type="java.lang.String"--%>
+<%--@elvariable id="frame" type="java.lang.String"--%>
 
 <%--
 

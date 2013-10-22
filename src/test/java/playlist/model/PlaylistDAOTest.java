@@ -118,9 +118,4 @@ public class PlaylistDAOTest extends TestCase {
 
   }
 
-  public void testRewritePlaylist() throws Exception {
-
-  }
-
-
 }

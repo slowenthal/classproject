@@ -72,9 +72,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     // If a button was pressed, carry out the button's action
     //
 
-    if (button != null) {
-
-    } else if (deleteTrack != null) {
+    if (deleteTrack != null) {
 
       // Delete one track
         long sequence_no = Long.parseLong(deleteTrack);
