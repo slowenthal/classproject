@@ -51,19 +51,17 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO addUser(String username, String password) throws UserExistsException {
 
-    String queryText = "INSERT INTO users (username, password) values (?, ?) IF NOT EXISTS";
 
+    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
     PreparedStatement preparedStatement = getSession().prepare(queryText);
 
+    // TODO
+    // TODO - prepare and execute the statement above to insert a new user
+    // TODO - with the newly minted UUID. Ensure you insert the user with the correct
+    // TODO - consistency level
+    // TODO
     // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
     ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password));
-
-    // Determine if the user was inserted.  If not, throw an exception.
-    boolean userGotInserted = resultSet.one().getBool("[applied]");
-
-    if (!userGotInserted) {
-      throw new UserExistsException();
-    }
 
     // Return the new user so the caller can get the userid
     return new UserDAO(username, password);
@@ -74,12 +72,11 @@ public class UserDAO extends CassandraData {
    * Delete the user.  It does not need to check if the user already exists.
    */
   public void deleteUser() {
-    SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where username = '"
-            + this.username + "'");
+    String query = "DELETE FROM users where username = '"+ this.username + "'";
 
-    // Delete users with CL = Quorum
-    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
-    getSession().execute(simpleStatement);
+     // TODO
+     // TODO - execute this statement with the correct consistency level
+     // TODO
 
   }
 
@@ -117,6 +114,17 @@ public class UserDAO extends CassandraData {
     SimpleStatement simpleStatement = new SimpleStatement(queryText);
     simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
     Row userRow = getSession().execute(simpleStatement).one();
+
+    Row userRow = null;  // For compil
+
+    // TODO
+    // TODO - if useQuorum is set, execute this statement with consistency level QUORUM
+    // TODO - otherwise use consistency level ONE
+    // TODO
+    // TODO - set userRow to the one Row object in the result set
+
+
+    // If the user isn't found, return null.  The constructor call below will throw if we don't do this
 
     if (userRow == null) {
       return null;
