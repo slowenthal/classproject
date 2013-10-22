@@ -62,19 +62,16 @@ public class UserDAO extends CassandraData {
     }
 
     // Generate a new UUID to use as the user's surrogate key
-
-    // TODO
-    // TODO - fix the line below to generate a new UUID for the user's surrogate key
-    UUID userId = null;  // We only added the "= null" so this code compiles. Remove it.
-    // TODO
+    UUID userId = UUID.randomUUID();
 
     String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
 
-    // TODO
-    // TODO - prepare and execute the statement above to insert a new user
-    // TODO - with the newly minted UUID. Ensure you insert the user with the correct
-    // TODO - consistency level
-    // TODO
+    PreparedStatement preparedStatement = getSession().prepare(queryText);
+
+    // We want to run this statement with CL quorum
+    preparedStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+
+    getSession().execute(preparedStatement.bind(email, password, userId));
 
     // Return the new user so the caller can get the userid
     return new UserDAO(email, password, userId);
@@ -85,11 +82,12 @@ public class UserDAO extends CassandraData {
    * Delete the user.  It does not need to check if the user already exists.
    */
   public void deleteUser() {
-    String query = "DELETE FROM users where email = '"+ this.email + "'";
+    SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where email = '"
+            + this.email + "'");
 
-     // TODO
-     // TODO - execute this statement with the correct consistency level
-     // TODO
+    // Delete users with CL = Quorum
+    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+    getSession().execute(simpleStatement);
 
   }
 
@@ -118,17 +116,8 @@ public class UserDAO extends CassandraData {
             + email + "'";
 
     SimpleStatement simpleStatement = new SimpleStatement(queryText);
-
-    Row userRow = null;  // For compil
-
-    // TODO
-    // TODO - if useQuorum is set, execute this statement with consistency level QUORUM
-    // TODO - otherwise use consistency level ONE
-    // TODO
-    // TODO - set userRow to the one Row object in the result set
-
-
-    // If the user isn't found, return null.  The constructor call below will throw if we don't do this
+    simpleStatement.setConsistencyLevel(useQuorum ? ConsistencyLevel.QUORUM : ConsistencyLevel.ONE);
+    Row userRow = getSession().execute(simpleStatement).one();
 
     if (userRow == null) {
       return null;
@@ -149,7 +138,7 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO validateLogin(String email, String password) throws UserLoginException {
 
-    UserDAO user = getUserWithConsistency(email, false /* TODO - fill the correct value in here for the correct consistency level */);
+    UserDAO user = getUserWithConsistency(email, true);
     if (user == null || !user.password.contentEquals(password)) {
       throw new UserLoginException();
     }

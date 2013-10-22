@@ -117,7 +117,6 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-
   /**
    * Delete this playlist
    */
