@@ -90,6 +90,53 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
+  /**
+   *
+   * Create a new playlist
+   *
+   * @param user A userDAO object for the user that gets the new playlist
+   * @param playlist_name The name of the new Playlist
+   * @return  A PlaylistDAO object for the new playlist
+   */
+  public static PlaylistDAO createPlayList(UserDAO user, String playlist_name) {
+
+
+    // Change single quotes to a pair of single quotes for escaping into the database
+    String fixed_playlist_name = playlist_name.replace("'","''");
+
+    PreparedStatement preparedStatement = getSession().prepare(
+            "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE email = ?");
+    BoundStatement bs = preparedStatement.bind(user.getEmail());
+    getSession().execute(bs);
+
+    // Update the user object too
+
+    user.getPlaylist_names().add(playlist_name);
+
+    return new PlaylistDAO(user,playlist_name);
+
+  }
+
+
+  /**
+   * Delete this playlist
+   */
+  public void deletePlayList() {
+
+    // Change single quotes to a pair of single quotes for escaping into the database
+    String fixed_playlist_name = this.playlist_name.replace("'","''");
+
+    PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
+            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
+            "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
+            "APPLY BATCH;");
+
+    BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
+
+    getSession().execute(bs);
+
+  }
+
   // Static finder method
 
   public static PlaylistDAO getPlaylistForUser(UserDAO user, String playlist_name) {
@@ -139,43 +186,6 @@ public class PlaylistDAO extends CassandraData {
     getSession().execute(bs);
 
   }
-
-
-  public void deletePlayList() {
-
-    // Change single quotes to a pair of single quotes for escaping into the database
-    String fixed_playlist_name = this.playlist_name.replace("'","''");
-
-    PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
-            "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
-            "APPLY BATCH;");
-
-    BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
-
-    getSession().execute(bs);
-
-  }
-
-  public static PlaylistDAO createPlayList(UserDAO user, String playlist_name) {
-
-
-    // Change single quotes to a pair of single quotes for escaping into the database
-    String fixed_playlist_name = playlist_name.replace("'","''");
-
-    PreparedStatement preparedStatement = getSession().prepare(
-            "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE email = ?");
-    BoundStatement bs = preparedStatement.bind(user.getEmail());
-    getSession().execute(bs);
-
-    // Update the user object too
-
-    user.getPlaylist_names().add(playlist_name);
-
-    return new PlaylistDAO(user,playlist_name);
-
-  }
-
 
   private void deletePlaylistTracks() {
 
