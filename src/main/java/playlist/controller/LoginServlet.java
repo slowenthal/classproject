@@ -2,7 +2,6 @@ package playlist.controller;
 
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
-import playlist.model.StatisticsDAO;
 import playlist.model.UserDAO;
 
 import javax.servlet.ServletException;
@@ -38,8 +37,6 @@ public class LoginServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    StatisticsDAO.increment_counter("page hits: login");
-
     String button = request.getParameter("button");
     button = button == null ? "" : button;
 
@@ -73,14 +70,10 @@ public class LoginServlet extends HttpServlet {
 
       // Go back to the user screen with an error
 
-      StatisticsDAO.increment_counter("failed login attempts");
-
       request.setAttribute("error", "Username or Password is Invalid");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
     }
-
-    StatisticsDAO.increment_counter("valid login attempts");
 
     response.sendRedirect("playlists");
 
@@ -101,9 +94,6 @@ public class LoginServlet extends HttpServlet {
 
     // Add the user.  If it's successful, create a login session for it
     try {
-
-      StatisticsDAO.increment_counter("users");
-
 
       UserDAO newUser = UserDAO.addUser(username, password);
 
