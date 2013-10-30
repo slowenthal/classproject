@@ -57,8 +57,6 @@ public class UserDAO extends CassandraData {
 
     // TODO
     // TODO - prepare and execute the statement above to insert a new user
-    // TODO - with the newly minted UUID. Ensure you insert the user with the correct
-    // TODO - consistency level
     // TODO
     // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
     ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password));
@@ -75,7 +73,7 @@ public class UserDAO extends CassandraData {
     String query = "DELETE FROM users where username = '"+ this.username + "'";
 
      // TODO
-     // TODO - execute this statement with the correct consistency level
+     // TODO - execute this statement
      // TODO
 
   }
