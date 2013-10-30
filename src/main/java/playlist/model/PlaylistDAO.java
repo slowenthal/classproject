@@ -146,7 +146,7 @@ public class PlaylistDAO extends CassandraData {
 
 
     // Read the tracks from the database
-    PreparedStatement statement = getSession().prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, genre, track_length_in_seconds " +
+    PreparedStatement statement = getSession().prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
             "FROM playlist_tracks WHERE user_id = ? and playlist_name = ?");
 
     BoundStatement boundStatement = statement.bind(user.getUserid(), playlist_name);
@@ -236,6 +236,7 @@ public class PlaylistDAO extends CassandraData {
       boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
       boundStatement.setString("track_name", playlistTrack.getTrack_name());
       boundStatement.setString("artist", playlistTrack.getArtist());
+      boundStatement.setString("track_id", playlistTrack.getTrack_id());
       boundStatement.setInt("track_length_in_seconds", playlistTrack.getTrack_length_in_seconds());
       boundStatement.setString("genre", playlistTrack.getGenre());
 
