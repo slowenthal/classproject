@@ -113,8 +113,6 @@ public class UserDAO extends CassandraData {
     simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
     Row userRow = getSession().execute(simpleStatement).one();
 
-    Row userRow = null;  // For compil
-
     // TODO
     // TODO - if useQuorum is set, execute this statement with consistency level QUORUM
     // TODO - otherwise use consistency level ONE
