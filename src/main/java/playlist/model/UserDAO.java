@@ -57,7 +57,7 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO addUser(String email, String password) throws UserExistsException {
 
-    if (getUserWithConsistency(email, true) != null) {
+    if (getUserWithQuorum(email) != null) {
       throw new UserExistsException();
     }
 
@@ -94,29 +94,36 @@ public class UserDAO extends CassandraData {
 
   /**
    * Look up a user by e-mail address and return a UserDAO object for it
+   *
    * @param email The email address to search
    * @return  A full UserDAO object
    */
   public static UserDAO getUser(String email) {
-    return getUserWithConsistency(email, false);
-  }
+    String queryText = "SELECT * FROM users where email = '"
+            + email + "'";
+
+    Row userRow = getSession().execute(queryText).one();
+
+    if (userRow == null) {
+      return null;
+    }
+
+    return new UserDAO(userRow);  }
 
 
   /**
-   * This is the innards of the getUser routine.  The caller can choose whether to use a consistency level of
-   * Quorum, or just the regular consistency level of One.
+   * This routine retrieves a userDAO, but reads it with a consistency level of quorum
    *
    * @param email email address to search
-   * @param useQuorum true = use consistency level QUORUM, false = use consistency level ONE
    * @return a UserDAO object
    */
-  private static UserDAO getUserWithConsistency(String email, boolean useQuorum) {
+  private static UserDAO getUserWithQuorum(String email) {
 
     String queryText = "SELECT * FROM users where email = '"
             + email + "'";
 
     SimpleStatement simpleStatement = new SimpleStatement(queryText);
-    simpleStatement.setConsistencyLevel(useQuorum ? ConsistencyLevel.QUORUM : ConsistencyLevel.ONE);
+    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
     Row userRow = getSession().execute(simpleStatement).one();
 
     if (userRow == null) {
@@ -138,7 +145,7 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO validateLogin(String email, String password) throws UserLoginException {
 
-    UserDAO user = getUserWithConsistency(email, true);
+    UserDAO user = getUserWithQuorum(email);
     if (user == null || !user.password.contentEquals(password)) {
       throw new UserLoginException();
     }
