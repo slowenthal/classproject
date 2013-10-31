@@ -37,7 +37,6 @@ public class UserTest extends TestCase {
 
     assertEquals("steve",user.getUsername());
     assertEquals("iforgot",user.getPassword());
-    assertNotNull("UUID is null", user.getUserid());
 
     user.deleteUser();
 
@@ -85,7 +84,6 @@ public class UserTest extends TestCase {
 
     UserDAO loginUser = UserDAO.validateLogin("steve", "pw1");
     assertNotNull(loginUser);
-    assertEquals(user.getUserid(), loginUser.getUserid());
 
     user.deleteUser();
 

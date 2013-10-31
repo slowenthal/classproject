@@ -83,7 +83,6 @@ public class PlaylistDAOTest extends TestCase {
     PlaylistDAO pl = PlaylistDAO.createPlayList(user,"Bob's favorites");
 
     assertEquals("testuser1",pl.getUsername() );
-    assertNotNull(pl.getUser_id());
 
     UserDAO testUser = UserDAO.getUser("testuser1");
     Set<String> playlists = testUser.getPlaylist_names();
@@ -105,7 +104,6 @@ public class PlaylistDAOTest extends TestCase {
     PlaylistDAO pl = PlaylistDAO.createPlayList(user, "Bob's favorites");
 
     assertEquals("testuser1",pl.getUsername() );
-    assertNotNull(pl.getUser_id());
 
     UserDAO testUser = UserDAO.getUser("testuser1");
     Set<String> playlists = testUser.getPlaylist_names();

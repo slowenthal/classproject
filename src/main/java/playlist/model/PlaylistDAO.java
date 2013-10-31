@@ -20,7 +20,6 @@ import java.util.UUID;
 
 public class PlaylistDAO extends CassandraData {
 
-  private UUID user_id;
   private String playlist_name;
   private String username;
   private int playlist_length_in_seconds;
@@ -29,7 +28,6 @@ public class PlaylistDAO extends CassandraData {
   public PlaylistDAO(UserDAO user, String playlist_name) {
 
     // Simple constructor to create an empty playlist
-    this.user_id = user.getUserid();
     this.username = user.getUsername();
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
@@ -126,11 +124,11 @@ public class PlaylistDAO extends CassandraData {
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
     PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE username = ? " +
+            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
             "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
             "APPLY BATCH;");
 
-    BoundStatement bs = preparedStatement.bind(this.username, this.user_id, this.playlist_name);
+    BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
 
     getSession().execute(bs);
 
@@ -147,9 +145,9 @@ public class PlaylistDAO extends CassandraData {
 
     // Read the tracks from the database
     PreparedStatement statement = getSession().prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
-            "FROM playlist_tracks WHERE user_id = ? and playlist_name = ?");
+            "FROM playlist_tracks WHERE email = ? and playlist_name = ?");
 
-    BoundStatement boundStatement = statement.bind(user.getUserid(), playlist_name);
+    BoundStatement boundStatement = statement.bind(user.getEmail(), playlist_name);
     ResultSet resultSet = getSession().execute(boundStatement);
 
     for (Row row : resultSet)  {
@@ -193,8 +191,8 @@ public class PlaylistDAO extends CassandraData {
     playlist_length_in_seconds -= playlistTrackToDelete != null ? playlistTrackToDelete.getTrack_length_in_seconds() : 0;
 
     // remove it from the database
-    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
-    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, new Date(sequenceNumberToDelete));
+    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where email = ? and playlist_name = ? and sequence_no = ?");
+    BoundStatement bs = ps.bind(this.email, this.playlist_name, new Date(ordinalToDelete));
     getSession().execute(bs);
 
   }
@@ -204,7 +202,7 @@ public class PlaylistDAO extends CassandraData {
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(
             "INSERT into playlist_tracks" +
-                    " (user_id, playlist_name, sequence_no, artist, track_name, genre, track_id, track_length_in_seconds) " +
+                    " (email, playlist_name, sequence_no, artist, track_name, genre, track_id, track_length_in_seconds) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     );
     BoundStatement boundStatement = statement.bind();
@@ -216,7 +214,7 @@ public class PlaylistDAO extends CassandraData {
     this.playlist_length_in_seconds += playlistTrack.track_length_in_seconds;
 
     // Let's use named parameters this time
-    boundStatement.setUUID("user_id", getUser_id());
+    boundStatement.setUUID("email", getEmail());
     boundStatement.setString("playlist_name", getPlaylist_name());
     boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
     boundStatement.setString("track_name", playlistTrack.getTrack_name());
@@ -231,9 +229,6 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public UUID getUser_id() {
-    return user_id;
-  }
 
   public String getPlaylist_name() {
     return playlist_name;

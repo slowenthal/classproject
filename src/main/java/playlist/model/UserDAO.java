@@ -21,13 +21,11 @@ public class UserDAO extends CassandraData {
 
   private String username;
   private String password;
-  private UUID userid;
   private SortedSet<String> playlist_names;
 
   private UserDAO(Row row) {
     username = row.getString("username");
     password = row.getString("password");
-    userid = row.getUUID("user_id");
 
     // We do this because we want a sorted set, and Cassandra only returns a regular set
     // the driver gives us a HashLinkedSet. We need to choose our implementation.
@@ -36,8 +34,7 @@ public class UserDAO extends CassandraData {
 
   }
 
-  UserDAO(String username, String password, UUID userid) {
-    this.userid = userid;
+  UserDAO(String username, String password) {
     this.password = password;
     this.username = username;
     this.playlist_names = new TreeSet<>();
@@ -72,7 +69,7 @@ public class UserDAO extends CassandraData {
     }
 
     // Return the new user so the caller can get the userid
-    return new UserDAO(username, password, userId);
+    return new UserDAO(email, password, userId);
 
   }
 
@@ -157,10 +154,6 @@ public class UserDAO extends CassandraData {
 
   public String getPassword() {
     return password;
-  }
-
-  public UUID getUserid() {
-    return userid;
   }
 
   public Set<String> getPlaylist_names() {
