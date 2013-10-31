@@ -1,9 +1,6 @@
 package playlist.model;
 
-import com.datastax.driver.core.ConsistencyLevel;
-import com.datastax.driver.core.PreparedStatement;
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.SimpleStatement;
+import com.datastax.driver.core.*;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
@@ -57,21 +54,22 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO addUser(String email, String password) throws UserExistsException {
 
-    if (getUserWithQuorum(email) != null) {
-      throw new UserExistsException();
-    }
-
     // Generate a new UUID to use as the user's surrogate key
     UUID userId = UUID.randomUUID();
 
-    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
+    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?) IF NOT EXISTS";
 
     PreparedStatement preparedStatement = getSession().prepare(queryText);
 
-    // We want to run this statement with CL quorum
-    preparedStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
+    // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
+    ResultSet resultSet = getSession().execute(preparedStatement.bind(email, password, userId));
 
-    getSession().execute(preparedStatement.bind(email, password, userId));
+    // Determine if the user was inserted.  If not, throw an exception.
+    boolean userGotInserted = resultSet.one().getBool("[applied]");
+
+    if (!userGotInserted) {
+      throw new UserExistsException();
+    }
 
     // Return the new user so the caller can get the userid
     return new UserDAO(email, password, userId);
