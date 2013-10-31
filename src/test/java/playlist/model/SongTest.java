@@ -30,7 +30,7 @@ public class SongTest extends TestCase {
 
     List<TracksDAO> songs = TracksDAO.listSongsByGenre("classical", 10000);
 
-    assertEquals(200, songs.size());
+    assertEquals(1874, songs.size());
 
     // Check the first track
     TracksDAO firstTrack = songs.get(0);
