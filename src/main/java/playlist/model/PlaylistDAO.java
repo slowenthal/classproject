@@ -25,14 +25,13 @@ public class PlaylistDAO extends CassandraData {
   private int playlist_length_in_seconds;
   private List<PlaylistTrack> playlistTrackList;
 
-  public PlaylistDAO(UserDAO user, String playlist_name) {
+  public PlaylistDAO(String email, String playlist_name) {
 
     // Simple constructor to create an empty playlist
-    this.username = user.getUsername();
+    this.username = username();
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
     playlistTrackList = new ArrayList<>();
-
   }
 
   public static class PlaylistTrack {
@@ -111,7 +110,7 @@ public class PlaylistDAO extends CassandraData {
 
     user.getPlaylist_names().add(playlist_name);
 
-    return new PlaylistDAO(user,playlist_name);
+    return new PlaylistDAO(user.getEmail(),playlist_name);
 
   }
 
@@ -136,18 +135,18 @@ public class PlaylistDAO extends CassandraData {
 
   // Static finder method
 
-  public static PlaylistDAO getPlaylistForUser(UserDAO user, String playlist_name) {
+  public static PlaylistDAO getPlaylistForUser(String email, String playlist_name) {
 
 
     // Create a new empty playlist object
-    PlaylistDAO newPlaylist = new PlaylistDAO(user, playlist_name);
+    PlaylistDAO newPlaylist = new PlaylistDAO(email, playlist_name);
 
 
     // Read the tracks from the database
-    PreparedStatement statement = getSession().prepare("SELECT user_id, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
+    PreparedStatement statement = getSession().prepare("SELECT email, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
             "FROM playlist_tracks WHERE email = ? and playlist_name = ?");
 
-    BoundStatement boundStatement = statement.bind(user.getEmail(), playlist_name);
+    BoundStatement boundStatement = statement.bind(email, playlist_name);
     ResultSet resultSet = getSession().execute(boundStatement);
 
     for (Row row : resultSet)  {

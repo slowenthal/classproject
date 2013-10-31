@@ -35,7 +35,7 @@ public class PlaylistDAOTest extends TestCase {
 
     newPlaylist.addTrackToPlaylist(playlistTrack1);
 
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(1, tracksList.size());
@@ -43,7 +43,7 @@ public class PlaylistDAOTest extends TestCase {
     newTrack = new TracksDAO("2","Artist2","Track2", "rock", 10);
     PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
     playlist.addTrackToPlaylist(playlistTrack2);
-    playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
+    playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
     tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(2, tracksList.size());
@@ -63,7 +63,7 @@ public class PlaylistDAOTest extends TestCase {
 
     newPlaylist.addTrackToPlaylist(playlistTrack1);
 
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
 
     assertEquals(1, tracksList.size());

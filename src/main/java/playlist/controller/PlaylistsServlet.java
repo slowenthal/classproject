@@ -51,7 +51,7 @@ public class PlaylistsServlet extends HttpServlet {
       if (button.contentEquals("deletePlaylist")) {
 
         // Delete the playlist
-        new PlaylistDAO(user, playlist).deletePlayList();
+        new PlaylistDAO(user.getEmail(), playlist).deletePlayList();
 
         // Force a re-read in this case
         response.sendRedirect("playlists");

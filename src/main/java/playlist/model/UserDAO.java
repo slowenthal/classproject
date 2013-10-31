@@ -46,20 +46,17 @@ public class UserDAO extends CassandraData {
    *
    * @param username new user's username address
    * @param password new user's password
-   * @return a UserDAO object which also contains the new user_id field (UUID)
+   * @return a UserDAO object
    * @throws UserExistsException
    */
   public static UserDAO addUser(String username, String password) throws UserExistsException {
 
-    // Generate a new UUID to use as the user's surrogate key
-    UUID userId = UUID.randomUUID();
-
-    String queryText = "INSERT INTO users (username, password, user_id) values (?, ?, ?) IF NOT EXISTS";
+    String queryText = "INSERT INTO users (username, password) values (?, ?) IF NOT EXISTS";
 
     PreparedStatement preparedStatement = getSession().prepare(queryText);
 
     // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
-    ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password, userId));
+    ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password));
 
     // Determine if the user was inserted.  If not, throw an exception.
     boolean userGotInserted = resultSet.one().getBool("[applied]");
@@ -69,7 +66,7 @@ public class UserDAO extends CassandraData {
     }
 
     // Return the new user so the caller can get the userid
-    return new UserDAO(email, password, userId);
+    return new UserDAO(username, password);
 
   }
 
