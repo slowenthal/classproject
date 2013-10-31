@@ -1,6 +1,9 @@
 package playlist.model;
 
-import com.datastax.driver.core.*;
+import com.datastax.driver.core.ConsistencyLevel;
+import com.datastax.driver.core.PreparedStatement;
+import com.datastax.driver.core.Row;
+import com.datastax.driver.core.SimpleStatement;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
