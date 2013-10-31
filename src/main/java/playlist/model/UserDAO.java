@@ -57,12 +57,32 @@ public class UserDAO extends CassandraData {
 
     String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
     PreparedStatement preparedStatement = getSession().prepare(queryText);
+    // TODO
+    // TODO - fix the line below to generate a new UUID for the user's surrogate key
+    UUID userId = null;  // We only added the "= null" so this code compiles. Remove it.
+    // TODO
+
+    String queryText = "INSERT INTO users ... ";            // TODO - fill in the rest of this statement
 
     // TODO
-    // TODO - prepare and execute the statement above to insert a new user
+    // TODO - prepare and execute the statement above to insert a new user. Also, capture the result set in a variable
+    // TODO - hint - the code is something like this:  ResultSet result = <execute statement>
     // TODO
     // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
     ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password));
+
+
+    boolean userGotInserted = false;   // just initialize this so this compiles.
+
+    // TODO - Retrieve the value of the "[applied]" column
+    // TODO - hint its something like userGotInserted = result.<get me the first row>.<get the boolean value of the "[applied]" column>
+
+
+    // Throw an exception if the user was not inserted
+
+    if (!userGotInserted) {
+      throw new UserExistsException();
+    }
 
     // Return the new user so the caller can get the userid
     return new UserDAO(username, password);
@@ -73,12 +93,7 @@ public class UserDAO extends CassandraData {
    * Delete the user.  It does not need to check if the user already exists.
    */
   public void deleteUser() {
-    String query = "DELETE FROM users where username = '"+ this.username + "'";
-
-     // TODO
-     // TODO - execute this statement
-     // TODO
-
+    getSession().execute("DELETE FROM users where username = '" + this.username + "'");
   }
 
 
@@ -100,41 +115,8 @@ public class UserDAO extends CassandraData {
 
     return new UserDAO(userRow);  }
 
-
   /**
-   * This routine retrieves a userDAO, but reads it with a consistency level of quorum
-   *
-   * @param username username address to search
-   * @return a UserDAO object
-   */
-  private static UserDAO getUserWithQuorum(String username) {
-
-    String queryText = "SELECT * FROM users where username = '"
-            + username + "'";
-
-    SimpleStatement simpleStatement = new SimpleStatement(queryText);
-    simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
-    Row userRow = getSession().execute(simpleStatement).one();
-
-    // TODO
-    // TODO - if useQuorum is set, execute this statement with consistency level QUORUM
-    // TODO - otherwise use consistency level ONE
-    // TODO
-    // TODO - set userRow to the one Row object in the result set
-
-
-    // If the user isn't found, return null.  The constructor call below will throw if we don't do this
-
-    if (userRow == null) {
-      return null;
-    }
-
-    return new UserDAO(userRow);
-
-  }
-
-  /**
-   * The also retrieves a user based on the username address, but also validates its password.  If the password is invalid, a
+   * The also retrieves a user based on the username, but also validates its password.  If the password is invalid, a
    * UserLoginException is thrown
    *
    * @param username  username address to search
@@ -144,7 +126,7 @@ public class UserDAO extends CassandraData {
    */
   public static UserDAO validateLogin(String username, String password) throws UserLoginException {
 
-    UserDAO user = getUserWithQuorum(username);
+    UserDAO user = getUser(username);
     if (user == null || !user.password.contentEquals(password)) {
       throw new UserLoginException();
     }
