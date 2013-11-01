@@ -2,7 +2,7 @@ package playlist.model;
 
 import com.datastax.driver.core.Session;
 import junit.framework.TestCase;
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.Set;
 
@@ -33,7 +33,7 @@ public class PlaylistDAOTest extends TestCase {
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(playlistTrack1);
+    newPlaylist.addTrackToPlaylist(playlistTrack1);
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
@@ -42,7 +42,7 @@ public class PlaylistDAOTest extends TestCase {
 
     newTrack = new TracksDAO("2","Artist2","Track2", "rock", 10);
     PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
-    playlist.addTracksToPlaylist(playlistTrack2);
+    playlist.addTrackToPlaylist(playlistTrack2);
     playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     tracksList = playlist.getPlaylistTrackList();
 
@@ -56,12 +56,12 @@ public class PlaylistDAOTest extends TestCase {
 
   public void testDeleteTrackFromPlaylist() throws Exception {
     UserDAO user = UserDAO.addUser("testuser1","pw");
-    PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1");
+    PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user, "Playlist1");
 
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(playlistTrack1);
+    newPlaylist.addTrackToPlaylist(playlistTrack1);
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();

@@ -186,7 +186,7 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public void addTracksToPlaylist(PlaylistTrack playlistTrack) {
+  public void addTrackToPlaylist(PlaylistTrack playlistTrack) {
 
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(

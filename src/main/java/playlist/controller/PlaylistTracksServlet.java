@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.Arrays;
 
 /**
  * DataStax Academy Sample Application
@@ -90,7 +89,7 @@ public class PlaylistTracksServlet extends HttpServlet {
 
     PlaylistDAO.PlaylistTrack newPlaylistTrack = new PlaylistDAO.PlaylistTrack(track);
     try {
-      playlist.addTracksToPlaylist(newPlaylistTrack);
+      playlist.addTrackToPlaylist(newPlaylistTrack);
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }
