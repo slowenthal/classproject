@@ -90,7 +90,7 @@ public class PlaylistTracksServlet extends HttpServlet {
 
     PlaylistDAO.PlaylistTrack newPlaylistTrack = new PlaylistDAO.PlaylistTrack(track);
     try {
-      playlist.addTracksToPlaylist(Arrays.asList(newPlaylistTrack));
+      playlist.addTracksToPlaylist(newPlaylistTrack);
     } catch (Exception e) {
       throw new ServletException("Couldn't add track to playlist");
     }

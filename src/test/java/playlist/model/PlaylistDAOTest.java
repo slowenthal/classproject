@@ -33,7 +33,7 @@ public class PlaylistDAOTest extends TestCase {
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(Arrays.asList(playlistTrack1));
+    newPlaylist.addTracksToPlaylist(playlistTrack1);
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();
@@ -42,7 +42,7 @@ public class PlaylistDAOTest extends TestCase {
 
     newTrack = new TracksDAO("2","Artist2","Track2", "rock", 10);
     PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
-    playlist.addTracksToPlaylist(Arrays.asList(playlistTrack2));
+    playlist.addTracksToPlaylist(playlistTrack2);
     playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     tracksList = playlist.getPlaylistTrackList();
 
@@ -52,8 +52,6 @@ public class PlaylistDAOTest extends TestCase {
 
     playlist.deletePlayList();
     user.deleteUser();
-
-
   }
 
   public void testDeleteTrackFromPlaylist() throws Exception {
@@ -63,7 +61,7 @@ public class PlaylistDAOTest extends TestCase {
     TracksDAO newTrack = new TracksDAO("1","Artist1","Track1", "rock", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
-    newPlaylist.addTracksToPlaylist(Arrays.asList(playlistTrack1));
+    newPlaylist.addTracksToPlaylist(playlistTrack1);
 
     PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user, "Playlist1");
     List<PlaylistDAO.PlaylistTrack> tracksList = playlist.getPlaylistTrackList();

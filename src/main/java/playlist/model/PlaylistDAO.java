@@ -186,33 +186,7 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  private void deletePlaylistTracks() {
-
-    // Delete a whole playlist
-
-    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ?");
-    BoundStatement bs = ps.bind(this.user_id, this.playlist_name);
-    getSession().execute(bs);
-
-  }
-
-  public void rewritePlaylist() {
-
-    // First delete the whole playlist
-    deletePlaylistTracks();
-
-    // Now insert all of the track, but first, reset all of the ordinals
-    List<PlaylistTrack> tracklist = this.playlistTrackList;
-
-    // remove the tracks from the playlist, so we can add them back and renumber them
-    this.playlistTrackList = new ArrayList<>();
-
-    // Add them back
-    addTracksToPlaylist(tracklist);
-
-  }
-
-  public void addTracksToPlaylist(List<PlaylistTrack> newPlaylistTracks) {
+  public void addTracksToPlaylist(PlaylistTrack playlistTrack) {
 
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(
@@ -222,28 +196,26 @@ public class PlaylistDAO extends CassandraData {
     );
     BoundStatement boundStatement = statement.bind();
 
-    for (PlaylistTrack playlistTrack : newPlaylistTracks) {
+    // Since the playlistTrack sequence is like a time-series, set it's sequence to the current time
+    // Also update the total time for the playlist locally.
 
-      // Since the playlistTrack sequence is like a time-series, set it's sequence to the current time
-      // Also update the total time for the playlist locally.
+    playlistTrack.sequence_no = new Date();
+    this.playlist_length_in_seconds += playlistTrack.track_length_in_seconds;
 
-      playlistTrack.sequence_no = new Date();
-      this.playlist_length_in_seconds += playlistTrack.track_length_in_seconds;
+    // Let's use named parameters this time
+    boundStatement.setUUID("user_id", getUser_id());
+    boundStatement.setString("playlist_name", getPlaylist_name());
+    boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
+    boundStatement.setString("track_name", playlistTrack.getTrack_name());
+    boundStatement.setString("artist", playlistTrack.getArtist());
+    boundStatement.setString("track_id", playlistTrack.getTrack_id());
+    boundStatement.setInt("track_length_in_seconds", playlistTrack.getTrack_length_in_seconds());
+    boundStatement.setString("genre", playlistTrack.getGenre());
 
-      // Let's use named parameters this time
-      boundStatement.setUUID("user_id", getUser_id());
-      boundStatement.setString("playlist_name", getPlaylist_name());
-      boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
-      boundStatement.setString("track_name", playlistTrack.getTrack_name());
-      boundStatement.setString("artist", playlistTrack.getArtist());
-      boundStatement.setString("track_id", playlistTrack.getTrack_id());
-      boundStatement.setInt("track_length_in_seconds", playlistTrack.getTrack_length_in_seconds());
-      boundStatement.setString("genre", playlistTrack.getGenre());
+    getSession().execute(boundStatement);
 
-      getSession().execute(boundStatement);
-    }
+    this.playlistTrackList.add(playlistTrack);
 
-    this.playlistTrackList.addAll(newPlaylistTracks);
   }
 
   public UUID getUser_id() {
