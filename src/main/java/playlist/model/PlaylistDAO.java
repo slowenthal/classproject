@@ -51,6 +51,7 @@ public class PlaylistDAO extends CassandraData {
 
     // TODO
     // TODO - Add the playlist name to the playlist_names Set
+    // TODO - Hint: insert the fixed_playlist_name value into the set using the special CQL syntax for mutating sets.
     // TODO
 
     // Update the user object too
@@ -72,6 +73,7 @@ public class PlaylistDAO extends CassandraData {
 
     // TODO
     // TODO - Add code here to delete this playlist from the database
+    // TODO - Hint: This code is similar to the the addPlayList method
     // TODO
 
   }
