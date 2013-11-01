@@ -41,7 +41,7 @@ public class PlaylistsServlet extends HttpServlet {
 
     }
 
-    UserDAO userFromDB = UserDAO.getUser(user.getEmail());
+    UserDAO userFromDB = UserDAO.getUser(user.getUsername());
 
     String button = request.getParameter("button");
     String playlist = request.getParameter("pl");
@@ -64,7 +64,7 @@ public class PlaylistsServlet extends HttpServlet {
       }
     }
 
-    request.setAttribute("email", userFromDB.getEmail());
+    request.setAttribute("username", userFromDB.getUsername());
     request.setAttribute("playlist_names", userFromDB.getPlaylist_names());
     getServletContext().getRequestDispatcher("/playlists.jsp").forward(request,response);
 

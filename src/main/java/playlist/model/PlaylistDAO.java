@@ -22,7 +22,7 @@ public class PlaylistDAO extends CassandraData {
 
   private UUID user_id;
   private String playlist_name;
-  private String email;
+  private String username;
   private int playlist_length_in_seconds;
   private List<PlaylistTrack> playlistTrackList;
 
@@ -30,7 +30,7 @@ public class PlaylistDAO extends CassandraData {
 
     // Simple constructor to create an empty playlist
     this.user_id = user.getUserid();
-    this.email = user.getEmail();
+    this.username = user.getUsername();
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
     playlistTrackList = new ArrayList<>();
@@ -105,8 +105,8 @@ public class PlaylistDAO extends CassandraData {
     String fixed_playlist_name = playlist_name.replace("'","''");
 
     PreparedStatement preparedStatement = getSession().prepare(
-            "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE email = ?");
-    BoundStatement bs = preparedStatement.bind(user.getEmail());
+            "UPDATE users set playlist_names = playlist_names + {'" + fixed_playlist_name +"'} WHERE username = ?");
+    BoundStatement bs = preparedStatement.bind(user.getUsername());
     getSession().execute(bs);
 
     // Update the user object too
@@ -126,11 +126,11 @@ public class PlaylistDAO extends CassandraData {
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
     PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
+            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE username = ? " +
             "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
             "APPLY BATCH;");
 
-    BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
+    BoundStatement bs = preparedStatement.bind(this.username, this.user_id, this.playlist_name);
 
     getSession().execute(bs);
 
@@ -262,8 +262,8 @@ public class PlaylistDAO extends CassandraData {
     return playlist_length_in_seconds;
   }
 
-  public String getEmail() {
-    return email;
+  public String getUsername() {
+    return username;
   }
 
 }

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<%--@elvariable id="email" type="java.lang.String"--%>
+<%--@elvariable id="username" type="java.lang.String"--%>
 <%--@elvariable id="playlist" type="playlist.model.PlaylistDAO"--%>
 <%--@elvariable id="playlist_tracks" type="playlist.model.PlaylistDAO.PlaylistTrack"--%>
 <%--
@@ -47,7 +47,7 @@ Copyright 2013 DataStax
     <a href="home">Home</a>
     <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
     <a href="playlists">Back to My Playlists</a> <br/>
-    <h2>Playlist ${playlist.playlist_name} for ${email}</h2>
+    <h2>Playlist ${playlist.playlist_name} for ${username}</h2>
     <h2>Total length:
         <fmt:formatNumber value="${playlist.playlist_length_in_seconds div 60}" minIntegerDigits="1" maxFractionDigits="0"/>:
         <fmt:formatNumber value="${playlist.playlist_length_in_seconds % 60}" minIntegerDigits="2"/>

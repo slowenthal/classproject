@@ -35,7 +35,7 @@ public class UserTest extends TestCase {
     UserDAO.addUser("steve", "iforgot");
     UserDAO user = UserDAO.getUser("steve");
 
-    assertEquals("steve",user.getEmail());
+    assertEquals("steve",user.getUsername());
     assertEquals("iforgot",user.getPassword());
     assertNotNull("UUID is null", user.getUserid());
 
@@ -110,7 +110,7 @@ public class UserTest extends TestCase {
 
   }
 
-  public void testValidateBadEmail() throws Exception {
+  public void testValidateBadUsername() throws Exception {
 
     UserDAO newUser = UserDAO.addUser("steve", "pw1");
     UserDAO user = UserDAO.getUser("steve");

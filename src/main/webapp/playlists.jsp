@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<%--@elvariable id="email" type="java.lang.String"--%>
+<%--@elvariable id="username" type="java.lang.String"--%>
 <%--@elvariable id="playlist_names" type="java.util.List"--%>
 <%--
 
@@ -21,7 +21,7 @@ Copyright 2013 DataStax
 <section class="menu small">
     <a href="home">Home</a>
     <a href="<c:url value="login"><c:param name="button" value="logout"/></c:url>">Logout</a> <br/>
-    <h2>Playlists for ${email}</h2>
+    <h2>Playlists for ${username}</h2>
 
     <form id="form1" class="playlist_form" name="form1" method="post" action="">
     <label for="pl">New Playlist Name</label>

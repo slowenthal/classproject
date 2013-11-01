@@ -54,18 +54,18 @@ public class LoginServlet extends HttpServlet {
 
 
   private void doLogin  (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String email = request.getParameter("email");
+    String username = request.getParameter("username");
     String password = request.getParameter("password");
 
-    if (email.isEmpty()) {
-      request.setAttribute("error", "Email Can Not Be Blank");
+    if (username.isEmpty()) {
+      request.setAttribute("error", "Username Can Not Be Blank");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
 
     }
 
     try {
-      UserDAO user = UserDAO.validateLogin(email, password);
+      UserDAO user = UserDAO.validateLogin(username, password);
       HttpSession httpSession = request.getSession(true);
       httpSession.setAttribute("user", user);
 
@@ -75,7 +75,7 @@ public class LoginServlet extends HttpServlet {
 
       StatisticsDAO.increment_counter("failed login attempts");
 
-      request.setAttribute("error", "Email or Password is Invalid");
+      request.setAttribute("error", "Username or Password is Invalid");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
     }
@@ -88,11 +88,11 @@ public class LoginServlet extends HttpServlet {
 
 
   private void doCreateUser  (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String email = request.getParameter("email");
+    String username = request.getParameter("username");
     String password = request.getParameter("password");
 
-    if (email.isEmpty()) {
-      request.setAttribute("error", "Email Can Not Be Blank");
+    if (username.isEmpty()) {
+      request.setAttribute("error", "Username Can Not Be Blank");
       getServletContext().getRequestDispatcher("/login.jsp").forward(request, response);
       return;
     }
@@ -105,7 +105,7 @@ public class LoginServlet extends HttpServlet {
       StatisticsDAO.increment_counter("users");
 
 
-      UserDAO newUser = UserDAO.addUser(email, password);
+      UserDAO newUser = UserDAO.addUser(username, password);
 
 
       // Create the user's login session so this application recognizes the user as having logged in

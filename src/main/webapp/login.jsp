@@ -30,8 +30,8 @@ Copyright 2013 DataStax
 <form id="form1" name="form1" class="login_form" method="post" action="">
     <h1>PLAYLIST LOGIN</h1>
     <p>
-        <label for="email">E-mail Address</label>
-        <input id="email" type="text" name="email" placeholder="Enter your email here" required>
+        <label for="username">User Name</label>
+        <input id="username" type="text" name="username" placeholder="Enter your user name here" required>
     </p>
     <p>
         <label for="password">Password</label>

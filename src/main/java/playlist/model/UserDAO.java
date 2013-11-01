@@ -19,13 +19,13 @@ import java.util.UUID;
 
 public class UserDAO extends CassandraData {
 
-  private String email;
+  private String username;
   private String password;
   private UUID userid;
   private SortedSet<String> playlist_names;
 
   private UserDAO(Row row) {
-    email = row.getString("email");
+    username = row.getString("username");
     password = row.getString("password");
     userid = row.getUUID("user_id");
 
@@ -36,10 +36,10 @@ public class UserDAO extends CassandraData {
 
   }
 
-  UserDAO(String email, String password, UUID userid) {
+  UserDAO(String username, String password, UUID userid) {
     this.userid = userid;
     this.password = password;
-    this.email = email;
+    this.username = username;
     this.playlist_names = new TreeSet<>();
   }
 
@@ -47,22 +47,22 @@ public class UserDAO extends CassandraData {
    * Static method to add a user.  It generates a new UUID for the user to use as its surrogate key.  It first checks to
    * ensure that the user does not already exist.  If it exists, we throw a UserExistsException
    *
-   * @param email new user's email address
+   * @param username new user's username address
    * @param password new user's password
    * @return a UserDAO object which also contains the new user_id field (UUID)
    * @throws UserExistsException
    */
-  public static UserDAO addUser(String email, String password) throws UserExistsException {
+  public static UserDAO addUser(String username, String password) throws UserExistsException {
 
     // Generate a new UUID to use as the user's surrogate key
     UUID userId = UUID.randomUUID();
 
-    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?) IF NOT EXISTS";
+    String queryText = "INSERT INTO users (username, password, user_id) values (?, ?, ?) IF NOT EXISTS";
 
     PreparedStatement preparedStatement = getSession().prepare(queryText);
 
     // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
-    ResultSet resultSet = getSession().execute(preparedStatement.bind(email, password, userId));
+    ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password, userId));
 
     // Determine if the user was inserted.  If not, throw an exception.
     boolean userGotInserted = resultSet.one().getBool("[applied]");
@@ -72,7 +72,7 @@ public class UserDAO extends CassandraData {
     }
 
     // Return the new user so the caller can get the userid
-    return new UserDAO(email, password, userId);
+    return new UserDAO(username, password, userId);
 
   }
 
@@ -80,8 +80,8 @@ public class UserDAO extends CassandraData {
    * Delete the user.  It does not need to check if the user already exists.
    */
   public void deleteUser() {
-    SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where email = '"
-            + this.email + "'");
+    SimpleStatement simpleStatement = new SimpleStatement("DELETE FROM users where username = '"
+            + this.username + "'");
 
     // Delete users with CL = Quorum
     simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
@@ -93,12 +93,12 @@ public class UserDAO extends CassandraData {
   /**
    * Look up a user by e-mail address and return a UserDAO object for it
    *
-   * @param email The email address to search
+   * @param username The username address to search
    * @return  A full UserDAO object
    */
-  public static UserDAO getUser(String email) {
-    String queryText = "SELECT * FROM users where email = '"
-            + email + "'";
+  public static UserDAO getUser(String username) {
+    String queryText = "SELECT * FROM users where username = '"
+            + username + "'";
 
     Row userRow = getSession().execute(queryText).one();
 
@@ -112,13 +112,13 @@ public class UserDAO extends CassandraData {
   /**
    * This routine retrieves a userDAO, but reads it with a consistency level of quorum
    *
-   * @param email email address to search
+   * @param username username address to search
    * @return a UserDAO object
    */
-  private static UserDAO getUserWithQuorum(String email) {
+  private static UserDAO getUserWithQuorum(String username) {
 
-    String queryText = "SELECT * FROM users where email = '"
-            + email + "'";
+    String queryText = "SELECT * FROM users where username = '"
+            + username + "'";
 
     SimpleStatement simpleStatement = new SimpleStatement(queryText);
     simpleStatement.setConsistencyLevel(ConsistencyLevel.QUORUM);
@@ -133,17 +133,17 @@ public class UserDAO extends CassandraData {
   }
 
   /**
-   * The also retrieves a user based on the email address, but also validates its password.  If the password is invalid, a
+   * The also retrieves a user based on the username address, but also validates its password.  If the password is invalid, a
    * UserLoginException is thrown
    *
-   * @param email  email address to search
+   * @param username  username address to search
    * @param password  password to validate
    * @return  a completed UserDAO object
    * @throws UserLoginException
    */
-  public static UserDAO validateLogin(String email, String password) throws UserLoginException {
+  public static UserDAO validateLogin(String username, String password) throws UserLoginException {
 
-    UserDAO user = getUserWithQuorum(email);
+    UserDAO user = getUserWithQuorum(username);
     if (user == null || !user.password.contentEquals(password)) {
       throw new UserLoginException();
     }
@@ -151,8 +151,8 @@ public class UserDAO extends CassandraData {
     return user;
   }
 
-  public String getEmail() {
-    return email;
+  public String getUsername() {
+    return username;
   }
 
   public String getPassword() {

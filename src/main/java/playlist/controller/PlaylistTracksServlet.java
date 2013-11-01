@@ -1,7 +1,6 @@
 package playlist.controller;
 
 import playlist.model.PlaylistDAO;
-import playlist.model.StatisticsDAO;
 import playlist.model.TracksDAO;
 import playlist.model.UserDAO;
 
@@ -41,7 +40,7 @@ public class PlaylistTracksServlet extends HttpServlet {
       }
     }
 
-    request.setAttribute("email", user.getEmail());
+    request.setAttribute("username", user.getUsername());
     request.setAttribute("playlist", playlist);
     getServletContext().getRequestDispatcher("/playlist_tracks.jsp").forward(request,response);
   }
@@ -79,7 +78,7 @@ public class PlaylistTracksServlet extends HttpServlet {
         doDeleteTrack(playlist, sequence_no);
     }
 
-    request.setAttribute("email", user.getEmail());
+    request.setAttribute("username", user.getUsername());
     request.setAttribute("playlist", playlist);
     getServletContext().getRequestDispatcher("/playlist_tracks.jsp").forward(request,response);
 
