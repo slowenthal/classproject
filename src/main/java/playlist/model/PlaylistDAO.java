@@ -164,12 +164,25 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-  public void deleteTrackFromPlaylist(long ordinalToDelete) {
+  /**
+   *
+   * @param sequenceNumberToDelete - This is a time, express as an offset from Epoch
+   */
+  public void deleteTrackFromPlaylist(long sequenceNumberToDelete) {
 
-    // Find the track to delete
+    // Find the track to delete, and delete it from the list
+
+    // Create a variable that for the playlist object we find
     PlaylistTrack playlistTrackToDelete = null;
+
+    // Loop through all of the tracks in the playlistTrackList
+    // We are using a simple iterator i in this loop
     for (int i = 0; i < this.playlistTrackList.size(); i++) {
-      if (this.playlistTrackList.get(i).sequence_no.getTime() == ordinalToDelete) {
+
+      // extract the time of from the current playlist track's sequence number, and compare it to the given time
+      if (this.playlistTrackList.get(i).sequence_no.getTime() == sequenceNumberToDelete) {
+
+        // If it's correct, set playlistTrackToDelete, remove it from the playlist, and stop looping
         playlistTrackToDelete = this.playlistTrackList.get(i);
         this.playlistTrackList.remove(i);
         break;
@@ -181,7 +194,7 @@ public class PlaylistDAO extends CassandraData {
 
     // remove it from the database
     PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where user_id = ? and playlist_name = ? and sequence_no = ?");
-    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, new Date(ordinalToDelete));
+    BoundStatement bs = ps.bind(this.user_id, this.playlist_name, new Date(sequenceNumberToDelete));
     getSession().execute(bs);
 
   }
