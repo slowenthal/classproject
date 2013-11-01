@@ -13,7 +13,7 @@ copy artists_by_first_letter (first_letter, artist) from 'artists.csv' WITH DELI
 
 alter table users add playlist_names set<text>  ;
 
-create table playlist_tracks (email text, playlist_name text, sequence_no timestamp, artist text, track_name text, genre text, track_length_in_seconds int, track_id text, primary key ((email, playlist_name), sequence_no ));
+create table playlist_tracks (username text, playlist_name text, sequence_no timestamp, artist text, track_name text, genre text, track_length_in_seconds int, track_id text, primary key ((username, playlist_name), sequence_no ));
 
 create table statistics (counter_name text PRIMARY KEY, counter_value counter);
 

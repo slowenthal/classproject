@@ -30,7 +30,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     String playlist_name = request.getParameter("pl");
     UserDAO user = (UserDAO) httpSession.getAttribute("user");
 
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getEmail(), playlist_name);
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), playlist_name);
 
     if (button != null) {
       if (button.contentEquals("addTrack")) {
@@ -61,7 +61,7 @@ public class PlaylistTracksServlet extends HttpServlet {
     //
 
     String playlist_name = request.getParameter("pl");
-    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getEmail(), playlist_name);
+    PlaylistDAO playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), playlist_name);
 
     String button = request.getParameter("button");
     String deleteTrack = request.getParameter("deleteTrack");

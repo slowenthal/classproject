@@ -110,7 +110,7 @@ public class PlaylistDAO extends CassandraData {
 
     user.getPlaylist_names().add(playlist_name);
 
-    return new PlaylistDAO(user.getEmail(),playlist_name);
+    return new PlaylistDAO(user.getUsername(),playlist_name);
 
   }
 
@@ -123,11 +123,11 @@ public class PlaylistDAO extends CassandraData {
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
     PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE email = ? " +
-            "DELETE FROM playlist_tracks WHERE user_id = ? and playlist_name = ? " +
+            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE username = ? " +
+            "DELETE FROM playlist_tracks WHERE username = ? and playlist_name = ? " +
             "APPLY BATCH;");
 
-    BoundStatement bs = preparedStatement.bind(this.email, this.user_id, this.playlist_name);
+    BoundStatement bs = preparedStatement.bind(this.username, this.username, this.playlist_name);
 
     getSession().execute(bs);
 
@@ -135,18 +135,18 @@ public class PlaylistDAO extends CassandraData {
 
   // Static finder method
 
-  public static PlaylistDAO getPlaylistForUser(String email, String playlist_name) {
+  public static PlaylistDAO getPlaylistForUser(String username, String playlist_name) {
 
 
     // Create a new empty playlist object
-    PlaylistDAO newPlaylist = new PlaylistDAO(email, playlist_name);
+    PlaylistDAO newPlaylist = new PlaylistDAO(username, playlist_name);
 
 
     // Read the tracks from the database
-    PreparedStatement statement = getSession().prepare("SELECT email, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
-            "FROM playlist_tracks WHERE email = ? and playlist_name = ?");
+    PreparedStatement statement = getSession().prepare("SELECT username, playlist_name, sequence_no, artist, track_name, track_id, genre, track_length_in_seconds " +
+            "FROM playlist_tracks WHERE username = ? and playlist_name = ?");
 
-    BoundStatement boundStatement = statement.bind(email, playlist_name);
+    BoundStatement boundStatement = statement.bind(username, playlist_name);
     ResultSet resultSet = getSession().execute(boundStatement);
 
     for (Row row : resultSet)  {
@@ -190,8 +190,8 @@ public class PlaylistDAO extends CassandraData {
     playlist_length_in_seconds -= playlistTrackToDelete != null ? playlistTrackToDelete.getTrack_length_in_seconds() : 0;
 
     // remove it from the database
-    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where email = ? and playlist_name = ? and sequence_no = ?");
-    BoundStatement bs = ps.bind(this.email, this.playlist_name, new Date(ordinalToDelete));
+    PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where username = ? and playlist_name = ? and sequence_no = ?");
+    BoundStatement bs = ps.bind(this.username, this.playlist_name, new Date(ordinalToDelete));
     getSession().execute(bs);
 
   }
@@ -201,7 +201,7 @@ public class PlaylistDAO extends CassandraData {
     // Prepare an insert statement
     PreparedStatement statement = getSession().prepare(
             "INSERT into playlist_tracks" +
-                    " (email, playlist_name, sequence_no, artist, track_name, genre, track_id, track_length_in_seconds) " +
+                    " (username, playlist_name, sequence_no, artist, track_name, genre, track_id, track_length_in_seconds) " +
                     "VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
     );
     BoundStatement boundStatement = statement.bind();
@@ -213,7 +213,7 @@ public class PlaylistDAO extends CassandraData {
     this.playlist_length_in_seconds += playlistTrack.track_length_in_seconds;
 
     // Let's use named parameters this time
-    boundStatement.setUUID("email", getEmail());
+    boundStatement.setString("username", getUsername());
     boundStatement.setString("playlist_name", getPlaylist_name());
     boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
     boundStatement.setString("track_name", playlistTrack.getTrack_name());
@@ -225,9 +225,7 @@ public class PlaylistDAO extends CassandraData {
     getSession().execute(boundStatement);
 
     this.playlistTrackList.add(playlistTrack);
-
   }
-
 
   public String getPlaylist_name() {
     return playlist_name;
