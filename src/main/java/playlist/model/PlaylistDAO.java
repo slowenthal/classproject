@@ -25,10 +25,10 @@ public class PlaylistDAO extends CassandraData {
   private int playlist_length_in_seconds;
   private List<PlaylistTrack> playlistTrackList;
 
-  public PlaylistDAO(String email, String playlist_name) {
+  public PlaylistDAO(String username, String playlist_name) {
 
     // Simple constructor to create an empty playlist
-    this.username = username();
+    this.username = username;
     this.playlist_name = playlist_name;
     playlist_length_in_seconds = 0;
     playlistTrackList = new ArrayList<>();
