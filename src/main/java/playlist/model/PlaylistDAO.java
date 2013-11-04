@@ -122,10 +122,15 @@ public class PlaylistDAO extends CassandraData {
     // Change single quotes to a pair of single quotes for escaping into the database
     String fixed_playlist_name = this.playlist_name.replace("'","''");
 
-    PreparedStatement preparedStatement = getSession().prepare("BEGIN BATCH " +
-            "UPDATE users set playlist_names = playlist_names - {'" + fixed_playlist_name + "'} WHERE username = ? " +
-            "DELETE FROM playlist_tracks WHERE username = ? and playlist_name = ? " +
-            "APPLY BATCH;");
+    // TODO
+    // TODO -  In the string below (where it says <fill this in here>
+    // TODO -  add an a atomic block statement which will remove the playlist from a the playlists set
+    // TODO -  in the users table, and remove the playlist from the playlist_tracks table.
+    // TODO -  hint: the bind() method is already filled in, so think about the parameter markers
+    // TODO -  you'll need in the atomic block.
+    // TODO
+
+    PreparedStatement preparedStatement = getSession().prepare("<fill this in here>");
 
     BoundStatement bs = preparedStatement.bind(this.username, this.username, this.playlist_name);
 
