@@ -191,7 +191,7 @@ public class PlaylistDAO extends CassandraData {
 
     // remove it from the database
     PreparedStatement ps = getSession().prepare("DELETE from playlist_tracks where username = ? and playlist_name = ? and sequence_no = ?");
-    BoundStatement bs = ps.bind(this.username, this.playlist_name, new Date(ordinalToDelete));
+    BoundStatement bs = ps.bind(this.username, this.playlist_name, new Date(sequenceNumberToDelete));
     getSession().execute(bs);
 
   }
