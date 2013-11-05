@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * DataStax Academy Sample Application
@@ -34,7 +35,7 @@ public class PlaylistTracksServlet extends HttpServlet {
 
     if (button != null) {
       if (button.contentEquals("addTrack")) {
-        String track_id = request.getParameter("track_id");
+        UUID track_id = UUID.fromString(request.getParameter("track_id"));
         doAddPlaylistTrack(playlist, track_id);
       }
     }
@@ -83,7 +84,7 @@ public class PlaylistTracksServlet extends HttpServlet {
 
   }
 
-  void doAddPlaylistTrack(PlaylistDAO playlist, String track_id) throws ServletException {
+  void doAddPlaylistTrack(PlaylistDAO playlist, UUID track_id) throws ServletException {
     // Grab the PlaylistTrack information from the DB
     TracksDAO track = TracksDAO.getTrackById(track_id);
 

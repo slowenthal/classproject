@@ -7,6 +7,7 @@ import com.datastax.driver.core.Row;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * DataStax Academy Sample Application
@@ -20,7 +21,7 @@ public class TracksDAO extends CassandraData {
 
   // Hard Coded Genres for now
 
-  private final String track_id;
+  private final UUID track_id;
   private final String artist;
   private final String track;
   private final String genre;
@@ -35,7 +36,7 @@ public class TracksDAO extends CassandraData {
    */
 
   private TracksDAO(Row row) {
-    track_id = row.getString("track_id");
+    track_id = row.getUUID("track_id");
     artist = row.getString("artist");
     track = row.getString("track");
     genre = row.getString("genre");
@@ -48,7 +49,7 @@ public class TracksDAO extends CassandraData {
     }
   }
 
-  public TracksDAO(String track_id, String artist, String track, String genre, int track_length_in_seconds) {
+  public TracksDAO(UUID track_id, String artist, String track, String genre, int track_length_in_seconds) {
     this.track_id = track_id;
     this.artist = artist;
     this.track = track;
@@ -92,7 +93,7 @@ public class TracksDAO extends CassandraData {
     return tracks;
   }
 
-  public static TracksDAO getTrackById(String track_id) {
+  public static TracksDAO getTrackById(UUID track_id) {
     PreparedStatement preparedStatement = getSession().prepare("SELECT * FROM track_by_id WHERE track_id = ?");
     BoundStatement boundStatement = preparedStatement.bind(track_id);
     ResultSet resultSet = getSession().execute(boundStatement);
@@ -150,7 +151,7 @@ public class TracksDAO extends CassandraData {
   }
 
 
-  public String getTrack_id() {
+  public UUID getTrack_id() {
     return track_id;
   }
 

@@ -40,7 +40,7 @@ public class PlaylistDAO extends CassandraData {
     private String artist;
     private int track_length_in_seconds;
     private String genre;
-    private String track_id;
+    private UUID track_id;
     private Date sequence_no;
 
     public PlaylistTrack(TracksDAO track) {
@@ -57,7 +57,7 @@ public class PlaylistDAO extends CassandraData {
       this.artist = row.getString("artist");
       this.track_length_in_seconds = row.getInt("track_length_in_seconds");
       this.sequence_no = row.getDate("sequence_no");
-      this.track_id = row.getString("track_id");
+      this.track_id = row.getUUID("track_id");
       this.genre = row.getString("genre");
     }
 
@@ -81,7 +81,7 @@ public class PlaylistDAO extends CassandraData {
       return genre;
     }
 
-    public String getTrack_id() {
+    public UUID getTrack_id() {
       return track_id;
     }
 
@@ -218,7 +218,7 @@ public class PlaylistDAO extends CassandraData {
     boundStatement.setDate("sequence_no", playlistTrack.sequence_no);
     boundStatement.setString("track_name", playlistTrack.getTrack_name());
     boundStatement.setString("artist", playlistTrack.getArtist());
-    boundStatement.setString("track_id", playlistTrack.getTrack_id());
+    boundStatement.setUUID("track_id", playlistTrack.getTrack_id());
     boundStatement.setInt("track_length_in_seconds", playlistTrack.getTrack_length_in_seconds());
     boundStatement.setString("genre", playlistTrack.getGenre());
 

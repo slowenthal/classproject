@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * DataStax Academy Sample Application
@@ -25,13 +26,13 @@ public class TrackServlet extends HttpServlet {
     String artist =  request.getParameter("artist");
     String track_name = request.getParameter("track_name");
     String genre = request.getParameter("genre");
-    String track_id = request.getParameter("track_id");
+    UUID track_id = UUID.fromString(request.getParameter("track_id"));
     String howmany = request.getParameter("howmany");
     String star = request.getParameter("star");
 
 
     if (star != null) {
-      TracksDAO.getTrackById(star).star();
+      TracksDAO.getTrackById(UUID.fromString(star)).star();
 
       response.sendRedirect("tracks?howmany=" + howmany
               + (artist == null ? "" : "&artist=" + URLEncoder.encode(artist, "UTF-8"))

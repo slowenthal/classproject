@@ -3,6 +3,7 @@ package playlist.model;
 import com.datastax.driver.core.Session;
 import junit.framework.TestCase;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * DataStax Academy Sample Application
@@ -41,7 +42,7 @@ public class SongTest extends TestCase {
 
   public void testFindTrackById() throws Exception {
 
-    TracksDAO track = TracksDAO.getTrackById("TRXQAEJ128F426C456");
+    TracksDAO track = TracksDAO.getTrackById(UUID.fromString("5cdbfcb7-ce74-4cf4-b7ee-1a51b798b6b3"));
 
     assertEquals("TRXQAEJ128F426C456", track.getTrack_id());
     assertEquals("Don't Fear The Reaper", track.getTrack());
@@ -64,15 +65,16 @@ public class SongTest extends TestCase {
 
     assertEquals(0,TracksDAO.listSongsByArtist("-The Riptanos").size());
     assertEquals(0,TracksDAO.listSongsByGenre("geek music", 10000).size());
-    assertNull("Track 123 exists",TracksDAO.getTrackById("123"));
+    assertNull("Track 733262e5-e773-4f0c-b84a-92735c6426f5 exists",TracksDAO.getTrackById(UUID.fromString("733262e5-e773-4f0c-b84a-92735c6426f5")));
 
-    TracksDAO tracksDAO = new TracksDAO("123", "-The Riptanos", "Share a Mind", "geek music",100 );
+    UUID newTrackid = UUID.randomUUID();
+    TracksDAO tracksDAO = new TracksDAO(newTrackid, "-The Riptanos", "Share a Mind", "geek music",100 );
     tracksDAO.add();
 
     assertEquals(1,TracksDAO.listSongsByArtist("-The Riptanos").size());
     assertEquals(1,TracksDAO.listSongsByGenre("geek music", 10000).size());
     assertEquals(100,TracksDAO.listSongsByGenre("geek music", 10000).get(0).getTrack_length_in_seconds());
-    assertNotNull("Track 123 exists",TracksDAO.getTrackById("123"));
+    assertNotNull("Track 123 exists",TracksDAO.getTrackById(newTrackid));
 
     cleanTestTrack();
   }
