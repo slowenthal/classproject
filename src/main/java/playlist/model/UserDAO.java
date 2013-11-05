@@ -1,9 +1,6 @@
 package playlist.model;
 
-import com.datastax.driver.core.ConsistencyLevel;
-import com.datastax.driver.core.PreparedStatement;
-import com.datastax.driver.core.Row;
-import com.datastax.driver.core.SimpleStatement;
+import com.datastax.driver.core.*;
 import playlist.exceptions.UserExistsException;
 import playlist.exceptions.UserLoginException;
 
@@ -55,12 +52,6 @@ public class UserDAO extends CassandraData {
   public static UserDAO addUser(String username, String password) throws UserExistsException {
 
 
-    String queryText = "INSERT INTO users (email, password, user_id) values (?, ?, ?)";
-    PreparedStatement preparedStatement = getSession().prepare(queryText);
-    // TODO
-    // TODO - fix the line below to generate a new UUID for the user's surrogate key
-    UUID userId = null;  // We only added the "= null" so this code compiles. Remove it.
-    // TODO
 
     String queryText = "INSERT INTO users ... ";            // TODO - fill in the rest of this statement
 
@@ -68,8 +59,6 @@ public class UserDAO extends CassandraData {
     // TODO - prepare and execute the statement above to insert a new user. Also, capture the result set in a variable
     // TODO - hint - the code is something like this:  ResultSet result = <execute statement>
     // TODO
-    // Because we use an IF NOT EXISTS clause, we get back a result set with 1 row containing 1 boolean column called "[applied]"
-    ResultSet resultSet = getSession().execute(preparedStatement.bind(username, password));
 
 
     boolean userGotInserted = false;   // just initialize this so this compiles.

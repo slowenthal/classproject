@@ -62,7 +62,6 @@ public class PlaylistDAO extends CassandraData {
 
   }
 
-
   /**
    * Delete this playlist
    */
@@ -76,10 +75,6 @@ public class PlaylistDAO extends CassandraData {
     // TODO - Hint: This code is similar to the the addPlayList method
     // TODO
 
-  }
-
-  public UUID getUser_id() {
-    return user_id;
   }
 
   public String getPlaylist_name() {
