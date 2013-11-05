@@ -34,8 +34,8 @@ Copyright 2013 DataStax
 <form id="form1" name="form1" class="login_form" method="post" action="tracks">
     <h1>Add A Track</h1>
     <p>
-        <label for="track_id">Track Id</label>
-        <input id="track_id" type="text" name="track_id" placeholder="Enter a track Id" required>
+        <label for="music_file">Track Id</label>
+        <input id="music_file" type="text" name="music_file" placeholder="Enter the Music File Name" required>
     </p>
     <p>
         <label for="artist">Artist</label>

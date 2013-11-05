@@ -26,7 +26,7 @@ public class TrackServlet extends HttpServlet {
     String artist =  request.getParameter("artist");
     String track_name = request.getParameter("track_name");
     String genre = request.getParameter("genre");
-    UUID track_id = UUID.fromString(request.getParameter("track_id"));
+    String music_file = request.getParameter("music_file");
     String howmany = request.getParameter("howmany");
     String star = request.getParameter("star");
 
@@ -59,10 +59,10 @@ public class TrackServlet extends HttpServlet {
       //
 
       TracksDAO newTrack = new TracksDAO(
-              track_id,
               artist,
               track_name,
               genre,
+              music_file,
               track_length_in_seconds
       );
 

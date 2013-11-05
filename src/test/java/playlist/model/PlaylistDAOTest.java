@@ -31,8 +31,7 @@ public class PlaylistDAOTest extends TestCase {
     UserDAO user = UserDAO.addUser("testuser1","pw");
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user,"Playlist1");
 
-    UUID uuid1 = UUID.randomUUID();
-    TracksDAO newTrack = new TracksDAO(uuid1,"Artist1","Track1", "rock", 20);
+    TracksDAO newTrack = new TracksDAO("Artist1","Track1", "rock", "music file 1", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
     newPlaylist.addTrackToPlaylist(playlistTrack1);
@@ -43,7 +42,7 @@ public class PlaylistDAOTest extends TestCase {
     assertEquals(1, tracksList.size());
 
     UUID uuid2 = UUID.randomUUID();
-    newTrack = new TracksDAO(uuid2,"Artist2","Track2", "rock", 10);
+    newTrack = new TracksDAO("Artist2","Track2", "rock", "music fiile 2", 10);
     PlaylistDAO.PlaylistTrack playlistTrack2 = new PlaylistDAO.PlaylistTrack(newTrack);
     playlist.addTrackToPlaylist(playlistTrack2);
     playlist = PlaylistDAO.getPlaylistForUser(user.getUsername(), "Playlist1");
@@ -61,8 +60,7 @@ public class PlaylistDAOTest extends TestCase {
     UserDAO user = UserDAO.addUser("testuser1","pw");
     PlaylistDAO newPlaylist = PlaylistDAO.createPlayList(user, "Playlist1");
 
-    UUID uuid1 = UUID.randomUUID();
-    TracksDAO newTrack = new TracksDAO(uuid1,"Artist1","Track1", "rock", 20);
+    TracksDAO newTrack = new TracksDAO("Artist1","Track1", "rock", "music file 3", 20);
     PlaylistDAO.PlaylistTrack playlistTrack1 = new PlaylistDAO.PlaylistTrack(newTrack);
 
     newPlaylist.addTrackToPlaylist(playlistTrack1);

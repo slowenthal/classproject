@@ -54,7 +54,6 @@ public class SongTest extends TestCase {
     session.execute("DELETE FROM artists_by_first_letter WHERE first_letter = '-' ");
     session.execute("DELETE FROM track_by_artist WHERE artist = '-The Riptanos' ");
     session.execute("DELETE FROM track_by_genre WHERE genre = 'geek music' ");
-    session.execute("DELETE FROM track_by_id WHERE track_id = '123' ");
   }
 
   public void testAddSongAndArtist() throws Exception {
@@ -64,17 +63,16 @@ public class SongTest extends TestCase {
     // Validate data is clean
 
     assertEquals(0,TracksDAO.listSongsByArtist("-The Riptanos").size());
-    assertEquals(0,TracksDAO.listSongsByGenre("geek music", 10000).size());
+    assertEquals(0, TracksDAO.listSongsByGenre("geek music", 10000).size());
     assertNull("Track 733262e5-e773-4f0c-b84a-92735c6426f5 exists",TracksDAO.getTrackById(UUID.fromString("733262e5-e773-4f0c-b84a-92735c6426f5")));
 
-    UUID newTrackid = UUID.randomUUID();
-    TracksDAO tracksDAO = new TracksDAO(newTrackid, "-The Riptanos", "Share a Mind", "geek music",100 );
+    TracksDAO tracksDAO = new TracksDAO("-The Riptanos", "Share a Mind", "geek music", "Music File", 100 );
     tracksDAO.add();
 
     assertEquals(1,TracksDAO.listSongsByArtist("-The Riptanos").size());
     assertEquals(1,TracksDAO.listSongsByGenre("geek music", 10000).size());
     assertEquals(100,TracksDAO.listSongsByGenre("geek music", 10000).get(0).getTrack_length_in_seconds());
-    assertNotNull("Track 123 exists",TracksDAO.getTrackById(newTrackid));
+    assertNotNull("Track 123 exists", TracksDAO.getTrackById(tracksDAO.getTrack_id()));
 
     cleanTestTrack();
   }

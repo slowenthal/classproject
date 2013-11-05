@@ -26,6 +26,7 @@ public class TracksDAO extends CassandraData {
   private final String track;
   private final String genre;
   private Boolean starred;
+  private final String music_file;
   private final int track_length_in_seconds;
 
   /**
@@ -40,6 +41,7 @@ public class TracksDAO extends CassandraData {
     artist = row.getString("artist");
     track = row.getString("track");
     genre = row.getString("genre");
+    music_file = row.getString("music_file");
     track_length_in_seconds = row.getInt("track_length_in_seconds");
 
     try {
@@ -49,11 +51,12 @@ public class TracksDAO extends CassandraData {
     }
   }
 
-  public TracksDAO(UUID track_id, String artist, String track, String genre, int track_length_in_seconds) {
-    this.track_id = track_id;
+  public TracksDAO(String artist, String track, String genre, String music_file, int track_length_in_seconds) {
+    this.track_id = UUID.randomUUID();  // We can generate the new UUID right here in the constructor
     this.artist = artist;
     this.track = track;
     this.genre = genre;
+    this.music_file = music_file;
     this.track_length_in_seconds = track_length_in_seconds;
     starred = false;  // We never set this when adding a track, so leave this one alone
   }
@@ -165,6 +168,10 @@ public class TracksDAO extends CassandraData {
 
   public String getGenre() {
     return genre;
+  }
+
+  public String getMusic_file() {
+    return music_file;
   }
 
   public int getTrack_length_in_seconds() {
