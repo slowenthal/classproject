@@ -44,7 +44,7 @@ public class SongTest extends TestCase {
 
     TracksDAO track = TracksDAO.getTrackById(UUID.fromString("5cdbfcb7-ce74-4cf4-b7ee-1a51b798b6b3"));
 
-    assertEquals("TRXQAEJ128F426C456", track.getTrack_id());
+    assertEquals("5cdbfcb7-ce74-4cf4-b7ee-1a51b798b6b3", track.getTrack_id().toString());
     assertEquals("Don't Fear The Reaper", track.getTrack());
 
   }
