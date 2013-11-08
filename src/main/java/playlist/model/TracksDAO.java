@@ -30,7 +30,7 @@ public class TracksDAO extends CassandraData {
   private final int track_length_in_seconds;
 
   /**
-   * Constructor to create a TrackDAO object when given a single Cassandra Row object
+   * Constructor to create a TracksDAO object when given a single Cassandra Row object
    *
    * @param row - a single Cassandra Java Driver Row
    *
