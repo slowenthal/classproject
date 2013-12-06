@@ -115,7 +115,7 @@ public class UserDAO extends CassandraData {
             + username + "'";
 
     // TODO
-    // TODO - take the queryText above and turning it into something
+    // TODO - take the queryText above and turn it into something
     // TODO - set the consistency level on that something to QUORUM
     // TODO - execute that something in the line below.
     // TODO
