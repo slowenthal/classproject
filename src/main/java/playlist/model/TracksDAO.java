@@ -84,9 +84,12 @@ public class TracksDAO extends CassandraData {
     String queryText = "SELECT * FROM track_by_genre WHERE genre = ? LIMIT ?";
     PreparedStatement preparedStatement = getSession().prepare(queryText);
     BoundStatement boundStatement = preparedStatement.bind(genre, num_tracks);
-    boundStatement.setFetchSize(200);
-    ResultSet results = getSession().execute(boundStatement);
 
+    //
+    //  TODO - Add a line here to automatically page the results 200 rows at a time
+    //
+
+    ResultSet results = getSession().execute(boundStatement);
 
     List<TracksDAO> tracks = new ArrayList<>();
 
